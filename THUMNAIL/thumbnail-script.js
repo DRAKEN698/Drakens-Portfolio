@@ -1,8 +1,8 @@
 /**
- * Data Array: Unsplash assets
+ * Data Array: Unsplash assets (Aapki Images)
  */
 const imageData = [
-  "Thumbnail image/1.webp ",
+  "Thumbnail image/1.webp",
   "Thumbnail image/2.webp",
   "Thumbnail image/3.webp",
   "Thumbnail image/4.webp",
@@ -24,52 +24,49 @@ const imageData = [
 
 // Core DOM Elements
 const galleryRing = document.getElementById("gallery-ring");
-const toggleBtn = document.getElementById("toggle-layout-btn");
 const items = [];
 const numItems = imageData.length;
 
 // State Management
 let isAnimating = false;
 let expandedItem = null;
-let hoveredItem = null; // Track currently hovered item
-let currentRadius = 0;
-let isStackedMode = false;
+let hoveredItem = null;
 
-// Timelines & Proxies
-const rotationProxy = { angle: 0 };
-let mainTimeline; // Circular Timeline
+// Stack Timeline Management
 const stackProxy = { progress: 0 };
-let stackTimeline; // Stack Loop Timeline
+let stackTimeline;
+
+// Performance Tweaks (Lag prevention)
+gsap.ticker.fps(60);
+gsap.ticker.lagSmoothing(1000, 16);
 
 /**
- * Initialization (UPDATED FOR LAZY LOADING & SMOOTH FADE-IN)
+ * Initialization (LAZY LOADING & DEFAULT STACK MODE)
  */
 function initGallery() {
-  // Bina kisi delay ke elements create karein
   imageData.forEach((src, index) => {
     const item = document.createElement("div");
     item.className = "gallery-item";
     item.dataset.index = index;
-    
-    // Container ko initially hide karein (animation ke liye)
-    gsap.set(item, { opacity: 0, scale: 0 }); 
+
+    // Hide initially
+    gsap.set(item, { opacity: 0, scale: 0, force3D: true });
 
     const img = new Image();
-    
-    // 🔥 1. NATIVE LAZY LOADING & ASYNC DECODING ADD KIYA 🔥
-    img.loading = "lazy"; 
+    img.loading = "lazy";
     img.decoding = "async";
-    
-    // Image ko shuru mein hide rakhein
     gsap.set(img, { opacity: 0 });
 
-    // 🔥 2. JAISE HI IMAGE LOAD HO, USKO SMOOTHLY FADE-IN KAREIN 🔥
-    img.onload = () => {
+    // Cache & Lazy load fix for Mobile
+    if (img.complete) {
       gsap.to(img, { opacity: 1, duration: 0.8, ease: "power2.out" });
-    };
-    
+    } else {
+      img.onload = () => {
+        gsap.to(img, { opacity: 1, duration: 0.8, ease: "power2.out" });
+      };
+    }
+
     img.src = src;
-    
     item.appendChild(img);
     galleryRing.appendChild(item);
     items.push(item);
@@ -77,32 +74,21 @@ function initGallery() {
     attachInteractions(item);
   });
 
-  // Images ka wait kiye bina math calculations aur animation turant start karein!
-  calculateRadius();
-  updatePositions(true);
+  // Set initial stack positions (Invisible)
+  items.forEach((item, i) => {
+    const props = getStackProps(i);
+    gsap.set(item, { x: props.x, y: props.y, zIndex: props.zIndex });
+  });
 
-  // Boxes ka aane ka animation
-  gsap.fromTo(
-    items,
-    { scale: 0, opacity: 0, rotation: () => Math.random() * 90 - 45 },
-    {
-      scale: 1,
-      opacity: 1,
-      rotation: 0,
-      duration: 1.5,
-      stagger: 0.1, 
-      ease: "expo.out",
-      onComplete: startRotation,
-    }
-  );
-}
-
-/**
- * Circle Radius Calculation
- */
-function calculateRadius() {
-  const vmin = Math.min(window.innerWidth, window.innerHeight);
-  currentRadius = window.innerWidth <= 768 ? vmin * 0.38 : vmin * 0.35;
+  // Smooth pop-in animation
+  gsap.to(items, {
+    scale: (i) => getStackProps(i).scale,
+    opacity: (i) => getStackProps(i).opacity,
+    duration: 1.5,
+    stagger: 0.1,
+    ease: "expo.out",
+    onComplete: startStackLoop,
+  });
 }
 
 /**
@@ -136,45 +122,14 @@ function getStackProps(index) {
 }
 
 /**
- * Circular Loop Updates
- */
-function updatePositions(isInitial = false) {
-  if (expandedItem || isStackedMode) return;
-
-  const angleOffset = rotationProxy.angle * (Math.PI / 180);
-
-  items.forEach((item, i) => {
-    if (item.classList.contains("is-transitioning") || item === hoveredItem)
-      return;
-
-    const angle = (i / numItems) * Math.PI * 2 + angleOffset;
-    const x = Math.cos(angle) * currentRadius;
-    const y = Math.sin(angle) * currentRadius;
-
-    if (isInitial) gsap.set(item, { x: x, y: y });
-    else gsap.set(item, { x: x, y: y, zIndex: 1 });
-  });
-}
-
-function startRotation() {
-  mainTimeline = gsap.to(rotationProxy, {
-    angle: 360,
-    duration: 35,
-    repeat: -1,
-    ease: "none",
-    onUpdate: () => updatePositions(false),
-  });
-}
-
-/**
- * Stack Loop Logic
+ * Stack Infinite Loop Logic
  */
 function startStackLoop() {
   stackProxy.progress = 0;
 
   stackTimeline = gsap.to(stackProxy, {
     progress: 1,
-    duration: 15, // Speed of the waterfall/stack
+    duration: 15, // Speed of the waterfall (increase to slow down)
     repeat: -1,
     ease: "none",
     onUpdate: () => {
@@ -201,91 +156,21 @@ function startStackLoop() {
 }
 
 /**
- * Toggle Button Layout Switcher
- */
-toggleBtn.addEventListener("click", () => {
-  if (isAnimating || expandedItem) return;
-
-  isAnimating = true;
-  isStackedMode = !isStackedMode;
-
-  if (isStackedMode) {
-    toggleBtn.innerText = "Back to Circle";
-    if (mainTimeline) mainTimeline.pause();
-
-    stackProxy.progress = 0;
-
-    items.forEach((item, i) => {
-      item.classList.add("is-transitioning");
-      const props = getStackProps(i);
-
-      gsap.to(item, {
-        x: props.x,
-        y: props.y,
-        scale: props.scale,
-        opacity: props.opacity,
-        rotation: 0,
-        zIndex: props.zIndex,
-        duration: 1.2,
-        ease: "expo.inOut",
-        onComplete: () => {
-          item.classList.remove("is-transitioning");
-          if (i === numItems - 1) {
-            isAnimating = false;
-            startStackLoop(); // Start infinite motion once layout is set
-          }
-        },
-      });
-    });
-  } else {
-    toggleBtn.innerText = "Toggle Layout";
-    if (stackTimeline) stackTimeline.kill();
-
-    const angleOffset = rotationProxy.angle * (Math.PI / 180);
-
-    items.forEach((item, i) => {
-      item.classList.add("is-transitioning");
-      const angle = (i / numItems) * Math.PI * 2 + angleOffset;
-      const targetX = Math.cos(angle) * currentRadius;
-      const targetY = Math.sin(angle) * currentRadius;
-
-      gsap.to(item, {
-        x: targetX,
-        y: targetY,
-        zIndex: 1,
-        opacity: 1,
-        scale: 1,
-        duration: 1.2,
-        ease: "expo.inOut",
-        onComplete: () => {
-          item.classList.remove("is-transitioning");
-          if (i === numItems - 1) {
-            isAnimating = false;
-            if (mainTimeline) mainTimeline.resume();
-          }
-        },
-      });
-    });
-  }
-});
-
-/**
  * Interactions (Hover & Click)
  */
 function attachInteractions(item) {
-  // Hover: Popping image to the absolute front and pausing motion
+  // Hover Logic (Desktop Only)
   item.addEventListener("mouseenter", () => {
-    // 🚀 MOBILE FIX: Agar touch screen ya mobile hai, toh hover logic mat chalao
-    if (window.matchMedia("(hover: none)").matches || window.innerWidth <= 768) return;
-
+    // Ignore on touch devices to prevent stuck images
+    if (window.matchMedia("(hover: none)").matches || window.innerWidth <= 768)
+      return;
     if (expandedItem || isAnimating) return;
-    hoveredItem = item;
 
-    if (isStackedMode && stackTimeline) stackTimeline.pause();
-    if (!isStackedMode && mainTimeline) mainTimeline.pause();
+    hoveredItem = item;
+    if (stackTimeline) stackTimeline.pause();
 
     gsap.to(item, {
-      scale: isStackedMode ? 1.15 : 1.05,
+      scale: 1.15,
       zIndex: 9999,
       duration: 0.4,
       ease: "power3.out",
@@ -294,37 +179,30 @@ function attachInteractions(item) {
   });
 
   item.addEventListener("mouseleave", () => {
-    // 🚀 MOBILE FIX: Touch screen par mouseleave ignore karein
-    if (window.matchMedia("(hover: none)").matches || window.innerWidth <= 768) return;
-
+    // Ignore on touch devices
+    if (window.matchMedia("(hover: none)").matches || window.innerWidth <= 768)
+      return;
     if (expandedItem === item || isAnimating) return;
+
     hoveredItem = null;
 
-    let targetScale = 1;
-    let targetZ = 1;
-
-    if (isStackedMode) {
-      const i = parseInt(item.dataset.index);
-      const props = getStackProps(i);
-      targetScale = props.scale;
-      targetZ = props.zIndex;
-    }
+    const i = parseInt(item.dataset.index);
+    const props = getStackProps(i);
 
     gsap.to(item, {
-      scale: targetScale,
-      zIndex: targetZ,
+      scale: props.scale,
+      zIndex: props.zIndex,
       duration: 0.4,
       ease: "power3.out",
       onComplete: () => {
-        if (!hoveredItem && !expandedItem) {
-          if (isStackedMode && stackTimeline) stackTimeline.resume();
-          if (!isStackedMode && mainTimeline) mainTimeline.resume();
+        if (!hoveredItem && !expandedItem && stackTimeline) {
+          stackTimeline.resume();
         }
       },
     });
   });
 
-  // Click Hamesha chalega (Mobile ho ya Desktop)
+  // Click Logic (Works Everywhere)
   item.addEventListener("click", () => {
     if (isAnimating) return;
     if (expandedItem === item) closeImage(item);
@@ -337,14 +215,13 @@ function attachInteractions(item) {
  */
 function openImage(item) {
   isAnimating = true;
-  document.body.classList.add("is-animating");
   expandedItem = item;
-  hoveredItem = null; // BUG FIX: Clear hover state so it doesn't get stuck later
+  hoveredItem = null;
   document.body.classList.add("is-viewing");
+  document.body.classList.add("is-animating"); // Disable background pointer events
   item.classList.add("is-transitioning", "is-expanded");
 
-  if (isStackedMode && stackTimeline) stackTimeline.pause();
-  if (!isStackedMode && mainTimeline) mainTimeline.pause();
+  if (stackTimeline) stackTimeline.pause();
 
   const rect = item.getBoundingClientRect();
   const padding = window.innerWidth <= 768 ? 20 : 60;
@@ -360,8 +237,11 @@ function openImage(item) {
     opacity: 1,
     duration: 1.2,
     ease: "expo.inOut",
-    force3D: false, // <--- YEH LINE ADD KAREIN (Image ko sharp rakhega)
-    onComplete: () => (isAnimating = false),
+    force3D: false, // Image quality fix
+    onComplete: () => {
+      isAnimating = false;
+      document.body.classList.remove("is-animating");
+    },
   });
 
   items.forEach((otherItem) => {
@@ -378,67 +258,44 @@ function openImage(item) {
 }
 
 /**
- * Close Image (Return to Orbit/Stack)
+ * Close Image (Return to Stack)
  */
 function closeImage(item) {
   isAnimating = true;
+  document.body.classList.add("is-animating");
   document.body.classList.remove("is-viewing");
   item.classList.remove("is-expanded");
 
   const index = parseInt(item.dataset.index);
-  let targetX, targetY, targetZ, targetScale;
-
-  // Calculate return position based on current active mode
-  if (isStackedMode) {
-    const props = getStackProps(index);
-    targetX = props.x;
-    targetY = props.y;
-    targetZ = props.zIndex;
-    targetScale = props.scale;
-  } else {
-    const angleOffset = rotationProxy.angle * (Math.PI / 180);
-    const angle = (index / numItems) * Math.PI * 2 + angleOffset;
-    targetX = Math.cos(angle) * currentRadius;
-    targetY = Math.sin(angle) * currentRadius;
-    targetZ = 1;
-    targetScale = 1;
-  }
+  const props = getStackProps(index);
 
   gsap.to(item, {
-    x: targetX,
-    y: targetY,
-    scale: targetScale,
-    zIndex: targetZ,
+    x: props.x,
+    y: props.y,
+    scale: props.scale,
+    zIndex: props.zIndex,
     duration: 1.2,
     ease: "expo.inOut",
-    force3D: false, // <--- YEH LINE ADD KAREIN
+    force3D: false,
     onComplete: () => {
       item.classList.remove("is-transitioning");
       expandedItem = null;
       hoveredItem = null;
       isAnimating = false;
+      document.body.classList.remove("is-animating");
 
-      if (isStackedMode) stackTimeline.resume();
-      else mainTimeline.resume();
+      if (stackTimeline) stackTimeline.resume();
     },
   });
 
   // Restore other items smoothly
   items.forEach((otherItem) => {
     if (otherItem !== item) {
-      let op = 1;
-      let sc = 1;
-
-      if (isStackedMode) {
-        const props = getStackProps(parseInt(otherItem.dataset.index));
-        op = props.opacity;
-        sc = props.scale;
-      }
-
+      const p = getStackProps(parseInt(otherItem.dataset.index));
       gsap.to(otherItem, {
-        opacity: op,
+        opacity: p.opacity,
         filter: "blur(0px)",
-        scale: sc,
+        scale: p.scale,
         duration: 1,
         ease: "power3.inOut",
         clearProps: "filter",
@@ -446,19 +303,5 @@ function closeImage(item) {
     }
   });
 }
-
-/**
- * Handle Resize
- */
-let resizeTimeout;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    calculateRadius();
-    if (!expandedItem && !isAnimating && !isStackedMode) {
-      updatePositions(true);
-    }
-  }, 150);
-});
 
 window.addEventListener("load", initGallery);
