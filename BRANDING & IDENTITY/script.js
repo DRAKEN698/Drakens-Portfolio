@@ -87,88 +87,88 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   const progressLines = document.querySelectorAll(".progress-line");
 
- // --- 3 & 4. Infinite Looping Mathematical Engine ---
-    const totalCards = cards.length;
-    let spreadX, curveFactor, tiltFactor;
-    // Memory se purana scroll check karo, agar nahi hai toh 0 se shuru karo
-    let savedScroll = sessionStorage.getItem("brandingScrollPos");
-    let virtualScroll = savedScroll ? parseFloat(savedScroll) : 0;
+  // --- 3 & 4. Infinite Looping Mathematical Engine ---
+  const totalCards = cards.length;
+  let spreadX, curveFactor, tiltFactor;
+  // Memory se purana scroll check karo, agar nahi hai toh 0 se shuru karo
+  let savedScroll = sessionStorage.getItem("brandingScrollPos");
+  let virtualScroll = savedScroll ? parseFloat(savedScroll) : 0;
 
-    // Jab user page chhod kar wapas jaye, tab uski current position save kar lo
-    window.addEventListener("beforeunload", () => {
-        sessionStorage.setItem("brandingScrollPos", virtualScroll);
+  // Jab user page chhod kar wapas jaye, tab uski current position save kar lo
+  window.addEventListener("beforeunload", () => {
+    sessionStorage.setItem("brandingScrollPos", virtualScroll);
+  });
+
+  function calculateLayoutParams() {
+    const ww = window.innerWidth;
+    const wh = window.innerHeight;
+
+    spreadX = ww * 0.45;
+    curveFactor = wh * 0.2;
+    tiltFactor = wh * 0.35;
+
+    if (ww < 1024) {
+      spreadX = ww * 0.6;
+      curveFactor = wh * 0.15;
+      tiltFactor = wh * 0.4;
+    }
+  }
+
+  calculateLayoutParams();
+  window.addEventListener("resize", calculateLayoutParams);
+
+  function updateGallery(scrollOffset) {
+    const cx = 0;
+    const cy = 0;
+
+    // Wrap Range controls the infinite loop distance
+    const wrapRange = 12;
+    const halfRange = wrapRange / 2;
+
+    cards.forEach((card, i) => {
+      // Space cards evenly in a circle (math space)
+      const baseT = (i / totalCards) * wrapRange;
+
+      // Apply scroll and WRAP it infinitely using Modulo (%)
+      let t = (baseT - scrollOffset) % wrapRange;
+      if (t < 0) t += wrapRange; // Fix for reverse scrolling
+      t -= halfRange; // Center the curve
+
+      const x = cx + t * spreadX;
+      // Adjusted curve multiplier (0.25) to match your original visual shape
+      const y = cy - (Math.pow(t, 3) * (curveFactor * 0.25) + t * tiltFactor);
+      const scale = Math.max(0.65, 1 - Math.abs(t) * 0.08);
+      const opacity = Math.max(0, 1 - Math.pow(Math.abs(t) / 2.2, 4));
+
+      card.style.transform = `translate(-50%, -50%) translate3d(${x}px, ${y}px, 0) scale(${scale})`;
+      card.style.opacity = opacity;
+      card.style.visibility = opacity === 0 ? "hidden" : "visible";
     });
 
-    function calculateLayoutParams() {
-        const ww = window.innerWidth;
-        const wh = window.innerHeight;
-        
-        spreadX = ww * 0.45;       
-        curveFactor = wh * 0.20;   
-        tiltFactor = wh * 0.35;    
-        
-        if (ww < 1024) {
-            spreadX = ww * 0.6;
-            curveFactor = wh * 0.15;
-            tiltFactor = wh * 0.4;
-        }
-    }
-    
-    calculateLayoutParams();
-    window.addEventListener('resize', calculateLayoutParams);
-
-    function updateGallery(scrollOffset) {
-        const cx = 0; 
-        const cy = 0; 
-        
-        // Wrap Range controls the infinite loop distance
-        const wrapRange = 12; 
-        const halfRange = wrapRange / 2; 
-        
-        cards.forEach((card, i) => {
-            // Space cards evenly in a circle (math space)
-            const baseT = (i / totalCards) * wrapRange;
-            
-            // Apply scroll and WRAP it infinitely using Modulo (%)
-            let t = (baseT - scrollOffset) % wrapRange;
-            if (t < 0) t += wrapRange; // Fix for reverse scrolling
-            t -= halfRange; // Center the curve
-
-            const x = cx + (t * spreadX);
-            // Adjusted curve multiplier (0.25) to match your original visual shape
-            const y = cy - (Math.pow(t, 3) * (curveFactor * 0.25) + t * tiltFactor);
-            const scale = Math.max(0.65, 1 - Math.abs(t) * 0.08);
-            const opacity = Math.max(0, 1 - Math.pow(Math.abs(t) / 2.2, 4));
-
-            card.style.transform = `translate(-50%, -50%) translate3d(${x}px, ${y}px, 0) scale(${scale})`;
-            card.style.opacity = opacity;
-            card.style.visibility = opacity === 0 ? 'hidden' : 'visible';
-        });
-
-        // Make the progress bar loop smoothly as well
-        const progress = Math.abs(scrollOffset % 1); 
-        const activeCount = Math.round(progress * totalLines);
-        progressLines.forEach((line, i) => {
-            if (i < activeCount) line.classList.add('active');
-            else line.classList.remove('active');
-        });
-    }
-
-    // Replace ScrollTrigger with GSAP Ticker for Infinite Auto-Play + Scroll
-    gsap.ticker.add(() => {
-        // If an image is clicked/zoomed (Lenis is stopped), pause the animation
-        if (lenis.isStopped) return; 
-
-        // 1. Auto-scroll speed (Premium slow movement)
-        virtualScroll += 0.0015; 
-        
-        // 2. Add manual user scroll velocity
-        if (lenis.velocity) {
-            virtualScroll += lenis.velocity * 0.001; 
-        }
-        
-        updateGallery(virtualScroll);
+    // Make the progress bar loop smoothly as well
+    const progress = Math.abs(scrollOffset % 1);
+    const activeCount = Math.round(progress * totalLines);
+    progressLines.forEach((line, i) => {
+      if (i < activeCount) line.classList.add("active");
+      else line.classList.remove("active");
     });
+  }
+
+  // Replace ScrollTrigger with GSAP Ticker for Infinite Auto-Play + Scroll
+  gsap.ticker.add(() => {
+    // If an image is clicked/zoomed (Lenis is stopped), pause the animation
+    if (lenis.isStopped) return;
+
+    // 1. Auto-scroll speed (Premium slow movement)
+    virtualScroll += 0.0015;
+
+    // 2. Add manual user scroll velocity
+    if (lenis.velocity) {
+      virtualScroll += lenis.velocity * 0.001;
+    }
+
+    updateGallery(virtualScroll);
+  });
 
   // --- 4. ScrollTrigger Connection ---
   ScrollTrigger.create({
@@ -276,7 +276,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- 6. Page Load Reveal Animation (FIXED) ---
+  // --- 6. Page Load Reveal Animation & Scroll Restoration ---
+
+  // 1. Browser ko auto-scroll reset karne se roko
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
   // Hide items before animation starts
   gsap.set(".gallery-container", { opacity: 0, scale: 0.85 });
   gsap.set(".progress-wrapper", { opacity: 0, y: 40 });
@@ -284,8 +290,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const tl = gsap.timeline({
     onComplete: () => {
       lenis.start(); // Allow scrolling once animation finishes
-      // Remove loader from DOM so it doesn't block anything
       document.querySelector(".page-loader").style.display = "none";
+
+      // 2. JESE HI ANIMATION KHATAM HO, PURANI JAGAH PAR JUMP KARO
+      let savedY = sessionStorage.getItem("brandingScrollY");
+      let savedV = sessionStorage.getItem("brandingVirtual");
+
+      if (savedY && savedV) {
+        virtualScroll = parseFloat(savedV);
+        window.scrollTo(0, parseInt(savedY));
+        // Lenis ko turant purani jagah dhakelo bina smooth scroll ke
+        lenis.scrollTo(parseInt(savedY), { immediate: true });
+      }
     },
   });
 
@@ -318,6 +334,40 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       "-=1.2",
     );
+
+  // 3. JAB BHI USER PAGE CHHODE, USKI POSITION SAVE KAR LO
+  window.addEventListener("beforeunload", () => {
+    sessionStorage.setItem("brandingScrollY", window.scrollY);
+    sessionStorage.setItem("brandingVirtual", virtualScroll);
+  });
+
+  // 4. BACK BUTTON (BFCACHE) FIX - Agar bina reload ke page wapas aaye
+  window.addEventListener("pageshow", (event) => {
+    const isBackNavigation =
+      event.persisted ||
+      (performance.getEntriesByType("navigation").length &&
+        performance.getEntriesByType("navigation")[0].type === "back_forward");
+
+    if (isBackNavigation) {
+      setTimeout(() => {
+        gsap.set(".page-loader", { display: "none" });
+        gsap.set(".gallery-container", {
+          opacity: 1,
+          scale: 1,
+          visibility: "visible",
+        });
+        gsap.set(".progress-wrapper", { opacity: 1, y: 0 });
+        gsap.set(".modal-overlay", { opacity: 0, pointerEvents: "none" });
+        isModalOpen = false;
+
+        if (typeof lenis !== "undefined") {
+          lenis.start();
+          let savedY = sessionStorage.getItem("brandingScrollY");
+          if (savedY) lenis.scrollTo(parseInt(savedY), { immediate: true });
+        }
+      }, 50);
+    }
+  });
 });
 
 
