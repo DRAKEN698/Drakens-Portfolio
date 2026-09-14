@@ -2,7 +2,6 @@
  * Data Array: Unsplash assets
  */
 const imageData = [
-  // /Drakens-Portfolio/ lagane se browser hamesha sahi jagah image dhoondhega
   "/Drakens-Portfolio/Thumbnail image/1.webp",
   "/Drakens-Portfolio/Thumbnail image/2.webp",
   "/Drakens-Portfolio/Thumbnail image/3.webp",
