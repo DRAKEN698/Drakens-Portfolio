@@ -1,0 +1,237 @@
+/* =========================================
+   Base & Reset
+   ========================================= */
+:root {
+    --bg-color: #f1f1f1;
+    --text-color: #111111;
+    --btn-border: rgba(0, 0, 0, 0.8);
+    --btn-bg-hover: #111111;
+    --btn-text-hover: #ffffff;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    overflow: hidden; /* Prevent native scroll */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+}
+
+.app-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* =========================================
+   Typography & UI Overlay
+   ========================================= */
+.header, .footer {
+    position: absolute;
+    width: 100%;
+    padding: 2.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    pointer-events: none; /* Let clicks pass through empty areas */
+}
+
+.header {
+    top: 0;
+}
+
+.footer {
+    bottom: 0;
+}
+
+.brand, .footer-left, .footer-right {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.header-spacer {
+    width: 120px; /* Balance the flex layout visually */
+}
+
+/* =========================================
+   Navigation Buttons
+   ========================================= */
+.nav-controls {
+    display: flex;
+    gap: 0.75rem;
+    pointer-events: auto;
+    background: transparent;
+}
+
+.nav-btn {
+    appearance: none;
+    background: transparent;
+    border: 1px solid var(--btn-border);
+    color: var(--text-color);
+    border-radius: 50px;
+    padding: 0.6rem 1.8rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: background-color, color, transform;
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+}
+
+.nav-btn.active {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* =========================================
+   3D Stage & Scene
+   ========================================= */
+.stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2000px; /* Depth of the 3D space */
+    overflow: hidden;
+}
+
+.scene {
+    position: relative;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    /* Rotation applied via JS to shift perspective slightly if needed */
+}
+
+/* =========================================
+   Card Components
+   ========================================= */
+.card-wrapper {
+    position: absolute;
+    /* Center the wrapper exactly at 0,0 of the scene */
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.card-inner {
+    /* The visible card, offset so its center is at 0,0 */
+    position: absolute;
+    left: -100px;
+    top: -125px;
+    width: 200px;
+    height: 250px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center center;
+    pointer-events: auto;
+    
+    /* Simulate the mix of products and photos from reference */
+    background-color: rgba(255,255,255,0.02);
+}
+
+/* Hover Micro-interaction */
+.card-inner:hover {
+    transform: scale(1.15) translateZ(50px);
+    z-index: 1000;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Best for product mockups */
+    pointer-events: none;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+}
+
+/* Variations to mimic the reference's diverse content types */
+.card-wrapper:nth-child(3n) .card-img {
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   Image Lightbox (Zoom Effect)
+   ========================================= */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85); /* Dark transparent background */
+    backdrop-filter: blur(10px);     /* Glassmorphism blur */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    cursor: zoom-out;
+}
+
+.lightbox-img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    filter: drop-shadow(0 25px 50px rgba(0,0,0,0.5));
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+@media (max-width: 1024px) {
+    .header, .footer { padding: 2rem; }
+    .card-inner { width: 160px; height: 200px; left: -80px; top: -100px; } /* 4:5 ratio */
+    .header-spacer { display: none; }
+}
+
+@media (max-width: 768px) {
+    .header { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+    .nav-controls { align-self: center; }
+    .brand { align-self: center; }
+    .footer { flex-direction: column; gap: 1rem; }
+    .card-inner { width: 120px; height: 150px; left: -60px; top: -75px; } /* 4:5 ratio */
+}

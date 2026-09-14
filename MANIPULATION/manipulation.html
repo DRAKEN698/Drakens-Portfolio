@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Infinity Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- UI Overlay (Fixed) -->
+    <main class="ui-layer">
+        <!-- Top Left: Thumbnail & Title -->
+        <!-- Top Left: Thumbnail & Title -->
+        <div class="header-left">
+            <div class="thumb-wrapper">
+                <!-- ID added here -->
+                <img id="dynamic-thumb" src="images/image1.jpg" alt="Thumbnail" loading="lazy">
+            </div>
+            <!-- ID added here -->
+            <span id="dynamic-title" class="museum-text">At the museum</span>
+        </div>
+
+        <!-- Top Right: Controls -->
+        <div class="header-right controls">
+            <button id="btn-scroll" class="control-btn">Scroll</button>
+            <button id="btn-animate" class="control-btn active">Animate</button>
+        </div>
+
+        <!-- Bottom Left: Huge Typography -->
+        <div class="bottom-left">
+            <h1 class="huge-text">Scroll</h1>
+        </div>
+
+        <!-- Bottom Right: Watermark -->
+        <div class="bottom-right watermark">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+                <path d="M7 0L14 7H7V14L0 7H7V0Z" fill="#000" />
+            </svg>
+
+        </div>
+    </main>
+
+    <!-- 3D Scene Wrapper -->
+    <div class="scene">
+        <!-- Tilt wrapper to give the slightly top-down perspective seen in the screenshot -->
+        <div class="tilt-wrapper">
+            <!-- The Rotating Ring -->
+            <div class="ring" id="ring">
+                <!-- Cards will be dynamically injected here via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Overlay (Click Badi Honi Chahiye) -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-bg"></div>
+        <button class="lightbox-close" id="lightbox-close">×</button>
+        <img src="" alt="Enlarged view" class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

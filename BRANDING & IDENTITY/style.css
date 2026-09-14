@@ -1,0 +1,199 @@
+/* --- Variables & Setup --- */
+:root {
+    --bg-color: #ffffff;
+    --card-width: 320px;
+    --card-height: 440px;
+    --card-radius: 18px;
+    --shadow-color: rgba(0, 0, 0, 0.12);
+    --progress-inactive: #dcdcdc;
+    --progress-active: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    cursor: none; 
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* --- Custom Cursor --- */
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 2.5L20.5 13.5L13.5 15L17.5 22L14 23.5L10 16.5L4.5 21.5V2.5Z" fill="black" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-10%, -10%);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border-radius: 50%;
+}
+
+/* --- Layout --- */
+.scroll-spacer {
+    height: 600vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+.gallery-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Container ignores clicks */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* --- Cards --- */
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: var(--card-radius);
+    background-color: #fff;
+    box-shadow: 0 24px 48px var(--shadow-color), 0 12px 24px rgba(0,0,0,0.06);
+    pointer-events: auto; /* Cards accept clicks */
+    cursor: pointer; /* Change cursor on hover */
+    will-change: transform, opacity;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.card.framed {
+    padding: 16px;
+    background-color: #f4f4f4;
+}
+
+.card.framed img {
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+.card:hover::after {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Progress Bar --- */
+.progress-wrapper {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.progress-bar {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    height: 30px; 
+}
+
+.progress-line {
+    width: 3px;
+    height: 18px;
+    background-color: var(--progress-inactive);
+    transition: background-color 0.15s ease, height 0.2s ease;
+    border-radius: 2px;
+}
+
+.progress-line.active {
+    background-color: var(--progress-active);
+    height: 22px; 
+}
+
+/* --- Modal / Image Zoom Animation --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none; 
+    cursor: pointer; /* Click anywhere to close */
+}
+
+.modal-image {
+    position: absolute;
+    border-radius: var(--card-radius);
+    box-shadow: 0 40px 100px rgba(0,0,0,0.3);
+    object-fit: cover;
+}
+
+/* --- Page Reveal Transition --- */
+.page-loader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-color); /* Matches your white background */
+    z-index: 999999;
+    pointer-events: none;
+}
+
+/* =========================================
+   RESPONSIVE CARD SIZES (TABLET & MOBILE)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    :root {
+        --card-width: 240px;
+        --card-height: 330px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --card-width: 180px;  /* मोबाइल के लिए और छोटा */
+        --card-height: 250px;
+    }
+}
+
+/* --- Responsive 2560x1440 Support --- */
+@media (min-width: 2560px) {
+    :root {
+        --card-width: 400px;
+        --card-height: 550px;
+    }
+}

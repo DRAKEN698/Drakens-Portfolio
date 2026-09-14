@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preload" as="image" href="Generated Image June 26, 2026 - 12_26PM.webp">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DRAKENS | Portfolio</title>
+
+	<!-- 🚀 SABSE BADA FIX: Yahan ye script daalein -->
+	<script>
+		// Check karega ki preloader pehle chal chuka hai ya nahi
+		if (sessionStorage.getItem('preloaderDone')) {
+			// AGAR CHAL CHUKA HAI TOH TURANT CSS SE HIDE KAR DO (Flash nahi aayega)
+			document.write('<style>.preloader { display: none !important; }</style>');
+
+			// Browser ko scroll yaad rakhne do
+			if (history.scrollRestoration) {
+				history.scrollRestoration = 'auto';
+			}
+		} else {
+			// PEHLI BAAR AAYA HAI (Top par bhejo aur manual set karo)
+			if (history.scrollRestoration) {
+				history.scrollRestoration = 'manual';
+			}
+			window.scrollTo(0, 0);
+		}
+	</script>
+
+	<script>
+		// Agar Google ka bot hai, toh Preloader ko CSS se turant gayab kar do
+		if (/bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse/i.test(navigator.userAgent)) {
+			document.write('<style>.preloader { display: none !important; }</style>');
+		}
+	</script>
+	<!-- 🚀 FIX END -->
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Asynchronous Font Loading for Mobile -->
+	<link rel="preload" as="style"
+		href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500&family=Montserrat:wght@400;700;800;900&display=swap">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500&family=Montserrat:wght@400;700;800;900&display=swap"
+		media="print" onload="this.media='all'">
+	<noscript>
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500&family=Montserrat:wght@400;700;800;900&display=swap">
+	</noscript>
+	
+	<!-- NAYA CSS LINK (High Priority) -->
+	<link rel="preload" href="style.css" as="style">
+	<link rel="stylesheet" href="style.css">
+	
+	<style>
+		/* MOBILE INSTANT LOAD HACK */
+		body {
+			background-color: #030303;
+			color: white;
+			margin: 0;
+		}
+	
+		.hero__title {
+			visibility: visible !important;
+			opacity: 1 !important;
+			font-family: sans-serif;
+		}
+	
+		.hero__img {
+			visibility: visible !important;
+			opacity: 1 !important;
+		}
+	</style>
+	
+	<script>
+		// Agar Lighthouse Bot hai toh Matrix animation band kar do
+		if (/bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse/i.test(navigator.userAgent)) {
+			document.write('<style>#matrix-canvas { display: none !important; opacity: 0 !important; }</style>');
+		}
+	</script>
+
+</head>
+<body>
+    <!-- Custom Cursor -->
+	<div class="page-transition"></div>
+	<div class="page-transition-overlay"></div>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+	<header class="header">
+		<div class="container header__container">
+			<a href="#" class="logo" data-hover>
+				<img src="brand logo/Gemini_Generated_Image_swb3rtswb.webp" alt="R Designer Logo" class="logo__img"
+					width="150" height="70" fetchpriority="high" style="object-fit: contain; width: auto;" loading="lazy">
+			</a>
+	
+			<!-- HAMBURGER BUTTON (Mobile ke liye) -->
+			<button class="hamburger" id="hamburger" data-hover aria-label="Toggle Menu">
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+			</button>
+	
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#top" class="nav__link active" data-hover>HOME</a></li>
+					<li class="nav__item"><a href="#about" class="nav__link" data-hover>ABOUT</a></li>
+					<li class="nav__item"><a href="#portfolio" class="nav__link" data-hover>WORK</a></li>
+					<li class="nav__item"><a href="#services" class="nav__link" data-hover>SERVICES</a></li>
+					<li class="nav__item"><a href="#footer" class="nav__link" data-hover>CONTACT</a></li>
+				</ul>
+			</nav>
+	
+			<!-- <a href="#footer" class="btn btn--primary btn--small header-btn" data-hover>LET'S TALK</a> -->
+		</div>
+	</header>
+
+	<main>
+        <section class="hero">
+            <!-- Left Content -->
+            <div class="hero__content">
+                <p class="hero__kicker reveal-element">DESIGNS THAT</p>
+                <h1 class="hero__title">
+                    <span class="line-wrap"><span class="line">SPEAK.</span></span><br>
+                    <span class="line-wrap"><span class="line">IMPRESS.</span></span><br>
+                    <span class="line-wrap"><span class="line text-accent">INSPIRE.</span></span>
+                </h1>
+                <p class="hero__desc reveal-element">
+                    I create powerful visual experiences<br>
+                    that help brands stand out and grow.
+                </p>
+                <!-- <div class="hero__actions reveal-element">
+                    <a href="#" class="btn btn--primary" data-hover>VIEW MY WORK</a>
+                    <a href="#" class="btn btn--outline" data-hover>ABOUT ME</a>
+                </div> -->
+
+                <div class="hero__scroll reveal-element">
+                    <span>SCROLL DOWN</span>
+                    <div class="scroll-icon">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 5v14M19 12l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image Area -->
+            <div class="hero__image-area">
+                <div class="hero__image-wrapper">
+                    <div class="image-overlay"></div>
+                    <!-- Placeholder image matching the vibe -->
+					<img src="Generated Image June 26 2026.webp" alt="Model" class="hero__img" width="800" height="1000" fetchpriority="high" loading="lazy">
+                </div>
+                
+                <!-- <div class="hero__badge reveal-element">
+                    <p>Crafting visual<br>magic that leaves a<br>lasting impact.</p>
+                    <div class="badge-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16v-4"></path>
+                            <path d="M12 8h.01"></path>
+                        </svg>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+		<!-- === PREVIOUS HERO SECTION KHTAM YAHAN === -->
+		
+		<!-- === NEW SCROLLING MARQUEE SECTION === -->
+		<div class="marquee">
+			<div class="marquee__inner">
+				<!-- Group 1 -->
+				<div class="marquee__group">
+					<span>Brand Identity</span> <span class="marquee__star">✦</span>
+					<span>Social Media Designs</span> <span class="marquee__star">✦</span>
+					<span>Poster Design</span> <span class="marquee__star">✦</span>
+					<span>Advertising Creatives Design</span> <span class="marquee__star">✦</span>
+					<span>Photo Manipulation</span> <span class="marquee__star">✦</span>
+					<span>Youtube Thumbnail</span> <span class="marquee__star">✦</span>
+				</div>
+				<!-- Group 2 (Duplicate for seamless infinite scroll) -->
+				<div class="marquee__group" aria-hidden="true">
+					<span>Brand Identity</span> <span class="marquee__star">✦</span>
+					<span>Social Media Designs</span> <span class="marquee__star">✦</span>
+					<span>Poster Design</span> <span class="marquee__star">✦</span>
+					<span>Advertising Creatives Design</span> <span class="marquee__star">✦</span>
+					<span>Photo Manipulation</span> <span class="marquee__star">✦</span>
+					<span>Youtube Thumbnail</span> <span class="marquee__star">✦</span>
+				</div>
+				<!-- Group 3 (Duplicate for seamless infinite scroll) -->
+				<div class="marquee__group" aria-hidden="true">
+					<span>Brand Identity</span> <span class="marquee__star">✦</span>
+					<span>Social Media Designs</span> <span class="marquee__star">✦</span>
+					<span>Poster Design</span> <span class="marquee__star">✦</span>
+					<span>Advertising Creatives Design</span> <span class="marquee__star">✦</span>
+					<span>Photo Manipulation</span> <span class="marquee__star">✦</span>
+					<span>Youtube Thumbnail</span> <span class="marquee__star">✦</span>
+				</div>
+			</div>
+		</div>
+		<!-- === MARQUEE SECTION END === -->
+		
+		
+		<!-- === YAHAN SE NAYA ABOUT SECTION START HOTA HAI === -->
+		<section class="about" id="about"
+			style="background-color: var(--bg-color); color: var(--text-main); padding: 8rem 0; overflow: hidden;">
+			<div class="container new-about-layout">
+		
+				<!-- LEFT COLUMN: ABOUT & TEXT -->
+				<div class="left-col">
+					<div class="header-group gs-reveal">
+						<h2 class="about-main-title">About Me <span class="plus">+</span></h2>
+						<h3 class="script-overlay">Who Am I?</h3>
+					</div>
+		
+					<p class="intro-text gs-reveal">
+						I'm <strong>Draken</strong>, a passionate <span class="highlight-red">Graphic Designer & AI Creative
+							Specialist</span>. I love turning ideas into <strong>bold, meaningful visuals</strong> that connect,
+						inspire, and leave a lasting impression.
+					</p>
+		
+					<div class="middle-grid">
+						<!-- Vision Box -->
+						<div class="vision-box gs-reveal">
+							<div class="tape"></div>
+							<h3><span class="red-star">✹</span> My <span class="highlight-red">Vision</span></h3>
+							<p>To create designs that speak louder than words and build visual identities that stand out in the
+								digital world.</p>
+						</div>
+		
+						<!-- Quote Box -->
+						<div class="quote-box gs-reveal">
+							<p class="quote">“ Design is not just what it <span class="highlight-red">looks like</span>, it's
+								how it <span class="highlight-red">works</span>. ”</p>
+							<div class="signature">DRAKEN</div>
+						</div>
+					</div>
+		
+					<div class="skills-tools-grid gs-reveal">
+						<div class="list-block">
+							<h3><span class="red-letter">S</span>kills</h3>
+							<ul>
+								<li>Brand Identity</li>
+								<li>Social Media Designs</li>
+								<li>Poster Design</li>
+								<li>Advertising Creatives</li>
+								<li>Photo Manipulation</li>
+								<li>Youtube Thumbnail</li>
+							</ul>
+						</div>
+						<div class="list-block">
+							<h3><span class="red-letter">T</span>ools</h3>
+							<ul>
+								<li>Adobe Photoshop</li>
+								<li>Adobe Lightroom</li>
+								<li>Figma</li>
+								<li>Pinterest</li>
+								<li>Nano Banana</li>
+								<li>ChatGPT / Claude</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		
+				<!-- RIGHT COLUMN: PORTRAIT & ICONS -->
+				<div class="right-col gs-reveal-img">
+					
+		
+					<!-- Decorative Doodles -->
+					
+		
+					<div class="portrait-wrapper">
+						
+						<!-- TUMHARI PURANI IMAGE (Nahi chhedi hai) -->
+						<img src="Gemini_Generated_Image_hz15fbhz15fbhz15.webp" alt="Draken" class="portrait-img" loading="lazy" width="500"
+							height="600" style="width: 100%; height: auto; object-fit: cover;">
+					</div>
+		
+					<!-- Floating Adobe Icons (Now with Images) -->
+					<div class="floating-icons">
+						<div class="icon-3d id magnetic" data-strength="20">
+							<!-- InDesign Icon -->
+							<img src="logo/ChatGPT_logo.svg.webp" alt="InDesign" class="tool-icon-img" width="85" height="85" loading="lazy">
+						</div>
+						<div class="icon-3d ps magnetic" data-strength="30">
+							<!-- Photoshop Icon -->
+							<img src="logo/adobe-photoshop-icon.png" alt="Photoshop" class="tool-icon-img" width="85" height="85" loading="lazy">
+						</div>
+						<div class="icon-3d lr magnetic" data-strength="15">
+							<!-- Lightroom Icon -->
+							<img src="logo/vecteezy_pinterest-logo-icon-pin-app-transparent-background-premium_65386622.png" alt="Lightroom" class="tool-icon-img" width="85" height="85" loading="lazy">
+						</div>
+						<div class="icon-3d ai magnetic" data-strength="25">
+							<!-- Figma or Illustrator Icon -->
+							<img src="logo/vecteezy_figma-logo-icon-figma-app-editable-transparent-background_65386871.png" alt="Figma" class="tool-icon-img" width="85" height="85" loading="lazy">
+						</div>
+						<div class="icon-3d pr magnetic" data-strength="20">
+							<!-- Premiere or any other tool Icon -->
+							<img src="logo/gemini.webp" alt="Gemini" class="tool-icon-img" width="85" height="85" loading="lazy">
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === ABOUT SECTION KHATAM YAHAN === -->
+		
+		
+		<!-- STATS SECTION -->
+		<section class="stats section-light">
+			<div class="container stats__container">
+		
+				<div class="stat-item">
+					<h3 class="stat-number"><span class="counter" data-target="5">0</span>+</h3>
+					<p class="stat-text">YEARS EXPERIENCE</p>
+				</div>
+		
+				<div class="stat-item">
+					<h3 class="stat-number"><span class="counter" data-target="200">0</span>+</h3>
+					<p class="stat-text">PROJECTS COMPLETED</p>
+				</div>
+		
+				<div class="stat-item">
+					<h3 class="stat-number"><span class="counter" data-target="98">0</span>%</h3>
+					<p class="stat-text">CLIENT SATISFACTION</p>
+				</div>
+		
+				<div class="stat-item">
+					<h3 class="stat-number"><span class="counter" data-target="50">0</span>+</h3>
+					<p class="stat-text">BRANDS WORKED WITH</p>
+				</div>
+		
+			</div>
+		</section>
+
+		<!-- === PORTFOLIO SECTION START === -->
+		<section class="portfolio section-light" id="portfolio">
+			<div class="container portfolio__container">
+		
+				<!-- Header & Filters -->
+				<div class="portfolio__header">
+					<h2 class="portfolio__title gs-reveal-portfolio">recent work</h2>
+		
+					<!-- Updated Filter Buttons -->
+					<div class="portfolio__filters gs-reveal-portfolio">
+						<!-- ALL ko 'featured' category de di hai -->
+						<button class="filter-btn active" data-filter="brand-identity" data-hover>BRAND IDENTITY</button>
+						<button class="filter-btn" data-filter="social-media" data-hover>SOCIAL MEDIA DESIGNS</button>
+						<button class="filter-btn" data-filter="poster-design" data-hover>POSTER DESIGN</button>
+						<button class="filter-btn" data-filter="advertising" data-hover>ADVERTISING CREATIVES</button>
+						<button class="filter-btn" data-filter="photo-manipulation" data-hover>PHOTO MANIPULATION</button>
+						<button class="filter-btn" data-filter="youtube-thumbnail" data-hover>YOUTUBE THUMBNAIL</button>
+					</div>
+					</div>
+					
+					<!-- Portfolio Grid -->
+					<div class="portfolio__grid">
+						<!-- ==========================================
+						      2. CATEGORY: BRAND IDENTITY (4 Images) - NOW DEFAULT VISIBLE
+						=========================================== -->
+						<!-- Card 1 -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="brand-identity" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg" alt="Brand 1" class="portfolio__img" width="400" height="500" loading="lazy">
+							</div>
+						</a>
+						<!-- Card 2 -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="brand-identity" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Brand 2" class="portfolio__img" width="400" height="500" loading="lazy">
+							</div>
+						</a>
+						<!-- Card 3 -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="brand-identity" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Brand 3" class="portfolio__img" width="400" height="500" loading="lazy">
+							</div>
+						</a>
+						<!-- Card 4 -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="brand-identity" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Brand 4" class="portfolio__img" width="400" height="500" loading="lazy">
+							</div>
+						</a>
+						<!-- (Aise hi baaki 3 Brand Identity cards se bhi style hata dein) -->
+					
+						<!-- ==========================================
+											 3. CATEGORY: SOCIAL MEDIA DESIGNS (4 Images) 
+										=========================================== -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="social-media" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Social Media 1" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="social-media" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Social Media 2" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="social-media" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Social Media 3" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="social-media" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Social Media 4" class="portfolio__img">
+							</div>
+						</a>
+					
+						<!-- ==========================================
+											 4. CATEGORY: POSTER DESIGN (4 Images) 
+										=========================================== -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="poster-design" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Poster 1" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="poster-design" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Poster 2" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="poster-design" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Poster 3" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="poster-design" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Poster 4" class="portfolio__img">
+							</div>
+						</a>
+					
+						<!-- ==========================================
+											 5. CATEGORY: ADVERTISING CREATIVES DESIGN (4 Images) 
+										=========================================== -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="advertising" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Ad 1" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="advertising" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Ad 2" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="advertising" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Ad 3" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="advertising" style="display: none;" data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="images (1).jpg"
+									alt="Ad 4" class="portfolio__img">
+							</div>
+						</a>
+					
+						<!-- ==========================================
+											 6. CATEGORY: PHOTO MANIPULATION (4 Images) 
+										=========================================== -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="photo-manipulation" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="Recent work image/PHOTO MANIPULATION image/DOOM.webp"
+									alt="Photo Manip 1" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="photo-manipulation" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="Recent work image/PHOTO MANIPULATION image/Toxic.webp"
+									alt="Photo Manip 2" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="photo-manipulation" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="Recent work image/PHOTO MANIPULATION image/HOF.webp"
+									alt="Photo Manip 3" class="portfolio__img">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="photo-manipulation" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="Recent work image/PHOTO MANIPULATION image/Space.webp"
+									alt="Photo Manip 4" class="portfolio__img">
+							</div>
+						</a>
+					
+						<!-- ==========================================
+											 7. CATEGORY: YOUTUBE THUMBNAIL (4 Images) 
+										=========================================== -->
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="youtube-thumbnail" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="Recent work image/YOUTUBE THUMBNAIL image/GTA 6.webp" alt="Thumbnail 1" class="portfolio__img" width="600" height="400" loading="lazy">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="youtube-thumbnail" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="Recent work image/YOUTUBE THUMBNAIL image/Street.webp"
+									alt="Thumbnail 2" class="portfolio__img" width="640" height="360" loading="lazy">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="youtube-thumbnail" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="6.webp"
+									alt="Thumbnail 3" class="portfolio__img" width="640" height="360" loading="lazy">
+							</div>
+						</a>
+						<a href="#" class="portfolio__card gs-reveal-card" data-category="youtube-thumbnail" style="display: none;"
+							data-hover>
+							<div class="portfolio__img-wrapper">
+								<div class="portfolio__overlay"></div>
+								<img src="6.webp"
+									alt="Thumbnail 4" class="portfolio__img" width="640" height="360" loading="lazy">
+							</div>
+						</a>
+					
+					
+					</div>
+					</section>
+					<!-- === PORTFOLIO SECTION END === -->
+		
+			</div>
+		</section>
+		<!-- === PORTFOLIO SECTION END === -->
+
+		<!-- === AI WORK SECTION START === -->
+		<section class="ai-work" id="ai-work">
+			<div class="container ai-work__container">
+		
+				<!-- Top Split Section -->
+				<div class="ai-work__hero">
+					<!-- Left Content -->
+					<div class="ai-work__content">
+						<p class="ai-work__kicker gs-reveal-ai">AI WORK</p>
+						<h2 class="ai-work__title gs-reveal-ai">
+							POWERED BY AI.<br>
+							CREATED BY ME.
+						</h2>
+						<p class="ai-work__desc gs-reveal-ai">
+							Exploring the power of AI to generate stunning visuals, concepts and ideas that push creative
+							boundaries.
+						</p>
+						<div class="ai-work__action gs-reveal-ai">
+							<a href="#branding" class="btn btn--primary btn--glow" data-hover>VIEW ALL AI WORK</a>
+						</div>
+					</div>
+		
+					<!-- Right Visual (Cinematic Blend with Flashlight Effect) -->
+					<div class="ai-work__visual gs-reveal-ai-img ai-torch-container" id="reveal-box">
+						<div class="ai-work__visual-overlay"></div>
+					
+						<!-- Niche wali image (Base/Default Image) -->
+						<img src="Gemini_Generated_Image_3fpw1i3fpw1i3fpw-clean.webp" alt="AI Black Suit Base" class="ai-work__main-img base-image">
+					
+						<!-- Upar wali image (Red Suit - Torch Reveal Image) -->
+						<!-- Note: class me 'ai-work__main-img' rakhna zaroori hai taaki border-radius wagerah match kare -->
+						<img src="retouch_2026090219381415-Recovered.webp" alt="AI Red Suit Reveal"
+							class="ai-work__main-img reveal-image">
+					</div>
+				</div>
+		
+				<!-- Bottom Grid (4 Cards) -->
+				<div class="ai-work__grid">
+		
+					<!-- Card 1 -->
+					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
+						<div class="ai-card__img-wrapper">
+							<div class="ai-card__overlay"></div>
+						
+							<!-- 1. Default Image (Base) -->
+							<img src="Ai Work Image/DOOM.webp" alt="AI Base" class="ai-card__img" loading="lazy">
+						
+							<!-- 2. Extra Images for Fast Hover Animation (Strobe Effect) -->
+							<!-- Inme apni alag-alag 3 images ka link daal dena -->
+							<img src="Ai Work Image/Toxic.webp" alt="AI Flash 1" class="ai-card__img strobe-img img-1" loading="lazy">
+							<img src="Ai Work Image/Resident evil.webp" alt="AI Flash 2" class="ai-card__img strobe-img img-3" loading="lazy">
+							<img src="Ai Work Image/HOF.webp" alt="AI Flash 3" class="ai-card__img strobe-img img-4" loading="lazy">
+							<img src="Ai Work Image/Devil.webp" alt="AI Flash 4" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/Ghost Rider.webp" alt="AI Flash 5" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/attack on titan.webp" alt="AI Flash 6" class="ai-card__img strobe-img img-5">
+							<img src="Ai Work Image/smile.webp" alt="AI Flash 7" class="ai-card__img strobe-img img-5">
+							<img src="Ai Work Image/Untitled-3.webp" alt="AI Flash 8" class="ai-card__img strobe-img img-5">
+							<img src="Ai Work Image/Mario.webp" alt="AI Flash 9" class="ai-card__img strobe-img img-5" loading="lazy" width="400"
+								height="500">
+							<img src="Ai Work Image/CAPTAIN copy.webp" alt="AI Flash 10" class="ai-card__img strobe-img img-5" loading="lazy"> 
+							<img src="Ai Work Image/Akuma copy.webp" alt="AI Flash 11" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/Robin copy.webp" alt="AI Flash 12" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/Iceman copy.webp" alt="AI Flash 13" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/Sang Chi copy.webp" alt="AI Flash 14" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/GAMBIT.webp" alt="AI Flash 15" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/Kraven copy.webp" alt="AI Flash 16" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/Naruto.webp" alt="AI Flash 17" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/Space.webp" alt="AI Flash 18" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="Ai Work Image/AQ Man.webp" alt="AI Flash 19" class="ai-card__img strobe-img img-5" loading="lazy">
+							
+						</div>
+						
+					</a>
+		
+					<!-- Card 2 -->
+					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
+						<div class="ai-card__img-wrapper">
+							<div class="ai-card__overlay"></div>
+					
+							<!-- 1. Default Image (Base) -->
+							<img src="https://images.unsplash.com/photo-1681404173264-7c603a110a11?q=80&w=600&auto=format&fit=crop"
+								alt="AI Product" class="ai-card__img">
+					
+							<!-- 2. Extra Images for Hover Animation (Card 2 की अपनी 3 इमेजेस यहाँ डालें) -->
+							<img src="extra-img-2a.jpg" alt="AI Flash 1" class="ai-card__img strobe-img img-1">
+							<img src="extra-img-2b.jpg" alt="AI Flash 2" class="ai-card__img strobe-img img-2">
+							<img src="extra-img-2c.jpg" alt="AI Flash 3" class="ai-card__img strobe-img img-3">
+						</div>
+					</a>
+					
+					<!-- Card 3 -->
+					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
+						<div class="ai-card__img-wrapper">
+							<div class="ai-card__overlay"></div>
+					
+							<!-- 1. Default Image (Base) -->
+							<img src="https://images.unsplash.com/photo-1662994977461-12f8fcbdcc84?q=80&w=600&auto=format&fit=crop"
+								alt="AI Environment" class="ai-card__img">
+					
+							<!-- 2. Extra Images for Hover Animation (Card 3 की अपनी 3 इमेजेस यहाँ डालें) -->
+							<img src="extra-img-3a.jpg" alt="AI Flash 1" class="ai-card__img strobe-img img-1">
+							<img src="extra-img-3b.jpg" alt="AI Flash 2" class="ai-card__img strobe-img img-2">
+							<img src="extra-img-3c.jpg" alt="AI Flash 3" class="ai-card__img strobe-img img-3">
+						</div>
+					</a>
+					
+					<!-- Card 4 -->
+					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
+						<div class="ai-card__img-wrapper">
+							<div class="ai-card__overlay"></div>
+					
+							<!-- 1. Default Image (Base) -->
+							<img src="Recent work image/YOUTUBE THUMBNAIL image/GTA 6.webp"
+								alt="AI Concept" class="ai-card__img">
+					
+							<!-- 2. Extra Images for Hover Animation (Card 4 की अपनी 3 इमेजेस यहाँ डालें) -->
+							<img src="Recent work image/YOUTUBE THUMBNAIL image/Street.webp" alt="AI Flash 1" class="ai-card__img strobe-img img-1"	 loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Gemini_Generated_Image_qotghuqotghuqotg-clean.webp" alt="AI Flash 2" class="ai-card__img strobe-img img-2" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 19, 2026 - 8_38PM.webp" alt="AI Flash 3" class="ai-card__img strobe-img img-3" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 20, 2026 - 2_30AM.webp" alt="AI Flash 4" class="ai-card__img strobe-img img-4" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 20, 2026 - 11_00PM.webp" alt="AI Flash 5" class="ai-card__img strobe-img img-5" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 20, 2026 - 9_49PM.webp" alt="AI Flash 6" class="ai-card__img strobe-img img-6" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 20, 2026 - 5_22PM.webp" alt="AI Flash 7" class="ai-card__img strobe-img img-7" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Gemini_Generated_Image_uyqmy2uyqmy2uyqm-clean.webp" alt="AI Flash 8" class="ai-card__img strobe-img img-8" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Gemini_Generated_Image_i86esri86esri86e-clean.webp" alt="AI Flash 9" class="ai-card__img strobe-img img-9" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Gemini_Generated_Image_u584j0u584j0u584-clean.webp" alt="AI Flash 10" class="ai-card__img strobe-img img-10" loading="lazy">
+							<img src="THUMNAIL/Thumbnail Image/Untitled-4.webp" alt="AI Flash 11" class="ai-card__img strobe-img img-11" loading="lazy">
+						</div>
+					</a>
+		
+				</div>
+			</div>
+		</section>
+		<!-- === AI WORK SECTION END === -->
+
+		<!-- === SERVICES SECTION START === -->
+		<section class="services section-light" id="services">
+			<div class="container services__container">
+		
+				<!-- Header -->
+				<div class="services__header">
+					<p class="services__kicker gs-reveal-services">SERVICES</p>
+					<h2 class="services__title gs-reveal-services">
+						CREATIVE SOLUTIONS<br>
+						FOR YOUR BRAND
+					</h2>
+				</div>
+		
+				<!-- Services Grid -->
+				<div class="services__grid">
+		
+					<!-- Service 1 -->
+					<div class="service-item gs-reveal-service" data-hover>
+						<div class="service-icon">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<circle cx="12" cy="12" r="3"></circle>
+								<path
+									d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+								</path>
+							</svg>
+						</div>
+						<div class="service-content">
+							<h3 class="service-title">Brand Identity</h3>
+							<p class="service-desc">Logos, branding & visual identity systems.</p>
+						</div>
+					</div>
+		
+					<!-- Service 2 -->
+					<div class="service-item gs-reveal-service" data-hover>
+						<div class="service-icon">
+							<!-- Social Media / Network Icon -->
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+								<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+								<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+							</svg>
+						</div>
+						<div class="service-content">
+							<h3 class="service-title">Social Media Designs</h3>
+							<p class="service-desc">Engaging posts, banners, and ad concepts for audience connection.</p>
+						</div>
+					</div>
+		
+					<!-- Service 3 -->
+					<div class="service-item gs-reveal-service" data-hover>
+						<div class="service-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 462.54" fill="currentColor">
+								<path
+									d="M49.68 0h337.29c13.65 0 26.06 5.64 35.03 14.61l.83.91c8.53 8.94 13.81 21.05 13.81 34.17V192.3c-13.83-3.96-28.43-6.1-43.53-6.1-7.25 0-14.38.5-21.37 1.45l38.17-35.52V49.69c0-5.95-2.36-11.49-6.2-15.62l-.6-.56c-4.16-4.16-9.89-6.79-16.14-6.79H49.68c-6.05 0-11.55 2.35-15.62 6.14l-.58.62c-4.16 4.16-6.76 9.91-6.76 16.21v177.93c29.58-26.67 76.93-63.95 106.82-89.08 4.88-4.22 12.14-4.13 16.93-.04.97.81 1.69 1.79 2.5 2.75l69.64 105.62 24.89-75.76c1.99-10.58 14.49-14.09 22.06-7.06l45.01 43.1c-7.78 4.48-15.12 9.62-21.99 15.32l-23.17-22.24-25.4 78.78c-1.6 11.15-15.44 15.38-22.92 6.78l-80.27-118.34-114.1 95.68v79.68c0 6.26 2.63 11.99 6.79 16.15 4.19 4.2 9.96 6.82 16.17 6.82h187.54c1.29 9.18 3.37 18.11 6.18 26.72H49.68c-13.58 0-26.04-5.62-35.07-14.64C5.64 368.88 0 356.46 0 342.81V49.69c0-13.67 5.59-26.11 14.58-35.11l.92-.83C24.45 5.25 36.49 0 49.68 0zM388.5 380.5l-38.51 10.26 5.54-41.32 32.97 31.06zm-24.47-40.45 40.4-45.69c.64-.75 1.58-1.2 2.53-1.21.62-.02 1.23.1 1.76.4l29.33 26.66c.59.53.93 1.32.95 2.1.01.89-.34 1.77-1.03 2.38l-41.1 46.42-32.9-31.06h.06zm29.08-115.3c32.83 0 62.56 13.31 84.06 34.82 21.52 21.52 34.83 51.24 34.83 84.07 0 32.83-13.31 62.57-34.82 84.07-21.51 21.52-51.24 34.83-84.07 34.83-32.82 0-62.55-13.31-84.07-34.83-21.51-21.5-34.82-51.24-34.82-84.07 0-32.8 13.31-62.5 34.82-84.02 21.57-21.56 51.27-34.87 84.07-34.87zm67.83 51.05c-17.34-17.34-41.34-28.09-67.83-28.09-26.5 0-50.5 10.73-67.86 28.07-17.34 17.35-28.07 41.36-28.07 67.86 0 26.49 10.75 50.5 28.09 67.84 17.36 17.36 41.36 28.1 67.84 28.1 26.49 0 50.49-10.74 67.84-28.1 17.35-17.34 28.09-41.35 28.09-67.84 0-26.48-10.74-50.48-28.1-67.84zM267.9 61.14c11.04 0 21.06 4.48 28.31 11.73s11.73 17.26 11.73 28.31c0 11.03-4.48 21.06-11.73 28.31s-17.27 11.73-28.31 11.73c-11.05 0-21.06-4.48-28.31-11.73s-11.73-17.28-11.73-28.31c0-11.05 4.48-21.06 11.73-28.31s17.26-11.73 28.31-11.73zm12.22 27.82a17.281 17.281 0 0 0-12.22-5.05c-4.77 0-9.1 1.94-12.22 5.05a17.272 17.272 0 0 0-5.04 12.22c0 4.77 1.93 9.1 5.04 12.22 3.12 3.11 7.45 5.05 12.22 5.05 4.77 0 9.1-1.94 12.22-5.05 3.11-3.12 5.05-7.45 5.05-12.22 0-4.77-1.94-9.1-5.05-12.22z" />
+							</svg>
+						</div>
+						<div class="service-content">
+							<h3 class="service-title">Poster Design</h3>
+							<p class="service-desc">High-impact custom poster designs that grab attention and drive results.</p>
+						</div>
+					</div>
+		
+					<!-- Service 4 -->
+					<!-- Service 4 -->
+					<div class="service-item gs-reveal-service" data-hover>
+						<div class="service-icon">
+							<!-- Aapke icon ka naya SVG code -->
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.879 96.568" fill="currentColor">
+								<path
+									d="M5.535,15.447h98.221c1.527,0,2.891,0.62,3.883,1.611c0.99,0.991,1.611,2.396,1.611,3.882v70.134 c0,1.528-0.621,2.891-1.611,3.883c-0.082,0.082-0.166,0.165-0.289,0.247c-0.951,0.868-2.23,1.363-3.635,1.363H5.494 c-1.528,0-2.892-0.619-3.883-1.61S0,92.562,0,91.075V20.941c0-1.528,0.62-2.891,1.611-3.882s2.396-1.611,3.883-1.611H5.535 L5.535,15.447z M28.218,34.489c4.354,0,7.882,3.528,7.882,7.882s-3.528,7.883-7.882,7.883c-4.354,0-7.882-3.529-7.882-7.883 C20.335,38.018,23.864,34.489,28.218,34.489L28.218,34.489z M61.389,68.316l15.766-27.258l16.748,42.363l-78.165-0.001v-5.254 l6.57-0.327l6.567-16.093l3.282,11.496h9.855l8.537-22.004L61.389,68.316L61.389,68.316z M21.891,6.525 c-1.817,0-3.263-1.486-3.263-3.263C18.628,1.445,20.115,0,21.891,0h97.726c1.816,0,3.262,1.487,3.262,3.263v68.895 c0,1.818-1.486,3.264-3.262,3.264c-1.818,0-3.264-1.487-3.264-3.264V6.567H21.891V6.525L21.891,6.525z M102.723,21.974H6.567 v68.027h96.155V21.974L102.723,21.974z" />
+							</svg>
+						</div>
+						<div class="service-content">
+							<h3 class="service-title">YouTube Thumbnail</h3>
+							<p class="service-desc">High-impact custom visuals that dominate search and drive views.</p>
+						</div>
+					</div>
+		
+					<!-- Service 5 -->
+					<div class="service-item gs-reveal-service" data-hover>
+						<div class="service-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123.52 113.54" fill="currentColor">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M82.33,16.91c-1.07,0.88-2.65,0.74-3.54-0.34s-0.74-2.65,0.34-3.54L94.2,0.58c1.07-0.88,2.65-0.74,3.54,0.33 c0.88,1.07,0.74,2.65-0.34,3.54L82.33,16.91L82.33,16.91L82.33,16.91z M9.12,60.78c-1.66,0.49-2.88,1.57-3.69,3 c-0.93,1.65-1.35,3.78-1.32,6.06c0.01,0.98,0.11,1.99,0.28,3.01c0.17,1.03,0.43,2.06,0.75,3.07c0.33,1.02,0.73,2.01,1.2,2.96 c0.46,0.92,0.98,1.8,1.55,2.6l0,0c1.4,1.95,3.14,3.5,5.15,4.28c1.75,0.69,3.72,0.79,5.84,0.06l0.04-0.01 c0.24-0.08,0.48-0.11,0.72-0.09c0.17,0.01,0.34,0.04,0.51,0.09l0.05-0.02c0.57-0.19,1.16-0.37,1.74-0.55l1.59-0.49 c0.58-0.17,1.13-0.33,1.65-0.48c0.51-0.15,1.03-0.29,1.56-0.43c0.55-0.15,1.1-0.06,1.56,0.2l0.05,0.03 c0.43,0.26,0.76,0.68,0.91,1.21c0.03,0.09,0.04,0.16,0.05,0.24c0.14,0.63,0.31,1.28,0.43,1.91c1.09,4.88,2.15,9.58,3.56,13.39 c0.12,0.38,0.27,0.75,0.41,1.13c0.43,1.2,0.88,2.44,1.38,3.57c0.48,1.1,0.99,2.08,1.57,2.8l0,0.01c0.43,0.54,0.93,0.88,1.52,0.91 c0.65,0.03,1.46-0.28,2.48-1.07c0.44-0.41,0.84-0.76,1.25-1.11l0.09-0.08c1.2-1.04,2.4-2.07,2.92-3.48 c-0.08-0.06-0.17-0.12-0.27-0.17c-0.23-0.13-0.52-0.26-0.81-0.38l-0.03-0.01c-1.07-0.45-2.13-0.91-2.9-1.87 c-0.78-0.97-1.2-2.38-0.91-4.68c0.01-0.14,0.03-0.26,0.05-0.38c0.02-0.14,0.04-0.28,0.05-0.42c0.13-1.04,0.2-1.58,0.16-1.73l0-0.02 c-0.03-0.04-0.24-0.19-0.66-0.58c-0.12-0.11-0.25-0.22-0.36-0.34c-0.62-0.58-1.06-1.27-1.34-2.03c-0.31-0.84-0.43-1.76-0.42-2.72 c0.01-0.94,0.15-1.92,0.36-2.85c0.26-1.13,0.63-2.21,1-3.1l0.02-0.03c0.14-0.33,0.36-0.6,0.62-0.8c0.28-0.22,0.62-0.36,0.97-0.41 l0.02,0c7.57-1.05,13.68-0.91,18.81-0.25c4.63,0.6,8.44,1.61,11.83,2.57c-2.59-2.95-4.97-6.42-7.12-10.2 c-2.77-4.88-5.15-10.29-7.07-15.77c-1.94-5.54-3.41-11.16-4.33-16.4c-0.77-4.4-1.16-8.54-1.11-12.13 c-2.89,4.15-6.78,9.19-12.5,14.27c-6.53,5.79-15.45,11.63-28.01,16.25c-0.13,0.04-0.26,0.09-0.39,0.13l-0.06,0.1 c0,0,0.01-0.01-0.22,0.35l-0.02,0.03c-0.13,0.2-0.29,0.37-0.47,0.51l0,0c-0.2,0.15-0.42,0.27-0.66,0.34L9.12,60.78L9.12,60.78z M66.17,68.52c1.88,3.61,3.96,6.97,6.21,9.88c2.14,2.76,4.44,5.13,6.86,6.92l0.25,0.02c0.12,0.01,0.24,0.01,0.34,0l0.04,0 c0.19-0.01,0.38-0.04,0.58-0.1c0.19-0.06,0.39-0.15,0.6-0.27c0.51-0.52,0.93-1.2,1.27-2c0.38-0.88,0.66-1.92,0.84-3.08 c0.55-3.43,0.29-7.82-0.56-12.67c-0.93-5.3-2.58-11.13-4.66-16.84c-2.04-5.61-4.5-11.09-7.12-15.83 c-2.49-4.52-5.12-8.36-7.66-10.99c-0.95-0.99-1.87-1.78-2.74-2.35c-0.81-0.53-1.56-0.87-2.25-0.98l-0.02,0 c-0.16-0.03-0.29-0.04-0.39-0.05c-0.04,0,0-0.03-0.02-0.02l0,0c-0.01,0-0.01,0.02-0.06,0.06c-0.09,0.08-0.22,0.2-0.37,0.35 c-0.13,0.12-0.26,0.27-0.38,0.41l-0.04,0.08c-1.16,2.4-1.56,6.2-1.31,10.83c0.26,4.7,1.2,10.23,2.73,15.97 c4.35-1,7.75-0.08,10.09,1.87c1.37,1.14,2.36,2.62,2.97,4.27c0.6,1.64,0.82,3.45,0.64,5.26C71.67,62.82,69.76,66.34,66.17,68.52 L66.17,68.52z M78.89,89.41c-0.2,0.03-0.4,0.03-0.6,0c-0.19-0.03-0.38-0.08-0.56-0.17c-0.27-0.05-0.54-0.1-0.8-0.16 c-1.89-0.39-3.73-0.92-5.71-1.48l-0.13-0.04c-6.79-1.93-15.28-4.35-28.88-2.67c-0.18,0.52-0.33,1.08-0.45,1.63 c-0.12,0.58-0.19,1.16-0.2,1.69c0,0.42,0.04,0.81,0.13,1.13c0.07,0.24,0.18,0.44,0.33,0.58l0.24,0.22 c1.11,1.01,1.65,1.51,1.96,2.65c0.25,0.92,0.14,1.77-0.08,3.45c-0.03,0.23-0.05,0.46-0.09,0.69c-0.1,0.81,0.03,1.28,0.27,1.57 c0.25,0.3,0.68,0.49,1.12,0.67l0.05,0.02c1.4,0.6,2.8,1.21,3.52,3.2c0.08,0.18,0.13,0.38,0.15,0.58c0.02,0.2,0.02,0.4-0.02,0.61 l0,0.01c-0.31,1.61-0.97,2.84-1.8,3.89c-0.81,1.03-1.77,1.85-2.72,2.67l-0.22,0.19c-0.33,0.28-0.65,0.56-0.96,0.86l-0.16,0.14 c-2.17,1.73-4.02,2.35-5.65,2.18c-1.65-0.17-3.02-1.15-4.18-2.61c-0.8-1-1.46-2.23-2.05-3.54c-0.58-1.3-1.08-2.67-1.56-4 c-0.13-0.37-0.27-0.74-0.41-1.11c-1.48-3.99-2.57-8.84-3.69-13.85c-0.36,0.1-0.72,0.22-1.08,0.32c-0.56,0.17-1.11,0.33-1.64,0.5 c-0.54,0.17-1.07,0.34-1.59,0.5l-0.03,0.01c-0.08,0.02-0.14,0.05-0.19,0.07l-0.03,0.01c-0.38,0.16-0.66,0.27-0.98,0.3 c-0.29,0.03-0.56,0-0.88-0.12c-2.89,0.8-5.56,0.56-7.94-0.4c-2.7-1.1-5.02-3.15-6.86-5.72L4.5,83.86 c-0.69-0.99-1.31-2.05-1.86-3.17c-0.56-1.13-1.03-2.31-1.42-3.51c-0.39-1.2-0.69-2.43-0.89-3.66C0.13,72.3,0.02,71.08,0,69.88 c-0.03-3.02,0.56-5.88,1.87-8.19C3.05,59.62,4.81,58,7.2,57.1c0.09-0.14,0.16-0.26,0.24-0.36c0.13-0.17,0.27-0.32,0.46-0.48 l0.04-0.03c0.2-0.17,0.39-0.28,0.61-0.39c0.2-0.09,0.43-0.18,0.74-0.29l0.28-0.1c12.71-4.68,21.5-10.66,27.81-16.51 c6.31-5.85,10.15-11.57,12.92-15.73l0.06-0.09c1.55-2.32,2.8-4.17,4.05-5.42l0,0c0.32-0.32,0.6-0.58,0.9-0.8 c0.31-0.23,0.63-0.41,1-0.55c0.39-0.14,0.77-0.22,1.18-0.24c0.4-0.02,0.83,0.02,1.33,0.1c1.18,0.19,2.38,0.68,3.59,1.44 c1.23,0.77,2.47,1.82,3.7,3.1c2.74,2.84,5.56,6.94,8.21,11.73c2.76,4.98,5.34,10.7,7.46,16.55c2.18,6,3.9,12.14,4.87,17.77 c0.89,5.19,1.15,9.96,0.53,13.77c-0.26,1.6-0.67,3.06-1.24,4.32c-0.56,1.24-1.29,2.31-2.19,3.18c-0.04,0.04-0.09,0.08-0.13,0.12 c-0.06,0.04-0.12,0.09-0.18,0.13c-0.59,0.39-1.16,0.67-1.73,0.85c-0.58,0.19-1.16,0.28-1.74,0.31h-0.04c-0.2,0-0.39,0-0.57-0.01 C79.22,89.44,79.05,89.43,78.89,89.41L78.89,89.41z M103.5,78.48c-1.39,0.06-2.55-1.02-2.6-2.41c-0.06-1.39,1.02-2.55,2.41-2.6 l17.6-0.66c1.38-0.04,2.54,1.04,2.6,2.41c0.05,1.39-1.02,2.55-2.41,2.61L103.5,78.48L103.5,78.48L103.5,78.48z M103,61.38 c-1.38,0.18-2.64-0.79-2.82-2.15c-0.18-1.38,0.79-2.64,2.15-2.82l16.26-2.16c1.38-0.18,2.64,0.79,2.82,2.15 c0.18,1.38-0.79,2.64-2.15,2.82L103,61.38L103,61.38L103,61.38z M99.58,45.68c-1.31,0.45-2.75-0.24-3.2-1.55 c-0.46-1.31,0.24-2.75,1.55-3.2l16.67-5.79c1.31-0.47,2.75,0.24,3.2,1.55c0.46,1.31-0.24,2.75-1.55,3.2L99.58,45.68L99.58,45.68 L99.58,45.68z M91.72,30.57c-1.2,0.69-2.74,0.27-3.42-0.94c-0.69-1.2-0.27-2.73,0.94-3.42l15.8-9.06c1.2-0.69,2.74-0.27,3.42,0.94 c0.69,1.2,0.27,2.73-0.94,3.42L91.72,30.57L91.72,30.57L91.72,30.57z" />
+							</svg>
+						</div>
+						<div class="service-content">
+							<h3 class="service-title">Advertising Creatives Design</h3>
+							<p class="service-desc">Compelling visuals that ampilly your
+							message and drive conversions.</p>
+						</div>
+					</div>
+		
+					<!-- Service 6 -->
+					<div class="service-item gs-reveal-service" data-hover>
+						<div class="service-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 515.142" fill="currentColor" fill-rule="evenodd"
+								clip-rule="evenodd">
+								<path
+									d="M287.644 140.552l86.489-38.812c17.792-8.093 36.482 9.437 29.978 27.63l-31.799 89.368 63.648 70.266c13.362 14.748 1.872 38.159-17.745 36.949l-94.018-2.604-47.171 82.269c-9.729 17.017-35.243 13.877-40.625-4.939l-26.686-90.777 11.499 39.121L62.659 507.578l-1.421 1.26c-10.31 8.931-26.066 8.274-35.71-1.345h-.063L7.668 489.697c-10.221-10.222-10.225-27.052-.004-37.274l152.835-152.831-43.542-9.126c-19.149-4-24.059-28.987-8.008-39.946l78.19-53.591-10.197-94.304c-2.103-19.474 20.49-31.9 35.82-19.676l74.882 57.603zm-77.929 169.35l-30.556-6.398-25.99 25.99 3.676 61.321 59.239-59.239-6.369-21.674zM80.539 402.124l-61.587 61.587c-4.042 4.047-4.042 10.647.004 14.698l17.797 17.796c4.05 4.047 10.579 4.118 14.618.085l32.519-32.52-3.351-61.646zm160.397-124.661l-59.93-12.561c-4.253-.868-5.29-6.411-1.783-8.814l50.522-34.627-6.584-60.904c-.472-4.409 4.675-7.068 8.017-4.287l48.385 37.237 55.884-25.08c3.958-1.779 8.034 2.129 6.613 6.107l-20.519 57.718 41.119 45.397c2.967 3.279.387 8.429-3.942 8.168l-61.047-1.686-30.467 53.136c-2.166 3.789-7.81 3.026-8.99-1.088l-17.278-58.716zm146.399 170.922l10.057-5.758c3.962-2.263 5.614-7.524 3.081-11.317l-38.324-57.292c-6.212-9.303-20.991-.864-16.114 9.223l29.982 62.067c1.985 4.106 7.355 5.345 11.318 3.077zM65.879 132.278L61.234 142.9c-1.829 4.182-.017 9.387 4.274 10.922l64.925 23.149c10.525 3.772 17.371-11.815 7.44-17.012L76.8 128.004c-4.042-2.112-9.092.097-10.921 4.274zM289.637 0h-11.591c-4.565 0-8.612 3.747-8.296 8.295l4.806 68.761c.767 11.153 17.792 11.175 18.567 0l4.805-68.761c.316-4.552-3.73-8.295-8.291-8.295zm222.119 190.974l-2.769-11.259c-1.088-4.43-5.695-7.465-10.033-6.07l-65.62 21.093c-10.652 3.41-6.614 19.945 4.434 18.027l67.918-11.76c4.493-.779 7.162-5.601 6.07-10.031zM220.708 297.999L119.79 276.852c-7.161-1.467-8.907-10.799-3.001-14.842l85.073-58.307-11.086-102.549c-.796-7.427 7.87-11.907 13.497-7.216l81.474 62.695 94.098-42.227c6.668-2.997 13.53 3.579 11.14 10.281l-34.56 97.187 69.242 76.441c4.995 5.517.653 14.192-6.635 13.75l-102.793-2.837-51.302 89.474c-3.651 6.381-13.151 5.092-15.141-1.834l-29.088-98.869z" />
+							</svg>
+						</div>
+						<div class="service-content">
+							<h3 class="service-title">Photo Manipulation</h3>
+							<p class="service-desc">Transforming ordinary photos into surreal visual artworks</p>
+						</div>
+					</div>
+		
+				</div>
+		
+				<!-- Footer / Action -->
+				<div class="services__footer gs-reveal-services-btn">
+					<!-- <a href="#" class="btn btn--pill-outline" data-hover>VIEW ALL SERVICES</a> -->
+					<a href="#" class="btn btn--pill-outline" data-hover>more SERVICES coming soon</a>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === SERVICES SECTION END === -->
+		
+		<!-- === PROCESS SECTION START === -->
+		<section class="process" id="process">
+			<div class="container">
+		
+				<h2 class="process__main-title gs-reveal-process">MY DESIGN PROCESS</h2>
+		
+				<div class="process__wrapper">
+		
+					<!-- Step 1 -->
+					<div class="process__item gs-reveal-step" data-hover>
+						<div class="process__icon-box">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<circle cx="11" cy="11" r="8"></circle>
+								<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+							</svg>
+						</div>
+						<div class="process__num">01</div>
+						<h3 class="process__title">DISCOVER</h3>
+						<p class="process__desc">Understanding your<br>goals & audience.</p>
+					</div>
+		
+					<!-- Arrow -->
+					<div class="process__arrow gs-reveal-arrow">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round">
+							<polyline points="13 17 18 12 13 7"></polyline>
+							<polyline points="6 17 11 12 6 7"></polyline>
+						</svg>
+					</div>
+		
+					<!-- Step 2 -->
+					<div class="process__item gs-reveal-step" data-hover>
+						<div class="process__icon-box">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path
+									d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z">
+								</path>
+								<path
+									d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z">
+								</path>
+							</svg>
+						</div>
+						<div class="process__num">02</div>
+						<h3 class="process__title">IDEATE</h3>
+						<p class="process__desc">Brainstorming ideas<br>& concepts.</p>
+					</div>
+		
+					<!-- Arrow -->
+					<div class="process__arrow gs-reveal-arrow">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round">
+							<polyline points="13 17 18 12 13 7"></polyline>
+							<polyline points="6 17 11 12 6 7"></polyline>
+						</svg>
+					</div>
+		
+					<!-- Step 3 -->
+					<div class="process__item gs-reveal-step" data-hover>
+						<div class="process__icon-box">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+								<path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+								<path d="M2 2l7.586 7.586"></path>
+								<circle cx="11" cy="11" r="2"></circle>
+							</svg>
+						</div>
+						<div class="process__num">03</div>
+						<h3 class="process__title">DESIGN</h3>
+						<p class="process__desc">Crafting visuals<br>with purpose.</p>
+					</div>
+		
+					<!-- Arrow -->
+					<div class="process__arrow gs-reveal-arrow">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round">
+							<polyline points="13 17 18 12 13 7"></polyline>
+							<polyline points="6 17 11 12 6 7"></polyline>
+						</svg>
+					</div>
+		
+					<!-- Step 4 -->
+					<div class="process__item gs-reveal-step" data-hover>
+						<div class="process__icon-box">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<circle cx="12" cy="12" r="3"></circle>
+								<path
+									d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+								</path>
+							</svg>
+						</div>
+						<div class="process__num">04</div>
+						<h3 class="process__title">REFINE</h3>
+						<p class="process__desc">Polishing & perfecting<br>the details.</p>
+					</div>
+		
+					<!-- Arrow -->
+					<div class="process__arrow gs-reveal-arrow">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+							stroke-linejoin="round">
+							<polyline points="13 17 18 12 13 7"></polyline>
+							<polyline points="6 17 11 12 6 7"></polyline>
+						</svg>
+					</div>
+		
+					<!-- Step 5 -->
+					<div class="process__item gs-reveal-step" data-hover>
+						<div class="process__icon-box">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+								<path
+									d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+								</path>
+								<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+								<line x1="12" y1="22.08" x2="12" y2="12"></line>
+							</svg>
+						</div>
+						<div class="process__num">05</div>
+						<h3 class="process__title">DELIVER</h3>
+						<p class="process__desc">Delivering results<br>that make impact.</p>
+					</div>
+		
+				</div>
+			</div>
+		</section>
+		<!-- === PROCESS SECTION END === -->
+
+		<!-- === TOOLS SECTION START === -->
+		<section class="tools section-light" id="tools">
+			<div class="container tools__container">
+		
+				<h2 class="tools__title gs-reveal-tools">
+					DESIGN & AI TOOLS<br>
+					I USE EVERYDAY
+				</h2>
+		
+				<div class="tools__wrapper">
+		
+					<!-- Group 1: Design Tools -->
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/adobe-photoshop-icon.png" alt="Photoshop" class="tool-icon-img" >
+						</div>
+					
+						<span class="tool-label">Photoshop</span>
+					</div>
+		
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/adobe-lightroom-icon.png" alt="Lightroom" class="tool-icon-img">
+						</div>
+					
+						<span class="tool-label">Lightroom</span>
+					</div>
+		
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/vecteezy_figma-logo-icon-figma-app-editable-transparent-background_65386871.png" alt="Figma" class="tool-icon-img">
+						</div>
+					
+						<span class="tool-label">Figma</span>
+					</div>
+		
+					<!-- Divider Line -->
+					<div class="tools__divider gs-reveal-divider"></div>
+		
+					<!-- Group 2: AI & Inspiration -->
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/nanobanana.webp" alt="Nano Banana" class="tool-icon-img">
+						</div>
+					
+						<span class="tool-label">Nano Banana</span>
+					</div>
+		
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/ChatGPT_logo.svg.webp" alt="ChatGPT" class="tool-icon-img">
+						</div>
+					
+						<span class="tool-label">ChatGPT</span>
+					</div>
+		
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/claude-ai-icon.png" alt="Claude" class="tool-icon-img">
+						</div>
+					
+						<span class="tool-label">Claude</span>
+					</div>
+		
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/gemini.webp" alt="Gemini" class="tool-icon-img">
+						</div>
+					
+						<span class="tool-label">Gemini</span>
+					</div>
+		
+					<!-- Example of ONE item -->
+					<div class="tool-item gs-reveal-tool" data-hover>
+					
+						<!-- YAHAN WRAPPER ADD KIYA HAI -->
+						<div class="tool-icon-wrap">
+							<img src="logo/vecteezy_pinterest-logo-icon-pin-app-transparent-background-premium_65386622.png" alt="Pinterest" class="tool-icon-img">
+						</div>
+					
+						<span class="tool-label">Pinterest</span>
+					</div>
+		
+				</div>
+			</div>
+		</section>
+		<!-- === TOOLS SECTION END === -->
+
+		<!-- === BRANDING & IDENTITY SECTION START === -->
+		<section class="branding section-light" id="branding">
+			<div class="container branding__container">
+		
+				<!-- Header -->
+				<div class="branding__header">
+					<h2 class="branding__title gs-reveal-branding">BRANDING & IDENTITY</h2>
+				</div>
+		
+				<!-- 3-Column Square Grid -->
+				<div class="branding__grid">
+		
+					<!-- Card 1 -->
+					<a href="#" class="branding__card gs-reveal-bcard" data-hover>
+						<div class="branding__img-wrapper">
+							<div class="branding__overlay"></div>
+							<!-- Replace src with your "Forto Real Estate" image -->
+							<img src="images (1).jpg"
+								alt="Forto Real Estate Logo" class="branding__img">
+						</div>
+					</a>
+		
+					<!-- Card 2 -->
+					<a href="#" class="branding__card gs-reveal-bcard" data-hover>
+						<div class="branding__img-wrapper">
+							<div class="branding__overlay"></div>
+							<!-- Replace src with your "Thunder Energy Drink" image -->
+							<img src="images (1).jpg"
+								alt="Thunder Energy Drink Logo" class="branding__img">
+						</div>
+					</a>
+		
+					<!-- Card 3 -->
+					<a href="#" class="branding__card gs-reveal-bcard" data-hover>
+						<div class="branding__img-wrapper">
+							<div class="branding__overlay"></div>
+							<!-- Replace src with your "Minimalist Clothing Co" image -->
+							<img src="images (1).jpg"
+								alt="Minimalist Clothing Co Logo" class="branding__img">
+						</div>
+					</a>
+
+					<!-- Card 4 -->
+					<a href="#" class="branding__card gs-reveal-bcard" data-hover>
+						<div class="branding__img-wrapper">
+							<div class="branding__overlay"></div>
+							<!-- Replace src with your 4th image -->
+							<img src="images (1).jpg"
+								alt="Branding 4" class="branding__img">
+						</div>
+					</a>
+		
+				</div>
+		
+				<!-- Footer / Action -->
+				<div class="branding__footer gs-reveal-bbtn">
+					<a href="BRANDING & IDENTITY/branding.html" id="branding-transition-btn" class="btn btn--pill-outline" data-hover>VIEW
+						ALL PROJECTS</a>
+				</div>
+				
+		
+			</div>
+		</section>
+		<!-- === BRANDING & IDENTITY SECTION END === -->
+
+		<!-- === SOCIAL MEDIA SECTION START === -->
+		<section class="social-media section-light" id="social-media">
+			<div class="container social-media__container">
+		
+				<!-- Header -->
+				<div class="social-media__header">
+					<h2 class="social-media__title gs-reveal-sm">SOCIAL MEDIA DESIGNS</h2>
+				</div>
+		
+				<!-- 4-Column Portrait Grid -->
+				<div class="social-media__grid">
+		
+					<!-- Card 1 -->
+					<a href="#" class="social-media__card gs-reveal-smcard" data-hover>
+						<div class="social-media__img-wrapper">
+							<div class="social-media__overlay"></div>
+							<!-- Replace src with your "Mega Sale" image -->
+							<img src="images (1).jpg"
+								alt="Mega Sale Poster" class="social-media__img">
+						</div>
+					</a>
+		
+					<!-- Card 2 -->
+					<a href="#" class="social-media__card gs-reveal-smcard" data-hover>
+						<div class="social-media__img-wrapper">
+							<div class="social-media__overlay"></div>
+							<!-- Replace src with your "New Arrival" image -->
+							<img src="images (1).jpg"
+								alt="New Arrival Poster" class="social-media__img">
+						</div>
+					</a>
+		
+					<!-- Card 3 -->
+					<a href="#" class="social-media__card gs-reveal-smcard" data-hover>
+						<div class="social-media__img-wrapper">
+							<div class="social-media__overlay"></div>
+							<!-- Replace src with your "Special Offer" image -->
+							<img src="images (1).jpg"
+								alt="Special Offer Poster" class="social-media__img">
+						</div>
+					</a>
+		
+					<!-- Card 4 -->
+					<a href="#" class="social-media__card gs-reveal-smcard" data-hover>
+						<div class="social-media__img-wrapper">
+							<div class="social-media__overlay"></div>
+							<!-- Replace src with your "Black Friday" image -->
+							<img src="images (1).jpg"
+								alt="Black Friday Poster" class="social-media__img">
+						</div>
+					</a>
+		
+				</div>
+		
+				<!-- Footer / Action -->
+				<div class="social-media__footer gs-reveal-smbtn">
+					<a href="SOCIAL MEDIA/social.html" id="branding-transition-btn" class="btn btn--pill-outline transition-link"
+						data-hover>VIEW ALL PROJECTS</a>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === SOCIAL MEDIA SECTION END === -->
+
+		<!-- === PRINT DESIGNS SECTION START === -->
+		<section class="print-designs section-light" id="print-designs">
+			<div class="container print-designs__container">
+		
+				<!-- Header -->
+				<div class="print-designs__header">
+					<h2 class="print-designs__title gs-reveal-print">POSTER DESIGNS</h2>
+				</div>
+		
+				<!-- 4-Column Grid -->
+				<div class="print-designs__grid">
+		
+					<!-- Card 1 -->
+					<a href="#" class="print-card gs-reveal-printcard" data-hover>
+						<div class="print-card__img-wrapper">
+							<div class="print-card__overlay"></div>
+							<!-- Replace src with your Poster Design image -->
+							<img src="images (1).jpg"
+								alt="Poster Design" class="print-card__img">
+						</div>
+						
+					</a>
+		
+					<!-- Card 2 -->
+					<a href="#" class="print-card gs-reveal-printcard" data-hover>
+						<div class="print-card__img-wrapper">
+							<div class="print-card__overlay"></div>
+							<!-- Replace src with your Flyer Design image -->
+							<img src="images (1).jpg"
+								alt="Flyer Design" class="print-card__img">
+						</div>
+						
+					</a>
+		
+					<!-- Card 3 -->
+					<a href="#" class="print-card gs-reveal-printcard" data-hover>
+						<div class="print-card__img-wrapper">
+							<div class="print-card__overlay"></div>
+							<!-- Replace src with your Brochure Design image -->
+							<img src="images (1).jpg"
+								alt="Brochure Design" class="print-card__img">
+						</div>
+						
+					</a>
+		
+					<!-- Card 4 -->
+					<a href="#" class="print-card gs-reveal-printcard" data-hover>
+						<div class="print-card__img-wrapper">
+							<div class="print-card__overlay"></div>
+							<!-- Replace src with your Magazine Design image -->
+							<img src="images (1).jpg"
+								alt="Magazine Design" class="print-card__img">
+						</div>
+						
+					</a>
+		
+				</div>
+		
+				<!-- Footer / Action -->
+				<div class="print-designs__footer gs-reveal-printbtn">
+					<a href="POSTER DESIGNS/poster.html" id="branding-transition-btn" class="btn btn--pill-outline transition-link"
+						data-hover>VIEW ALL PROJECTS</a>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === PRINT DESIGNS SECTION END === -->
+
+		<!-- === PACKAGING DESIGNS SECTION START === -->
+		<section class="packaging section-light" id="packaging">
+			<div class="container packaging__container">
+		
+				<!-- Header -->
+				<div class="packaging__header">
+					<h2 class="packaging__title gs-reveal-pack">advertising creatives design</h2>
+				</div>
+		
+				<!-- 4-Column Grid -->
+				<div class="packaging__grid">
+		
+					<!-- Card 1 -->
+					<a href="#" class="packaging__card gs-reveal-packcard" data-hover>
+						<div class="packaging__img-wrapper">
+							<div class="packaging__overlay"></div>
+							<!-- Replace src with your Coffee Bag image -->
+							<img src="images (1).jpg"
+								alt="Coffee Packaging Design" class="packaging__img">
+						</div>
+					</a>
+		
+					<!-- Card 2 -->
+					<a href="#" class="packaging__card gs-reveal-packcard" data-hover>
+						<div class="packaging__img-wrapper">
+							<div class="packaging__overlay"></div>
+							<!-- Replace src with your Chips/Snack Bag image -->
+							<img src="images (1).jpg"
+								alt="Snack Packaging Design" class="packaging__img">
+						</div>
+					</a>
+		
+					<!-- Card 3 -->
+					<a href="#" class="packaging__card gs-reveal-packcard" data-hover>
+						<div class="packaging__img-wrapper">
+							<div class="packaging__overlay"></div>
+							<!-- Replace src with your Box Packaging image -->
+							<img src="images (1).jpg"
+								alt="Box Packaging Design" class="packaging__img">
+						</div>
+					</a>
+		
+					<!-- Card 4 -->
+					<a href="#" class="packaging__card gs-reveal-packcard" data-hover>
+						<div class="packaging__img-wrapper">
+							<div class="packaging__overlay"></div>
+							<!-- Replace src with your Bottle Packaging image -->
+							<img src="images (1).jpg"
+								alt="Bottle Packaging Design" class="packaging__img">
+						</div>
+					</a>
+		
+				</div>
+		
+				<!-- Footer / Action -->
+				<div class="packaging__footer gs-reveal-packbtn">
+					<a href="ADVERTISING CREATIVES DESIGN/ADVERTISING.html" id="branding-transition-btn" class="btn btn--pill-outline transition-link"
+						data-hover>VIEW ALL PROJECTS</a>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === PACKAGING DESIGNS SECTION END === -->
+
+		<!-- === PHOTO MANIPULATION SECTION START === -->
+		<section class="photo-manip section-light" id="photo-manipulation">
+			<div class="container photo-manip__container">
+		
+				<!-- Header -->
+				<div class="photo-manip__header">
+					<h2 class="photo-manip__title gs-reveal-pm">PHOTO MANIPULATION</h2>
+				</div>
+		
+				<!-- 4-Column Cinematic Grid -->
+				<div class="photo-manip__grid">
+		
+					<!-- Card 1 -->
+					<a href="#" class="photo-manip__card gs-reveal-pmcard" data-hover>
+						<div class="photo-manip__img-wrapper">
+							<div class="photo-manip__overlay"></div>
+							<!-- Replace src with your Floating Island image -->
+							<img src="MANIPULATION/MANIPULATION image/GAMBIT.webp"
+								alt="Floating Island Photo Manipulation" class="photo-manip__img" loading="lazy">
+						</div>
+					</a>
+		
+					<!-- Card 2 -->
+					<a href="#" class="photo-manip__card gs-reveal-pmcard" data-hover>
+						<div class="photo-manip__img-wrapper">
+							<div class="photo-manip__overlay"></div>
+							<!-- Replace src with your Car Landscape image -->
+							<img src="MANIPULATION/MANIPULATION image/Naruto.webp"
+								alt="Car Landscape Manipulation" class="photo-manip__img" loading="lazy">
+						</div>
+					</a>
+		
+					<!-- Card 3 -->
+					<a href="#" class="photo-manip__card gs-reveal-pmcard" data-hover>
+						<div class="photo-manip__img-wrapper">
+							<div class="photo-manip__overlay"></div>
+							<!-- Replace src with your Red Smoke Character image -->
+							<img src="MANIPULATION/MANIPULATION image/Iceman copy.webp"
+								alt="Red Smoke Character Manipulation" class="photo-manip__img" loading="lazy">
+						</div>
+					</a>
+		
+					<!-- Card 4 -->
+					<a href="#" class="photo-manip__card gs-reveal-pmcard" data-hover>
+						<div class="photo-manip__img-wrapper">
+							<div class="photo-manip__overlay"></div>
+							<!-- Replace src with your Action/Surreal image -->
+							<img src="MANIPULATION/MANIPULATION image/Akuma copy.webp"
+								alt="Dynamic Action Manipulation" class="photo-manip__img" loading="lazy">
+						</div>
+					</a>
+		
+				</div>
+		
+				<!-- Footer / Action -->
+				<div class="photo-manip__footer gs-reveal-pmbtn">
+					<a href="MANIPULATION/manipulation.html" id="branding-transition-btn" class="btn btn--pill-outline transition-link"
+						data-hover>VIEW ALL PROJECTS</a>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === PHOTO MANIPULATION SECTION END === -->
+
+		<!-- === THUMBNAIL GALLERY SECTION START === -->
+		<section class="thumbnail-gallery section-light" id="thumbnail-gallery">
+			<div class="container thumbnail__container">
+		
+				<!-- Header -->
+				<div class="thumbnail__header">
+					<p class="thumbnail__kicker gs-reveal-thumb">AI CREATED</p>
+					<h2 class="thumbnail__title gs-reveal-thumb">THUMBNAIL GALLERY</h2>
+					<div class="thumbnail__line gs-reveal-thumb"></div>
+					<p class="thumbnail__desc gs-reveal-thumb">
+						Explore a collection of eye-catching thumbnails generated using AI.
+					</p>
+				</div>
+		
+				<!-- 4x2 Grid (16:9 Aspect Ratio) -->
+				<div class="thumbnail__grid">
+		
+					<!-- Row 1 -->
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Gaming/Action -->
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 19, 2026 - 8_38PM.webp"
+								alt="Victory Royale Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Anime/Character -->
+							<img src="THUMNAIL/Thumbnail Image/Gemini_Generated_Image_i86esri86esri86e-clean.webp"
+								alt="Anime Gear 5 Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Tech/Gadget -->
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 19, 2026 - 6_49PM.webp"
+								alt="iPhone Review Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Fitness/Motivation -->
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 22, 2026 - 6_28PM.webp"
+								alt="Fitness Motivation Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+					<!-- Row 2 -->
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Supercar -->
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 20, 2026 - 9_49PM.webp"
+								alt="Supercar Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Gaming/Fantasy -->
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 20, 2026 - 5_22PM.webp"
+								alt="God of War Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Finance/Crypto -->
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 20, 2026 - 2_30AM.webp"
+								alt="Finance Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+					<a href="#" class="thumbnail__card gs-reveal-thumbcard" data-hover>
+						<div class="thumbnail__img-wrapper">
+							<!-- Placeholder: Space/Sci-Fi -->
+							<img src="THUMNAIL/Thumbnail Image/Generated Image July 10, 2026 - 7_18PM.webp"
+								alt="Space Sci-Fi Thumbnail" class="thumbnail__img" loading="lazy">
+						</div>
+					</a>
+		
+				</div>
+		
+				<!-- Custom Purple Button -->
+				<div class="thumbnail__footer gs-reveal-thumbbtn">
+					<a href="THUMNAIL/thumbnail.html" id="branding-transition-btn" class="btn btn--pill-outline transition-link" data-hover>
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<rect x="3" y="3" width="7" height="7"></rect>
+							<rect x="14" y="3" width="7" height="7"></rect>
+							<rect x="14" y="14" width="7" height="7"></rect>
+							<rect x="3" y="14" width="7" height="7"></rect>
+						</svg>
+						VIEW ALL THUMBNAILS
+					</a>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === THUMBNAIL GALLERY SECTION END === -->
+
+		<!-- === WHY CHOOSE ME SECTION START === -->
+		<section class="why-choose section-light" id="why-choose">
+			<div class="container why-choose__container">
+		
+				<!-- Left Content: Text & Grid -->
+				<div class="why-choose__content">
+		
+					<div class="why-choose__header">
+						<p class="why-choose__kicker gs-reveal-wc">WHY CHOOSE ME?</p>
+						<div class="why-choose__line gs-reveal-wc"></div>
+						<h2 class="why-choose__title gs-reveal-wc">WHY CHOOSE ME?</h2>
+						<p class="why-choose__desc gs-reveal-wc">
+							I combine creativity with technology to deliver outstanding results that make an impact.
+						</p>
+					</div>
+		
+					<!-- 2x2 Feature Cards Grid -->
+					<div class="why-choose__grid">
+		
+						<!-- Card 1 -->
+						<div class="feature-card gs-reveal-wccard" data-hover>
+							<div class="feature-card__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round">
+									<circle cx="12" cy="12" r="4"></circle>
+									<path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+								</svg>
+							</div>
+							<div class="feature-card__text">
+								<h3>Creative & Unique</h3>
+								<div class="card-line"></div>
+								<p>Every design is crafted with fresh ideas.</p>
+							</div>
+						</div>
+		
+						<!-- Card 2 -->
+						<div class="feature-card gs-reveal-wccard" data-hover>
+							<div class="feature-card__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round">
+									<rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+									<rect x="9" y="9" width="6" height="6"></rect>
+									<line x1="9" y1="1" x2="9" y2="4"></line>
+									<line x1="15" y1="1" x2="15" y2="4"></line>
+									<line x1="9" y1="20" x2="9" y2="23"></line>
+									<line x1="15" y1="20" x2="15" y2="23"></line>
+									<line x1="20" y1="9" x2="23" y2="9"></line>
+									<line x1="20" y1="14" x2="23" y2="14"></line>
+									<line x1="1" y1="9" x2="4" y2="9"></line>
+									<line x1="1" y1="14" x2="4" y2="14"></line>
+								</svg>
+							</div>
+							<div class="feature-card__text">
+								<h3>AI + Human Touch</h3>
+								<div class="card-line"></div>
+								<p>Powered by AI, perfected by creativity.</p>
+							</div>
+						</div>
+		
+						<!-- Card 3 -->
+						<div class="feature-card gs-reveal-wccard" data-hover>
+							<div class="feature-card__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round">
+									<circle cx="12" cy="12" r="10"></circle>
+									<polyline points="12 6 12 12 16 14"></polyline>
+									<line x1="2" y1="12" x2="4" y2="12"></line>
+									<line x1="20" y1="12" x2="22" y2="12"></line>
+								</svg>
+							</div>
+							<div class="feature-card__text">
+								<h3>On-Time Delivery</h3>
+								<div class="card-line"></div>
+								<p>Deadlines matter and I respect that.</p>
+							</div>
+						</div>
+		
+						<!-- Card 4 -->
+						<div class="feature-card gs-reveal-wccard" data-hover>
+							<div class="feature-card__icon">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round">
+									<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+									<polyline points="9 12 11 14 15 10"></polyline>
+								</svg>
+							</div>
+							<div class="feature-card__text">
+								<h3>Unlimited Revisions</h3>
+								<div class="card-line"></div>
+								<p>Your satisfaction is my top priority.</p>
+							</div>
+						</div>
+		
+					</div>
+				</div>
+		
+				<!-- Right Content: Hexagon Visual -->
+				<div class="why-choose__visual gs-reveal-wchex">
+					<div class="hex-shadow-wrapper">
+						<div class="hexagon-outer">
+							<div class="hexagon-inner">
+								<!-- Apni Portrait Image Yahan Dalein -->
+								<img src="Generated Image May 25, 2026 - 10_37AM.webp"
+									alt="R Designer Portrait" class="hexagon-img" loading="lazy">
+							</div>
+						</div>
+					</div>
+				</div>
+		
+			</div>
+		</section>
+		<!-- === WHY CHOOSE ME SECTION END === -->
+    </main>
+
+		<!-- === FOOTER SECTION START === -->
+		<footer class="footer" id="footer">
+			<div class="container footer__container">
+		
+				<!-- Top 4 Columns -->
+				<div class="footer__top gs-reveal-footer">
+		
+					<!-- Col 1: Brand Info -->
+					<div class="footer__brand">
+						<a href="#" class="logo footer__logo" data-hover>
+							<!-- Yahan bhi apne logo ka sahi path daal dena -->
+							<img src="brand logo/Gemini_Generated_Image_swb3rtswb.webp" alt="R Designer Logo" class="logo__img" loading="lazy">
+						</a>
+						<p class="footer__desc">
+							Designing visual stories<br>that leave a lasting impact.
+						</p>
+						<div class="footer__socials">
+							<a href="#" class="social-btn" data-hover>
+								<!-- Twitter / X Icon -->
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+									<path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+								</svg>
+							</a>
+							<a href="#" class="social-btn" data-hover>
+								<!-- Instagram Icon -->
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+									<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+									<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+								</svg>
+							</a>
+							<a href="#" class="social-btn" data-hover>
+								<!-- Facebook Icon -->
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round">
+									<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+		
+					<!-- Col 2: Quick Links -->
+					<!-- Col 2: Quick Links -->
+					<div class="footer__links">
+						<h4 class="footer__heading">QUICK LINKS</h4>
+						<ul>
+							<li><a href="#top" data-hover>Home</a></li>
+							<li><a href="#about" data-hover>About</a></li>
+							<li><a href="#portfolio" data-hover>Work</a></li>
+							<li><a href="#ai-work" data-hover>AI Work</a></li>
+							<li><a href="#services" data-hover>Services</a></li>
+							<li><a href="#footer" data-hover>Contact</a></li>
+						</ul>
+					</div>
+		
+					<!-- Col 3: Services -->
+					<div class="footer__links">
+						<h4 class="footer__heading">SERVICES</h4>
+						<ul>
+							<li><a href="#branding" data-hover>Brand Identity</a></li>
+							<li><a href="#social-media" data-hover>Social Media Designs</a></li>
+							<li><a href="#print-designs" data-hover>Poster Design</a></li>
+							<li><a href="#packaging" data-hover>Advertising Creatives Design</a></li>
+							<li><a href="#photo-manipulation" data-hover>Photo Manipulation</a></li>
+							<li><a href="#thumbnail-gallery" data-hover>Youtube Thumbnail</a></li>
+						</ul>
+					</div>
+		
+					<!-- Col 4: Contact -->
+					<div class="footer__contact">
+						<h4 class="footer__heading">CONTACT</h4>
+						<ul>
+							<li>
+								<span class="contact-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+										</path>
+										<polyline points="22,6 12,13 2,6"></polyline>
+									</svg>
+								</span>
+								hello@rdesigner.com
+							</li>
+							<li>
+								<span class="contact-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path
+											d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+										</path>
+									</svg>
+								</span>
+								+123 456 7890
+							</li>
+							<li>
+								<span class="contact-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round">
+										<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+										<circle cx="12" cy="10" r="3"></circle>
+									</svg>
+								</span>
+								New York, USA.
+							</li>
+						</ul>
+					</div>
+		
+				</div>
+		
+				<!-- Bottom Bar -->
+				<div class="footer__bottom gs-reveal-footer">
+					<p>&copy; 2026 All rights reserved.</p>
+					<p>LET'S <span class="text-accent">CREATE SOMETHING AMAZING!</span></p>
+				</div>
+		
+			</div>
+		</footer>
+		<!-- === FOOTER SECTION END === -->
+
+    <!-- Scripts -->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script defer src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+	<script defer src="script.js"></script>
+</body>
+</html>

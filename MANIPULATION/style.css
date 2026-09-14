@@ -1,0 +1,322 @@
+/* --- Base Reset & Variables --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --btn-bg: #eaeaec;
+    --btn-hover: #d1d1d4;
+    --font-primary: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --card-width: 140px;
+    --card-height: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important; /* Kisi bhi tarah ka scrollbar block karega */
+    position: fixed; /* Page ko ekdum screen par chipka dega (lock) */
+    
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    
+    /* Mobile ke faltu scrolls rokne ke liye */
+    overscroll-behavior: none; 
+    touch-action: none; 
+}
+
+/* --- Fixed UI Layer --- */
+.ui-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through to 3D scene */
+    z-index: 100;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header Left */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    pointer-events: auto;
+}
+
+.thumb-wrapper {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.thumb-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.museum-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+/* Header Right (Controls) */
+.header-right {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    gap: 8px;
+    pointer-events: auto;
+}
+
+.control-btn {
+    background-color: var(--btn-bg);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.control-btn.active {
+    color: #000;
+}
+
+.control-btn::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-right: 6px;
+    transition: background 0.3s;
+}
+
+.control-btn.active::before {
+    background-color: #ff3b30; /* Red dot for active state */
+}
+
+/* Bottom Left Typography */
+.bottom-left {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+}
+
+.huge-text {
+    font-size: 8vw;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+/* Bottom Right Watermark */
+.bottom-right {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    pointer-events: auto;
+}
+
+/* --- 3D Scene --- */
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2500px;
+    z-index: 10;
+}
+
+.tilt-wrapper {
+    /* translateY(-10vh) laga kar desktop par bhi ring ko upar move kiya gaya hai */
+    transform: translateY(-5vh) rotateX(-8deg);
+    transform-style: preserve-3d;
+}
+
+.ring {
+    position: relative;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+}
+
+.card-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+}
+
+/* The actual image card */
+.card {
+    position: absolute;
+    width: var(--card-width);
+    height: var(--card-height);
+    /* Center the card relative to wrapper */
+    left: calc(var(--card-width) / -2);
+    top: calc(var(--card-height) / -2);
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    /* Smooth transitions for the hover effect */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+                filter 0.5s ease;
+    will-change: transform;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Prevents ghost dragging */
+}
+
+/* Hover Effect: Scale up, push forward in 3D space, and add shadow */
+.card:hover {
+    transform: scale(1.35) translateZ(40px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    z-index: 100;
+}
+
+/* --- Lightbox (Enlarged View) --- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.lightbox-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
+
+.lightbox-img {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.2);
+    transform: scale(0.9);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.lightbox.active .lightbox-img {
+    transform: scale(1);
+}
+
+/* Styling for missing/black cards */
+.card.empty-card {
+    background-color: #000;
+    cursor: default;
+    pointer-events: none; /* Black card ko hover ya click karne se roke ga */
+    box-shadow: none;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .huge-text { font-size: 10vw; }
+    /* Tablet par thoda upar kiya */
+    .tilt-wrapper { transform: translateY(-50px) rotateX(-8deg) scale(0.8); }
+}
+
+@media (max-width: 768px) {
+    .ui-layer { padding: 20px; }
+    
+    /* YEH LINE THUMBNAIL AUR TITLE KO MOBILE PAR HIDE KAREGI */
+    .header-left { display: none; }
+    
+    .header-right { top: 20px; right: 20px; }
+    .bottom-left { left: 20px; bottom: 60px; }
+    .bottom-right { bottom: 20px; right: 20px; }
+    .huge-text { font-size: 15vw; }
+    
+    .tilt-wrapper { transform: translateY(-10vh) rotateX(-8deg) scale(0.55); }
+}
+
+@media (max-width: 480px) {
+    /* Chhoti screen par ring ko aur thoda upar kiya */
+    .tilt-wrapper { transform: translateY(-12vh) rotateX(-8deg) scale(0.45); }
+}

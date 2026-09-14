@@ -1,0 +1,175 @@
+/* =========================================
+   Reset & Base Styles
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #000000;
+    /* Responsive base sizes using vmin for perfect scaling on all devices */
+    --item-width: 20vmin;
+    --item-height: 14vmin;
+    --radius: 35vmin;
+    --border-radius: 6px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling, full viewport experience */
+    width: 100vw;
+    height: 100vh;
+    /* Use svh for mobile browser UI bar handling */
+    height: 100svh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   Gallery Layout
+   ========================================= */
+.gallery-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery-ring {
+    position: relative;
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+/* =========================================
+   Individual Gallery Items
+   ========================================= */
+.gallery-item {
+    position: absolute;
+    left: calc(var(--item-width) / -2);
+    top: calc(var(--item-height) / -2);
+    width: var(--item-width);
+    height: var(--item-height);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #111;
+    
+    /* ADD THESE 3 LINES FOR SMOOTHNESS */
+    backface-visibility: hidden; 
+    transform-style: preserve-3d;
+    transform: translateZ(0); 
+
+    will-change: transform, opacity, filter;
+    transform-origin: center center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    user-select: none; 
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0);
+    transition: background 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.gallery-item:hover::after {
+    background: rgba(255,255,255,0.05); /* Subtle hover brighten */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+    pointer-events: none; /* Let the parent div handle clicks */
+    transform: scale(1.01); /* Fix slight edge bleeding */
+}
+
+/* Expanded State Cursor */
+.gallery-item.is-expanded {
+    cursor: zoom-out;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+/* =========================================
+   UI Overlay
+   ========================================= */
+.interaction-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 5;
+    transition: opacity 0.5s ease;
+}
+
+.is-viewing .interaction-hint {
+    opacity: 0;
+}
+
+/* Layout Toggle Button */
+.layout-btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.layout-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #000000;
+}
+
+/* =========================================
+   Responsive Breakpoints
+   ========================================= */
+@media (max-width: 768px) {
+    :root {
+        /* Larger proportions relative to screen on mobile */
+        --item-width: 28vmin;
+        --item-height: 20vmin;
+        --radius: 38vmin;
+        --border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --item-width: 32vmin;
+        --item-height: 24vmin;
+        --radius: 40vmin;
+    }
+}
