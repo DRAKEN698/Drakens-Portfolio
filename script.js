@@ -1251,15 +1251,3 @@ window.addEventListener("pageshow", (event) => {
     }
 });
 
-// --- FIX FOR BLACK SCREEN ON BACK BUTTON (HOME PAGE) ---
-window.addEventListener("pageshow", function (event) {
-    // Agar user back button daba kar is page par wapas aaya hai
-    const isBackNavigation = event.persisted || 
-      (performance.getEntriesByType("navigation").length && 
-       performance.getEntriesByType("navigation")[0].type === "back_forward");
-
-    if (isBackNavigation) {
-        // Page ko instantly reload kar do taaki saari exit-animations reset ho jayein
-        window.location.reload();
-    }
-});
