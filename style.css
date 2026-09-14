@@ -35,16 +35,20 @@
 
 /* Firefox, IE aur Edge ke liye */
 html, body {
-   -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     overflow-x: hidden !important;
     width: 100%;
     position: relative;
     margin: 0;
     padding: 0;
-
     font-family: var(--font-body);
-    cursor: none; /* Hide default cursor for custom one */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+    
+    /* 🚀 YEH LINE ADD KAREIN (Auto-scroll ko rokne ke liye) */
+    overflow-anchor: none; 
 }
 
 html {
