@@ -2913,17 +2913,6 @@ ul {
 }
 
 /* =========================================
-   MOBILE FULL SCREEN FIX (DYNAMIC VIEWPORT)
-   ========================================= */
-@media screen and (max-width: 767px) {
-    .hero {
-        height: 100dvh !important; /* URL बार के हिसाब से अपने आप स्क्रीन साइज एडजस्ट करेगा */
-        min-height: 100dvh !important;
-        position: relative;
-    }
-}
-
-/* =========================================
    MOBILE FIX FOR CIRCLE IMAGE (WHY CHOOSE ME)
    ========================================= */
 @media screen and (max-width: 767px) {
