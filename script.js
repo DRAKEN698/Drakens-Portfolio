@@ -1,5 +1,8 @@
 // Ensure DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
+  // 🚀 FIX: Mobile पर स्क्रॉल करते टाइम GSAP का Jump बंद करने के लिए
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
   // 1. INITIALIZE LENIS (SMOOTH SCROLLING) ONLY FOR DESKTOP
   if (window.innerWidth > 768) {
     window.lenis = new Lenis({

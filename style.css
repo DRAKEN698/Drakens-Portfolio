@@ -3095,10 +3095,20 @@ ul {
     }
 }
 
-
-
-
-
+/* =========================================
+   MOBILE FIX: HERO SECTION JUMP / RESIZE
+   ========================================= */
+@media screen and (max-width: 767px) {
+    .hero {
+        /* URL बार छुपने पर हाइट नहीं बदलेगी */
+        height: 100svh !important; 
+        min-height: 100svh !important;
+    }
+    
+    .hero__image-area {
+        height: 100svh !important;
+    }
+}
 
 /* RESPONSIVE FOOTER */
 @media screen and (max-width: 1024px) {
