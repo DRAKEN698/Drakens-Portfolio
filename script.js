@@ -1214,7 +1214,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================================
-// 25. FIX: BACK BUTTON SCROLL RESTORATION (STAY ON SAME POSITION)
+// 25. FIX: BACK BUTTON SCROLL RESTORATION & BLACK SCREEN
 // =========================================
 
 // Step 1: Kisi dusre page par jane se pehle current scroll location save karlo
@@ -1225,29 +1225,37 @@ window.addEventListener("beforeunload", () => {
 // Step 2: Jab wapas is page par aayen (Back button dabane par)
 window.addEventListener("pageshow", (event) => {
     
-    // Fix: Agar back aane par kaala parda screen par atak jaye toh usko hatana
-    if (event.persisted) {
+    // Check karein ki user Back Button daba kar aaya hai ya nahi
+    const isBackNavigation = event.persisted || 
+      (performance.getEntriesByType("navigation").length && 
+       performance.getEntriesByType("navigation")[0].type === "back_forward");
+
+    if (isBackNavigation) {
+        // 🚀 FIX 1: Normal CSS waale parde ko hatayein
         const transitionOverlay = document.querySelector(".page-transition");
         if (transitionOverlay) {
             transitionOverlay.classList.remove("active", "bottom-origin");
             transitionOverlay.classList.add("loaded");
         }
+
+        // 🚀 FIX 2: GSAP waale parde (Branding Button) ko wapas neeche bhejein
+        const gsapOverlay = document.querySelector(".page-transition-overlay");
+        if (gsapOverlay) {
+            // GSAP se parde ko turant 100% neeche bhej do
+            gsap.set(gsapOverlay, { y: "100%", clearProps: "all" });
+        }
     }
 
-    // Save ki hui purani location nikalo
+    // Save ki hui purani scroll location nikalo aur wapas wahi le jao
     const savedScroll = sessionStorage.getItem("savedScrollPosition");
     
     if (savedScroll) {
-        // Thoda sa delay (150ms) de rahe hain taaki GSAP (animations) theek se load ho jayein
         setTimeout(() => {
             if (window.lenis) {
-                // Desktop ke liye (jahan Lenis smooth scroll active hai)
                 window.lenis.scrollTo(parseFloat(savedScroll), { immediate: true });
             } else {
-                // Mobile ke liye (jahan normal scroll active hai)
                 window.scrollTo({ top: parseFloat(savedScroll), behavior: "instant" });
             }
         }, 150);
     }
 });
-
