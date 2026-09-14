@@ -90,7 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
  // --- 3 & 4. Infinite Looping Mathematical Engine ---
     const totalCards = cards.length;
     let spreadX, curveFactor, tiltFactor;
-    let virtualScroll = 0; // Tracks infinite scroll position
+    // Memory se purana scroll check karo, agar nahi hai toh 0 se shuru karo
+    let savedScroll = sessionStorage.getItem("brandingScrollPos");
+    let virtualScroll = savedScroll ? parseFloat(savedScroll) : 0;
+
+    // Jab user page chhod kar wapas jaye, tab uski current position save kar lo
+    window.addEventListener("beforeunload", () => {
+        sessionStorage.setItem("brandingScrollPos", virtualScroll);
+    });
 
     function calculateLayoutParams() {
         const ww = window.innerWidth;
