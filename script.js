@@ -1015,29 +1015,6 @@ ScrollTrigger.create({
         },
         "-=0.4",
       )
-
-      // 3. Slide in and Scale up the Hexagon Image
-      .to(
-        ".gs-reveal-wchex",
-        {
-          x: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 1.2,
-          ease: "power3.out",
-          onComplete: () => {
-            // Start Continuous Floating Animation ONLY after reveal is done
-            gsap.to(".hex-shadow-wrapper", {
-              y: -15, // Float up by 15px
-              duration: 2.5,
-              ease: "sine.inOut",
-              yoyo: true,
-              repeat: -1, // Infinite loop
-            });
-          },
-        },
-        "-=0.8",
-      );
   },
 });
 

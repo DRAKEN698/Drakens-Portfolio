@@ -2365,50 +2365,35 @@ ul {
     line-height: 1.5;
 }
 
-/* --- Right Visual (Pure CSS Hexagon with Border & Shadow) --- */
+/* --- Right Visual (Circle Image) --- */
 .why-choose__visual {
     display: flex;
-    justify-content: flex-end;
-}
-
-/* The wrapper creates the drop shadow which perfectly follows the clip-path */
-.hex-shadow-wrapper {
-    width: 100%;
-    max-width: 700px; /* Controls image size */
-    filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.15));
-    /* Animation hook for GSAP floating */
-    will-change: transform; 
+    justify-content: center; /* इमेज को सेंटर में रखेगा */
+    align-items: center;
     position: relative;
-    right: 200px;
     top: 120px;
-    margin-bottom: 200px;
+    left: -50px;
 }
 
-/* The outer white hexagon (acts as the thick border) */
-.hexagon-outer {
+.normal-img-wrapper {
     width: 100%;
-    aspect-ratio: 1 / 1.15; /* Perfect geometry for a flat-sided hexagon */
-    background-color: #FFFFFF;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    padding: 12px; /* This thickness becomes the white border */
+    max-width: 550px; /* सर्कल का साइज, इसे कम-ज्यादा कर सकते हैं */
+    aspect-ratio: 1 / 1; /* 🚀 EXACT 1:1 RATIO (गोल करने के लिए जरूरी) */
+    border-radius: 50%; /* 🚀 PERFECT CIRCLE (परफेक्ट गोल) */
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* डार्क बैकग्राउंड पर शैडो */
+    background-color: #111;
+    
+    /* (Optional) अगर गोल इमेज के चारो तरफ एक हल्की सी आउटलाइन/बॉर्डर चाहिए तो ये लाइन रखें, वरना हटा दें */
+    border: 4px solid rgba(255, 255, 255, 0.05); 
 }
 
-/* The inner hexagon that holds the image */
-.hexagon-inner {
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-.hexagon-img {
+.normal-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    transform: scale(1.5);
-    position: relative;
-    top: 200px;
-    right: 20px;
+    object-fit: cover; /* इमेज बिना पिचके (stretch) गोल शेप में फिट होगी */
+    object-position: center top; /* अगर चेहरा ऊपर से कट रहा हो तो इसे 'center' की जगह 'center top' रखें */
+    display: block;
 }
 
 /* =========================================
@@ -2921,6 +2906,46 @@ ul {
 
 .portfolio__card[data-category="youtube-thumbnail"] {
     aspect-ratio: 16 / 9 !important;
+}
+
+/* =========================================
+   MOBILE FIX: HERO SCROLL DOWN BUTTON
+   ========================================= */
+@media screen and (max-width: 767px) {
+    .hero__scroll {
+        bottom: 5rem !important; /* इसे 5rem किया है ताकि स्क्रीन के नीचे से ऊपर आ जाए */
+    }
+}
+
+/* =========================================
+   MOBILE FIX FOR CIRCLE IMAGE (WHY CHOOSE ME)
+   ========================================= */
+@media screen and (max-width: 767px) {
+    .why-choose__visual {
+        display: flex !important;
+        justify-content: center !important; /* मोबाइल पर इमेज को सेंटर करेगा */
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: 3rem; /* टेक्स्ट और इमेज के बीच थोड़ा स्पेस */
+        padding-bottom: 2rem;
+        position: relative;
+        left: 0px;
+        top: 20px;
+    }
+
+    .normal-img-wrapper {
+        width: 85% !important; /* स्क्रीन से बाहर नहीं जाएगा, किनारों पर जगह छोड़ेगा */
+        max-width: 320px !important; /* मोबाइल पर ज्यादा बड़ा नहीं होगा */
+        margin: 0 auto !important; /* चारों तरफ से परफेक्ट सेंटर */
+        
+        /* पुराने Hexagon की फालतू सेटिंग्स को रिसेट करने के लिए */
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        transform: none !important;
+    }
 }
 
 /* =========================================
