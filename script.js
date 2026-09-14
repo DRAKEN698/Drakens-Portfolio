@@ -135,9 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // =========================================
 
 gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.config({ 
-    ignoreMobileResize: true 
-});
 // Initial States set karna (Hidden states)
 gsap.set(".header-group", { y: 50, opacity: 0 });
 gsap.set(".intro-text", { y: 30, opacity: 0 });

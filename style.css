@@ -46,9 +46,6 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: none;
-    
-    /* 🚀 YEH LINE ADD KAREIN (Auto-scroll ko rokne ke liye) */
-    overflow-anchor: none; 
 }
 
 html {
