@@ -2,7 +2,7 @@
  * Data Array: Unsplash assets
  */
 const imageData = [
-  "Thumbnail image/1.webp",
+  "Thumbnail image/1.webp ",
   "Thumbnail image/2.webp",
   "Thumbnail image/3.webp",
   "Thumbnail image/4.webp",
@@ -42,40 +42,46 @@ const stackProxy = { progress: 0 };
 let stackTimeline; // Stack Loop Timeline
 
 /**
- * 
- * Initialization (UPDATED FOR SMOOTH LOADING)
+ * Initialization (UPDATED FOR LAZY LOADING & SMOOTH FADE-IN)
  */
-async function initGallery() {
-  // Array to hold all image loading promises
-  const loadPromises = imageData.map((src, index) => {
-    return new Promise((resolve) => {
-      const item = document.createElement("div");
-      item.className = "gallery-item";
-      item.dataset.index = index;
-      
-      // Hide initially to prevent layout shifts
-      gsap.set(item, { opacity: 0, scale: 0 }); 
+function initGallery() {
+  // Bina kisi delay ke elements create karein
+  imageData.forEach((src, index) => {
+    const item = document.createElement("div");
+    item.className = "gallery-item";
+    item.dataset.index = index;
+    
+    // Container ko initially hide karein (animation ke liye)
+    gsap.set(item, { opacity: 0, scale: 0 }); 
 
-      const img = new Image();
-      img.onload = () => resolve(); // Jab image load ho jaye tab aage badho
-      img.onerror = () => resolve(); // Agar koi image error de toh bhi aage badho
-      img.src = src;
-      
-      item.appendChild(img);
-      galleryRing.appendChild(item);
-      items.push(item);
+    const img = new Image();
+    
+    // 🔥 1. NATIVE LAZY LOADING & ASYNC DECODING ADD KIYA 🔥
+    img.loading = "lazy"; 
+    img.decoding = "async";
+    
+    // Image ko shuru mein hide rakhein
+    gsap.set(img, { opacity: 0 });
 
-      attachInteractions(item);
-    });
+    // 🔥 2. JAISE HI IMAGE LOAD HO, USKO SMOOTHLY FADE-IN KAREIN 🔥
+    img.onload = () => {
+      gsap.to(img, { opacity: 1, duration: 0.8, ease: "power2.out" });
+    };
+    
+    img.src = src;
+    
+    item.appendChild(img);
+    galleryRing.appendChild(item);
+    items.push(item);
+
+    attachInteractions(item);
   });
 
-  // WAIT FOR ALL IMAGES TO LOAD BEFORE ANIMATING
-  await Promise.all(loadPromises);
-
-  // Jab saari images load ho jayein, tab math calculations aur animation start karo
+  // Images ka wait kiye bina math calculations aur animation turant start karein!
   calculateRadius();
   updatePositions(true);
 
+  // Boxes ka aane ka animation
   gsap.fromTo(
     items,
     { scale: 0, opacity: 0, rotation: () => Math.random() * 90 - 45 },
@@ -84,7 +90,7 @@ async function initGallery() {
       opacity: 1,
       rotation: 0,
       duration: 1.5,
-      stagger: 0.1, // Stagger hone se ek-ek karke ayenge, smooth lagega
+      stagger: 0.1, 
       ease: "expo.out",
       onComplete: startRotation,
     }
@@ -329,6 +335,7 @@ function attachInteractions(item) {
  */
 function openImage(item) {
   isAnimating = true;
+  document.body.classList.add("is-animating");
   expandedItem = item;
   hoveredItem = null; // BUG FIX: Clear hover state so it doesn't get stuck later
   document.body.classList.add("is-viewing");

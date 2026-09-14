@@ -49,20 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 2. CUSTOM CURSOR LOGIC
+  // 2. CUSTOM CURSOR LOGIC (OPTIMIZED GPU VERSION)
   const cursorDot = document.querySelector("[data-cursor-dot]");
   const cursorOutline = document.querySelector("[data-cursor-outline]");
   const hoverElements = document.querySelectorAll("[data-hover]");
+
+  // Setup initial GPU hardware acceleration
+  gsap.set([cursorDot, cursorOutline], { force3D: true });
 
   window.addEventListener("mousemove", (e) => {
     const posX = e.clientX;
     const posY = e.clientY;
 
-    // Instant follow for dot
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
+    // Instant follow for dot using GSAP transform (Zero layout recalculation)
+    gsap.set(cursorDot, { x: posX, y: posY });
 
-    // Smooth follow for outline using GSAP for better performance
+    // Smooth follow for outline
     gsap.to(cursorOutline, {
       x: posX,
       y: posY,
