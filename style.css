@@ -43,6 +43,7 @@ html, body {
     position: relative;
     margin: 0;
     padding: 0;
+    overscroll-behavior: none;
 }
 
 html {
@@ -58,11 +59,6 @@ body {
     overflow-x: hidden;
     cursor: none; /* Hide default cursor for custom one */
 }
-
-body.is-animating .gallery-item {
-    pointer-events: none !important;
-}
-
 
 a {
     text-decoration: none;
@@ -2741,6 +2737,7 @@ ul {
     opacity: 0;
     z-index: 4;
     pointer-events: none;
+
     transform: translateZ(0); 
     will-change: opacity;
 }
