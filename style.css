@@ -842,11 +842,6 @@ ul {
     .hero__desc {
         max-width: 80%;
     }
-    .hero__scroll {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 2rem;
-    }
     .hero__actions {
         justify-content: center;
     }
@@ -2909,15 +2904,6 @@ ul {
 }
 
 /* =========================================
-   MOBILE FIX: HERO SCROLL DOWN BUTTON
-   ========================================= */
-@media screen and (max-width: 767px) {
-    .hero__scroll {
-        bottom: 5rem !important; /* इसे 5rem किया है ताकि स्क्रीन के नीचे से ऊपर आ जाए */
-    }
-}
-
-/* =========================================
    MOBILE FIX FOR CIRCLE IMAGE (WHY CHOOSE ME)
    ========================================= */
 @media screen and (max-width: 767px) {
@@ -3580,10 +3566,6 @@ ul {
     .hero__actions .btn {
         width: 100%; /* Buttons full width honge mobile par */
     }
-    .hero__scroll {
-        bottom: 1.5rem;
-    }
-
 
     /* Marquee */
     .marquee {
@@ -3778,7 +3760,7 @@ ul {
     .hero__scroll {
         left: 50% !important; /* Ye usko exactly center me layega */
         transform: translateX(-50%) !important; 
-        bottom: 2rem !important; /* Typo fix kar diya */
+        bottom: 4rem !important; /* Typo fix kar diya */
         width: max-content; /* Text aur icon ko ek line me rakhega */
     }
 }
