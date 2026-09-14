@@ -35,15 +35,16 @@
 
 /* Firefox, IE aur Edge ke liye */
 html, body {
-    -ms-overflow-style: none;  /* IE and Edge */
+   -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    overflow-x: hidden !important; /* 🚀 SABSE BADA FIX: Ye left-right shake band karega */
+    overflow-x: hidden !important;
     width: 100%;
-    max-width: 100%;
     position: relative;
     margin: 0;
     padding: 0;
-    overscroll-behavior: none;
+
+    font-family: var(--font-body);
+    cursor: none; /* Hide default cursor for custom one */
 }
 
 html {
