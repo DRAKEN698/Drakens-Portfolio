@@ -2,24 +2,25 @@
  * Data Array: Unsplash assets
  */
 const imageData = [
-  "../Thumbnail-image/1.webp",
-  "../Thumbnail-image/2.webp",
-  "../Thumbnail-image/3.webp",
-  "../Thumbnail-image/4.webp",
-  "../Thumbnail-image/5.webp",
-  "../Thumbnail-image/6.webp",
-  "../Thumbnail-image/7.webp",
-  "../Thumbnail-image/8.webp",
-  "../Thumbnail-image/9.webp",
-  "../Thumbnail-image/10.webp",
-  "../Thumbnail-image/11.webp",
-  "../Thumbnail-image/12.webp",
-  "../Thumbnail-image/13.webp",
-  "../Thumbnail-image/14.webp",
-  "../Thumbnail-image/15.webp",
-  "../Thumbnail-image/16.webp",
-  "../Thumbnail-image/17.webp",
-  "../Thumbnail-image/18.webp",
+  // /Drakens-Portfolio/ lagane se browser hamesha sahi jagah image dhoondhega
+  "/Drakens-Portfolio/Thumbnail image/1.webp",
+  "/Drakens-Portfolio/Thumbnail image/2.webp",
+  "/Drakens-Portfolio/Thumbnail image/3.webp",
+  "/Drakens-Portfolio/Thumbnail image/4.webp",
+  "/Drakens-Portfolio/Thumbnail image/5.webp",
+  "/Drakens-Portfolio/Thumbnail image/6.webp",
+  "/Drakens-Portfolio/Thumbnail image/7.webp",
+  "/Drakens-Portfolio/Thumbnail image/8.webp",
+  "/Drakens-Portfolio/Thumbnail image/9.webp",
+  "/Drakens-Portfolio/Thumbnail image/10.webp",
+  "/Drakens-Portfolio/Thumbnail image/11.webp",
+  "/Drakens-Portfolio/Thumbnail image/12.webp",
+  "/Drakens-Portfolio/Thumbnail image/13.webp",
+  "/Drakens-Portfolio/Thumbnail image/14.webp",
+  "/Drakens-Portfolio/Thumbnail image/15.webp",
+  "/Drakens-Portfolio/Thumbnail image/16.webp",
+  "/Drakens-Portfolio/Thumbnail image/17.webp",
+  "/Drakens-Portfolio/Thumbnail image/18.webp"
 ];
 
 // Core DOM Elements
