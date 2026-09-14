@@ -2,8 +2,8 @@
  * Data Array: Unsplash assets
  */
 const imageData = [
-  "Thumbnail-image/1.WEBP",
-  "Thumbnail-image/2.WEBP",
+  "THUMNAIL/Thumbnail-Image/1.WEBP",
+  "THUMNAIL/Thumbnail-Image/2.WEBP",
   "Thumbnail-image/3.WEBP",
   "Thumbnail-image/4.WEBP",
   "Thumbnail-image/5.WEBP",
