@@ -314,3 +314,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// --- FIX FOR BLANK SCREEN ON BACK BUTTON (BFCache) ---
+  window.addEventListener("pageshow", (event) => {
+    // Agar page browser ki memory (cache) se load hua hai
+    if (event.persisted) {
+      // Loader ko hata do
+      gsap.set(".page-loader", { display: "none" });
+      
+      // Gallery aur progress bar ko instantly wapas dikha do
+      gsap.set(".gallery-container", { opacity: 1, scale: 1 });
+      gsap.set(".progress-wrapper", { opacity: 1, y: 0 });
+      
+      // Modal agar open reh gaya tha toh band kar do
+      gsap.set(".modal-overlay", { opacity: 0, pointerEvents: "none" });
+      isModalOpen = false;
+      
+      // Scroll dobara chalu kar do
+      lenis.start();
+    }
+  });
