@@ -105,6 +105,11 @@ body {
 .gallery-item.is-expanded {
     cursor: zoom-out;
     box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+
+    /* 👇 ADD THESE 3 LINES TO FIX BLUR ISSUE 👇 */
+    will-change: auto !important;
+    backface-visibility: visible !important;
+    transform-style: flat !important;
 }
 
 /* =========================================

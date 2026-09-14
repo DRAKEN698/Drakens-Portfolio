@@ -351,6 +351,7 @@ function openImage(item) {
     opacity: 1,
     duration: 1.2,
     ease: "expo.inOut",
+    force3D: false, // <--- YEH LINE ADD KAREIN (Image ko sharp rakhega)
     onComplete: () => (isAnimating = false),
   });
 
@@ -401,10 +402,11 @@ function closeImage(item) {
     zIndex: targetZ,
     duration: 1.2,
     ease: "expo.inOut",
+    force3D: false, // <--- YEH LINE ADD KAREIN
     onComplete: () => {
       item.classList.remove("is-transitioning");
       expandedItem = null;
-      hoveredItem = null; // BUG FIX: Ensure it's clear
+      hoveredItem = null;
       isAnimating = false;
 
       if (isStackedMode) stackTimeline.resume();
