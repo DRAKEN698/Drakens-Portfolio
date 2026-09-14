@@ -842,6 +842,11 @@ ul {
     .hero__desc {
         max-width: 80%;
     }
+    .hero__scroll {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2rem;
+    }
     .hero__actions {
         justify-content: center;
     }
@@ -2904,6 +2909,17 @@ ul {
 }
 
 /* =========================================
+   MOBILE FULL SCREEN FIX (DYNAMIC VIEWPORT)
+   ========================================= */
+@media screen and (max-width: 767px) {
+    .hero {
+        height: 100dvh !important; /* URL बार के हिसाब से अपने आप स्क्रीन साइज एडजस्ट करेगा */
+        min-height: 100dvh !important;
+        position: relative;
+    }
+}
+
+/* =========================================
    MOBILE FIX FOR CIRCLE IMAGE (WHY CHOOSE ME)
    ========================================= */
 @media screen and (max-width: 767px) {
@@ -3566,6 +3582,10 @@ ul {
     .hero__actions .btn {
         width: 100%; /* Buttons full width honge mobile par */
     }
+    .hero__scroll {
+        bottom: 1.5rem;
+    }
+
 
     /* Marquee */
     .marquee {
@@ -3760,7 +3780,7 @@ ul {
     .hero__scroll {
         left: 50% !important; /* Ye usko exactly center me layega */
         transform: translateX(-50%) !important; 
-        bottom: 4rem !important; /* Typo fix kar diya */
+        bottom: 2rem !important; /* Typo fix kar diya */
         width: max-content; /* Text aur icon ko ek line me rakhega */
     }
 }
