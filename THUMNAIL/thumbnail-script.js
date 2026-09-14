@@ -42,28 +42,26 @@ const stackProxy = { progress: 0 };
 let stackTimeline; // Stack Loop Timeline
 
 /**
- * Initialization (UPDATED FOR LAZY LOADING & SMOOTH FADE-IN)
+ * Initialization (UPDATED: BURST FROM CENTER ANIMATION)
  */
 function initGallery() {
-  // Bina kisi delay ke elements create karein
+  // 1. Math calculation pehle hi kar lo
+  calculateRadius();
+
+  // 2. Elements Create karo
   imageData.forEach((src, index) => {
     const item = document.createElement("div");
     item.className = "gallery-item";
     item.dataset.index = index;
     
-    // Container ko initially hide karein (animation ke liye)
-    gsap.set(item, { opacity: 0, scale: 0 }); 
+    // Shuru mein center pe aur chota rakho
+    gsap.set(item, { x: 0, y: 0, opacity: 0, scale: 0 }); 
 
     const img = new Image();
-    
-    // 🔥 1. NATIVE LAZY LOADING & ASYNC DECODING ADD KIYA 🔥
     img.loading = "lazy"; 
     img.decoding = "async";
-    
-    // Image ko shuru mein hide rakhein
     gsap.set(img, { opacity: 0 });
 
-    // 🔥 2. JAISE HI IMAGE LOAD HO, USKO SMOOTHLY FADE-IN KAREIN 🔥
     img.onload = () => {
       gsap.to(img, { opacity: 1, duration: 0.8, ease: "power2.out" });
     };
@@ -76,6 +74,45 @@ function initGallery() {
 
     attachInteractions(item);
   });
+
+  // 3. JADOO: 50ms ka chota sa delay taaki browser saans le sake
+  setTimeout(() => {
+    const angleOffset = rotationProxy.angle * (Math.PI / 180);
+
+    // Har image ko center se uski asli jagah par bhejo
+    items.forEach((item, i) => {
+      const angle = (i / numItems) * Math.PI * 2 + angleOffset;
+      const targetX = Math.cos(angle) * currentRadius;
+      const targetY = Math.sin(angle) * currentRadius;
+
+      gsap.fromTo(
+        item,
+        { 
+          x: 0, 
+          y: 0, 
+          scale: 0, 
+          opacity: 0, 
+          rotation: Math.random() * 180 - 90 // Random angle se aayengi
+        },
+        {
+          x: targetX,
+          y: targetY,
+          scale: 1,
+          opacity: 1,
+          rotation: 0,
+          duration: 1.5,
+          ease: "expo.out",
+          delay: i * 0.05, // Ek ek karke nikalne ka effect
+          force3D: true
+        }
+      );
+    });
+
+    // Jab saari images apni jagah pohoch jayein (approx 2.5 seconds), tab circle ghumana shuru karo
+    gsap.delayedCall(2.5, startRotation);
+
+  }, 50);
+
 
   // Images ka wait kiye bina math calculations aur animation turant start karein!
   calculateRadius();
