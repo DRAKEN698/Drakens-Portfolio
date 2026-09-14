@@ -1250,3 +1250,32 @@ window.addEventListener("pageshow", (event) => {
         }, 150);
     }
 });
+
+// --- BULLETPROOF FIX FOR BLANK SCREEN ON BACK BUTTON ---
+  window.addEventListener("pageshow", (event) => {
+    // Check if loaded from cache OR if navigation type is back/forward
+    const isBackNavigation = event.persisted || 
+      (performance.getEntriesByType("navigation").length && 
+       performance.getEntriesByType("navigation")[0].type === "back_forward");
+
+    if (isBackNavigation) {
+      // Thoda sa delay dete hain taaki DOM live server par ready ho jaye
+      setTimeout(() => {
+        // Loader ko force hide karo
+        gsap.set(".page-loader", { display: "none" });
+        
+        // Gallery instantly dikhao
+        gsap.set(".gallery-container", { opacity: 1, scale: 1, visibility: "visible" });
+        gsap.set(".progress-wrapper", { opacity: 1, y: 0 });
+        
+        // Agar modal fasa hua hai toh band karo
+        gsap.set(".modal-overlay", { opacity: 0, pointerEvents: "none" });
+        isModalOpen = false;
+        
+        // Scroll wapas chalu karo
+        if(typeof lenis !== "undefined") {
+            lenis.start();
+        }
+      }, 50);
+    }
+  });
