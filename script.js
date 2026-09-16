@@ -1,5 +1,80 @@
 // Ensure DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
+
+// =========================================
+  // WELCOME POPUP (NEW PROJECTS) LOGIC
+  // =========================================
+  const popupOverlay = document.getElementById("welcomePopup");
+  const closePopupBtn = document.getElementById("closePopupBtn");
+  const explorePopupBtn = document.getElementById("explorePopupBtn");
+
+  // Check if popup has already been shown in this session
+  if (!sessionStorage.getItem("welcomePopupShown") && popupOverlay) {
+      
+      // Hero animation ke khatam hone ka wait karo (approx 2.5 seconds baad popup aayega)
+      setTimeout(() => {
+          // Lenis scroll roko taaki user background me scroll na kar paye
+          if (window.lenis) window.lenis.stop();
+          document.body.style.overflow = "hidden"; // For mobile
+
+          // GSAP Animation to show Popup
+          gsap.to(popupOverlay, {
+              autoAlpha: 1, // Handles visibility & opacity
+              duration: 0.4,
+              ease: "power2.out"
+          });
+
+          gsap.to(".welcome-popup-box", {
+              scale: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "back.out(1.2)",
+              delay: 0.1
+          });
+
+      }, 2500); // 2.5 seconds delay after load
+  }
+
+  // Function to close the popup
+  const closeWelcomePopup = () => {
+      // GSAP Animation to hide Popup
+      gsap.to(".welcome-popup-box", {
+          scale: 0.9,
+          y: 30,
+          duration: 0.4,
+          ease: "power2.in"
+      });
+
+      gsap.to(popupOverlay, {
+          autoAlpha: 0,
+          duration: 0.4,
+          delay: 0.2,
+          onComplete: () => {
+              // Scroll wapas chalu karo
+              if (window.lenis) window.lenis.start();
+              document.body.style.overflow = "";
+              
+              // Session me save kar do ki popup dikh gaya hai (taaki refresh pe dobara na aaye)
+              sessionStorage.setItem("welcomePopupShown", "true");
+          }
+      });
+  };
+
+  if (closePopupBtn) closePopupBtn.addEventListener("click", closeWelcomePopup);
+  if (explorePopupBtn) {
+      explorePopupBtn.addEventListener("click", () => {
+          closeWelcomePopup();
+          // Explore dabane par "Work" (Portfolio) section par scroll kar do
+          setTimeout(() => {
+              if (window.lenis) {
+                  lenis.scrollTo("#portfolio");
+              } else {
+                  document.querySelector("#portfolio").scrollIntoView({ behavior: "smooth" });
+              }
+          }, 600); // Popup band hone ke baad scroll start hoga
+      });
+  }
+  
   // 🚀 FIX: Mobile पर स्क्रॉल करते टाइम GSAP का Jump बंद करने के लिए
   ScrollTrigger.config({ ignoreMobileResize: true });
 

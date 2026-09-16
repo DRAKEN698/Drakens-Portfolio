@@ -83,12 +83,12 @@ ul {
    ========================================= */
 .cursor-dot,
 .cursor-outline {
-    position: fixed;
+   position: fixed;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 9999;
+    z-index: 9999999; /* 🚀 FIX: Yahan 9999 ko badha kar 9999999 kar do */
     pointer-events: none;
 }
 
@@ -2907,6 +2907,157 @@ ul {
 
 .portfolio__card[data-category="youtube-thumbnail"] {
     aspect-ratio: 16 / 9 !important;
+}
+
+/* =========================================
+   WELCOME POPUP STYLES
+   ========================================= */
+.welcome-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(3, 3, 3, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100000; /* Sabse upar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    padding: 20px;
+}
+
+.welcome-popup-box {
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(230, 0, 0, 0.1);
+    transform: scale(0.9) translateY(30px);
+}
+
+.popup-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: none;
+    transition: all 0.3s ease;
+}
+
+.popup-close svg {
+    width: 24px;
+    height: 24px;
+}
+
+.popup-close:hover {
+    color: var(--accent-color);
+    transform: rotate(90deg);
+}
+
+.popup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.popup-kicker {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.popup-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: #FFFFFF;
+}
+
+.popup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.popup-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    cursor: none;
+}
+
+/* 🚀 RED "NEW" TAG */
+.popup-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    z-index: 10;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(230, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+.popup-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.popup-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.popup-item:hover .popup-img {
+    transform: scale(1.08);
+}
+
+.popup-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-footer .btn {
+    width: 100%;
+}
+
+/* Mobile Adjustments for Popup */
+@media screen and (max-width: 480px) {
+    .welcome-popup-box {
+        padding: 1.5rem;
+    }
+    .popup-grid {
+        grid-template-columns: 1fr; /* Mobile me 1 column */
+        gap: 1rem;
+    }
+    .popup-item {
+        aspect-ratio: 16/9; /* Mobile pe choti image taaki screen me fit ho */
+    }
 }
 
 /* =========================================

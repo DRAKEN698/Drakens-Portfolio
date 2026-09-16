@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { src: "MANIPULATION image/Akuma.webp", title: "Akuma" },
     { src: "MANIPULATION image/Kraven.webp", title: "Kraven" },
     { src: "MANIPULATION image/AQ Man.webp", title: "AQ Man" },
+    { src: "MANIPULATION image/Magneto.webp", title: "Magneto" },
+    
   ];
 
   const galleryGrid = document.getElementById("gallery-grid");
