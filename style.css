@@ -2940,6 +2940,14 @@ ul {
     position: relative;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(230, 0, 0, 0.1);
     transform: scale(0.9) translateY(30px);
+    
+    /* 🚀 FUTURE FIX: Zyada images aane par popup scroll hoga */
+    max-height: 90vh; 
+    overflow-y: auto;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+.welcome-popup-box::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
 }
 
 .popup-close {
@@ -3044,6 +3052,29 @@ ul {
 
 .popup-footer .btn {
     width: 100%;
+}
+
+/* 🚀 ASPECT RATIO UTILITY CLASSES (Future Control) */
+.ratio-4x5 {
+    aspect-ratio: 4 / 5 !important;
+}
+.ratio-16x9 {
+    aspect-ratio: 16 / 9 !important;
+}
+.ratio-1x1 {
+    aspect-ratio: 1 / 1 !important; /* Square - For future use */
+}
+
+/* Mobile Adjustments for Popup */
+@media screen and (max-width: 480px) {
+    .welcome-popup-box {
+        padding: 1.5rem;
+    }
+    .popup-grid {
+        grid-template-columns: 1fr; /* Mobile me 1 column */
+        gap: 1.5rem; /* Gap thoda badha diya */
+    }
+    /* Yahan se .popup-item ka aspect-ratio hata diya gaya hai */
 }
 
 /* Mobile Adjustments for Popup */
