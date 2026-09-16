@@ -3099,13 +3099,21 @@ ul {
     .hero__image-area {
         width: 100% !important;
         left: 0 !important;
+        right: auto !important;
+    }
+
+    /* 🚀 FIX: Desktop ka right: -50px reset kar diya taaki left me gap na aaye */
+    .hero__image-wrapper {
         right: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
     }
 
     /* इमेज को बिल्कुल सेंटर में सेट करना */
     .hero__img {
         object-position: center center !important;
-        opacity: 0.6 !important; /* मोबाइल पर इमेज थोड़ी डार्क रहेगी ताकि सफ़ेद टेक्स्ट चमके */
+        opacity: 0.6 !important; 
+        width: 100% !important;
     }
 
     /* मोबाइल पर ब्लैक फेड इफ़ेक्ट नीचे से ऊपर जाएगा (टेक्स्ट के पीछे) */
@@ -3119,6 +3127,8 @@ ul {
         text-align: center !important;
         padding-top: 6rem !important;
         width: 100% !important;
+        padding-left: 20px !important; /* Side se thoda space ensure karne ke liye */
+        padding-right: 20px !important;
     }
 
     .hero__desc {
