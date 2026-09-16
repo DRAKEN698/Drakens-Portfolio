@@ -3113,6 +3113,9 @@ ul {
         object-position: center center !important;
         opacity: 0.6 !important; 
         width: 100% !important;
+        position: relative;
+        left: 20px;
+
     }
 
     /* मोबाइल पर ब्लैक फेड इफ़ेक्ट नीचे से ऊपर जाएगा (टेक्स्ट के पीछे) */
