@@ -22,6 +22,8 @@ const imageData = [
   "Thumbnail image/18.webp",
   "Thumbnail image/19.webp",
   "Thumbnail image/20.webp",
+  "Thumbnail image/21.webp",
+  "Thumbnail image/22.webp",
 ];
 
 const galleryGrid = document.getElementById("gallery-grid");
