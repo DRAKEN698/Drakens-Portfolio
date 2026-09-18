@@ -2,118 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Gallery Loop | 4:5 Aspect Ratio</title>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Social Media Designs | Grid Gallery</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
 
-    <main class="gallery-wrapper">
-        <div class="gallery-grid">
+        <!-- Main Grid Container -->
+        <main class="static-gallery" id="social-grid">
+                <!-- JS se images yahan automatically aayengi -->
+        </main>
 
-            <!-- Column 1 (Scrolls Up) -->
-            <div class="gallery-column" data-direction="up" data-speed="slow">
-                <div class="gallery-track">
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
-                            alt="Abstract"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&w=800&q=80"
-                            alt="3D Art"></div>
-                </div>
-            </div>
-
-            <!-- Column 2 (Scrolls Down) -->
-            <div class="gallery-column" data-direction="down" data-speed="fast">
-                <div class="gallery-track">
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?auto=format&fit=crop&w=800&q=80"
-                            alt="Abstract"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=800&q=80"
-                            alt="Gradient"></div>
-                </div>
-            </div>
-
-            <!-- Column 3 (Scrolls Up) -->
-            <div class="gallery-column" data-direction="up" data-speed="medium">
-                <div class="gallery-track">
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=800&q=80"
-                            alt="Fashion"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1604871000636-074fa5117945?auto=format&fit=crop&w=800&q=80"
-                            alt="Art"></div>
-                </div>
-            </div>
-
-            <!-- Column 4 (Scrolls Down) -->
-            <div class="gallery-column" data-direction="down" data-speed="slow">
-                <div class="gallery-track">
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&w=800&q=80"
-                            alt="Abstract"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1618005192384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
-                            alt="Texture"></div>
-                </div>
-            </div>
-
-            <!-- Column 5 (Scrolls Up) -->
-            <div class="gallery-column" data-direction="up" data-speed="fast">
-                <div class="gallery-track">
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?auto=format&fit=crop&w=800&q=80"
-                            alt="Typography"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?auto=format&fit=crop&w=800&q=80"
-                            alt="Portrait"></div>
-                    <div class="gallery-item"><img
-                            src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80"
-                            alt="Architecture"></div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Lightbox Overlay -->
-    <div class="lightbox-overlay" id="lightbox">
-        <div class="lightbox-close">Close</div>
-        <img src="" alt="Expanded View" id="lightbox-img">
-    </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

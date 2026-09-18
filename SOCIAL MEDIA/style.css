@@ -1,219 +1,61 @@
-/* =========================================
-   Base & Reset
-   ========================================= */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --bg-color: #070707;
-    --gap: 1.5vw;
-    --radius: 4px;
+body {
+    background-color: #000000; /* Dark background */
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden; 
+    overflow-y: auto; /* Normal Scrolling */
+    padding: 2px; /* Outer border */
 }
 
-body, html {
+/* 5-Column Grid Layout */
+.static-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 🚀 5 COLUMNS */
+    gap: 2px; /* Images ke beech 2px patli line */
+    background-color: #333333; /* Line ka color */
     width: 100%;
-    height: 100vh;
-    background-color: var(--bg-color);
-    overflow: hidden; /* Hide scrollbars, purely animated grid */
-    cursor: none; /* Hide default cursor for custom one */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* =========================================
-   Custom Cursor
-   ========================================= */
-.cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: difference;
-    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-}
-
-.cursor.hovered {
-    width: 60px;
-    height: 60px;
-    background-color: transparent;
-    border: 1px solid rgba(255,255,255,0.5);
-    backdrop-filter: blur(4px);
-}
-
-/* =========================================
-   Gallery Layout
-   ========================================= */
-.gallery-wrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--gap);
-}
-
-.gallery-grid {
-    display: flex;
-    gap: var(--gap);
-    width: 100%;
-    height: 120vh; /* Taller than screen to allow offset */
-    transform: rotate(-2deg) scale(1.05); /* Slight tilt for artistic Awwwards feel */
-}
-
-.gallery-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    /* Masking to fade out top and bottom slightly */
-    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-}
-
-.gallery-track {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    will-change: transform; /* Performance optimization */
-}
-
-/* =========================================
-   Individual Images (The 4:5 Request)
-   ========================================= */
+/* Individual Image Container */
 .gallery-item {
-    width: 100%;
-    /* EXACT 4:5 ASPECT RATIO ENFORCED HERE */
-    aspect-ratio: 4 / 5;
     position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5; /* 🚀 EXACT 4:5 ASPECT RATIO */
+    background-color: #111;
     overflow: hidden;
-    border-radius: var(--radius);
-    background-color: #1a1a1a; /* Placeholder color before load */
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image fills the 4:5 box without distortion */
-    object-position: center;
-    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
-    filter: grayscale(20%) brightness(0.8);
-}
-
-/* Premium Hover Interactions */
-.gallery-item:hover img {
-    transform: scale(1.08);
-    filter: grayscale(0%) brightness(1.1);
-}
-
-
-
-/* Animation Classes applied via JS based on data attributes */
-.anim-up-medium { animation: scrollUp 30s linear infinite; }
-.anim-up-fast { animation: scrollUp 20s linear infinite; }
-
-.anim-down-slow { animation: scrollDown 45s linear infinite; }
-.anim-down-medium { animation: scrollDown 35s linear infinite; }
-.anim-down-fast { animation: scrollDown 25s linear infinite; }
-
-
-/* =========================================
-   Lightbox Expansion & Translation
-   ========================================= */
-.lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(7, 7, 7, 0.95); /* Matches your var(--bg-color) */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-}
-
-.lightbox-overlay.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.lightbox-overlay img {
-    max-height: 85vh;
-    max-width: 90vw;
-    aspect-ratio: 4 / 5; /* Maintains your requested ratio */
     object-fit: cover;
-    border-radius: 8px;
-    
-    /* The Starting State: Translated down and scaled down */
-    transform: translateY(100px) scale(0.8);
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: block;
 }
-
-/* The Ending State: Moves to original position smoothly */
-.lightbox-overlay.active img {
-    transform: translateY(0) scale(1);
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    color: white;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    z-index: 10001;
-}
-
-/* Ensure cursor shows as pointer over gallery items now */
-.gallery-item {
-    cursor: pointer;
-}
-
 
 /* =========================================
-   Responsive Design
+   RESPONSIVE (Laptops, Tablets & Mobiles)
    ========================================= */
-@media (max-width: 1200px) {
-    .gallery-grid { transform: rotate(0) scale(1); height: 100vh;}
+@media (max-width: 1400px) {
+    .static-gallery {
+        grid-template-columns: repeat(4, 1fr); /* Choti screen par 4 col */
+    }
 }
 
 @media (max-width: 1024px) {
-    /* Hide the 5th column on smaller laptops/tablets */
-    .gallery-column:nth-child(5) { display: none; }
-    :root { --gap: 2vw; }
+    .static-gallery {
+        grid-template-columns: repeat(3, 1fr); /* Tablet par 3 col */
+    }
 }
 
 @media (max-width: 768px) {
-    /* Hide 4th column on tablets */
-    .gallery-column:nth-child(4) { display: none; }
-    :root { --gap: 3vw; }
-    .cursor { display: none; } /* Disable custom cursor on touch */
-    body, html { cursor: auto; overflow-y: auto; } /* Allow normal scroll on mobile if needed, though loop is better */
-    
-    /* Reset layout for mobile to just be a normal scrolling feed if preferred, 
-       but to keep the loop effect, we retain it but with fewer columns */
-    .gallery-wrapper { padding: 5vw; }
-}
-
-@media (max-width: 480px) {
-    /* Just 2 columns for mobile to keep images large enough */
-    .gallery-column:nth-child(3) { display: none; }
-    :root { --gap: 4vw; }
+    .static-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Mobile par 2 col */
+    }
 }
