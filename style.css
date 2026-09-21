@@ -2879,6 +2879,29 @@ ul {
 }
 
 /* =========================================
+   📱 MOBILE FIX: THUMBNAIL BUTTON CENTER
+   ========================================= */
+@media screen and (max-width: 767px) {
+    .thumbnail__footer {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .thumbnail__footer a, 
+    .thumbnail__footer .btn {
+        width: auto !important; /* Button ko stretch hone se rokega */
+        padding: 1rem 2rem !important; /* Perfect button shape */
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important; /* Perfect center alignment */
+        position: relative;
+        bottom: 5px;
+    }
+}
+
+/* =========================================
    RESPONSIVE LOGO FIX
    ========================================= */
 
