@@ -1142,6 +1142,7 @@ ul {
     object-position: center 10%;
 }
 
+
 /* =========================================
    DAREDEVIL FLASHLIGHT (TORCH) EFFECT
    ========================================= */
@@ -1183,113 +1184,6 @@ ul {
 }
 
 
-/* --- Bottom Cards Grid --- */
-.ai-work__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    position: relative;
-    z-index: 10;
-}
-
-.ai-card {
-    display: block;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    aspect-ratio: 4 / 5;
-    background: #111; /* Fallback */
-}
-
-.ai-card__img-wrapper {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.ai-card__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
-    will-change: transform;
-}
-
-/* Bottom fade for the text to sit on */
-.ai-card__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 30%, transparent 100%);
-    z-index: 2;
-    transition: background 0.4s ease;
-}
-
-/* Card Label */
-.ai-card__label {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    transition: transform 0.4s ease;
-}
-
-.ai-card__icon {
-    width: 28px;
-    height: 28px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.ai-card__icon svg {
-    width: 14px;
-    height: 14px;
-    color: #fff;
-}
-
-.ai-card__label span {
-    font-family: var(--font-heading);
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    /* Adding a slight text-shadow to mimic the gritty feel from the image */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-}
-
-/* Card Hover Effects */
-.ai-card:hover .ai-card__img {
-    transform: scale(1.08);
-}
-
-.ai-card:hover .ai-card__label {
-    transform: translateY(-5px);
-}
-
-/* =========================================
-   AI WORK - CARD 2 SPECIFIC STYLE
-   ========================================= */
-.ai-work__grid .ai-card:nth-child(2) {
-    aspect-ratio: 4 / 5 !important;
-    align-self: center !important; /* Ye card ko vertically center mein laayega */
-}
-
-/* =========================================
-   AI WORK - CARD 4 SPECIFIC STYLE
-   ========================================= */
-.ai-work__grid .ai-card:nth-child(4) {
-    aspect-ratio: 16 / 9 !important;
-    align-self: center !important; /* Ye height choti hone par usko center me rakhega */
-}
 
 /* =========================================
    SERVICES SECTION
@@ -2682,7 +2576,6 @@ ul {
     color: var(--accent-color) !important; /* Red Stars */
 }
 
-
 /* =========================================
    HAMBURGER MENU & MOBILE NAV STYLES
    ========================================= */
@@ -2706,51 +2599,6 @@ ul {
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, background-color 0.3s ease;
 }
 
-/* =========================================
-   AI CARDS EXTREME GLITCH & GRUNGE EFFECT
-   ========================================= */
-
-/* 1. Halftone & Grunge Texture Overlay (Hidden by default) */
-.ai-card__img-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: -10px; /* Thoda bahar rakha hai taaki hilne pe edge na kate */
-    /* Halftone dots aur Grunge lines create kar rahe hain */
-    background-image: 
-        radial-gradient(circle, #ffffff 1.5px, transparent 2px),
-        repeating-linear-gradient(0deg, rgba(0,0,0,0.4) 0px, rgba(0,0,0,0.4) 2px, transparent 2px, transparent 6px);
-    background-size: 5px 5px, 100% 100%;
-    mix-blend-mode: difference; /* Double exposure jaisa effect dega */
-    opacity: 0;
-    z-index: 4;
-    pointer-events: none;
-
-    transform: translateZ(0); 
-    will-change: opacity;
-}
-
-
-/* =========================================
-   AI CARDS UNLIMITED STROBE (SMOOTH CROSSFADE & FIXED SPEED)
-   ========================================= */
-
-/* 1. सभी इमेजेस बाई-डिफॉल्ट छुप जाएँगी */
-.ai-card .ai-card__img {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    opacity: 0; 
-    z-index: 1;
-    
-    /* YEH 3 LINES SABSE ZAROORI HAIN LAG KHATAM KARNE KE LIYE */
-    will-change: opacity;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    
-    transition: opacity 0.4s ease-in-out;
-}
-
 /* 2. पुरानी इमेज (is-prev) स्क्रीन पर रुकी रहेगी ताकि पीछे ब्लैंक न दिखे */
 .ai-card .ai-card__img.is-prev {
     opacity: 1;
@@ -2762,147 +2610,6 @@ ul {
     opacity: 1;
     z-index: 2;
     animation: ai-card-zoom 1.2s linear forwards; /* स्पीड अब 1.2s हो गई है */
-}
-
-
-
-/* 4. Grunge Overlay */
-.ai-card__img-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    /* Blend mode aur heavy animation hata di, normal dark fade rakha hai */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
-    opacity: 0.8; 
-    z-index: 5;
-    pointer-events: none;
-    /* GPU Acceleration add ki */
-    transform: translateZ(0);
-    will-change: transform;
-}
-
-@keyframes texture-flicker {
-    0% { opacity: 0.9; transform: translate(0px, 0px) translateZ(0); }
-    50% { opacity: 0.4; transform: translate(4px, -4px) translateZ(0); }
-    100% { opacity: 0.8; transform: translate(-3px, 3px) translateZ(0); }
-}
-
-
-/* 4. Overlapping Pattern Flicker */
-@keyframes texture-flicker {
-    0% { opacity: 0.9; transform: translate(0px, 0px); }
-    50% { opacity: 0.3; transform: translate(3px, -3px); }
-    100% { opacity: 0.8; transform: translate(-2px, 2px); }
-}
-
-
-/* =========================================
-   AI CARDS STROBE (MULTIPLE IMAGES) EFFECT - AUTOMATIC (4 IMAGES)
-   ========================================= */
-
-/* Extra images by default hide रहेंगी */
-.strobe-img {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0; 
-    z-index: 3;
-    object-fit: cover;
-}
-
-/* AUTOMATIC: सभी इमेजेस हमेशा High Contrast B&W रहेंगी */
-
-
-/* Grunge और Halftone Double Exposure Layer */
-.ai-card__img-wrapper::after {
-    content: "";
-    position: absolute;
-    inset: -5px;
-    background-image: 
-        radial-gradient(circle, #ffffff 1px, transparent 1.5px),
-        repeating-linear-gradient(0deg, rgba(0,0,0,0.3) 0px, rgba(0,0,0,0.3) 2px, transparent 2px, transparent 6px);
-    background-size: 4px 4px, 100% 100%;
-    mix-blend-mode: overlay; 
-    opacity: 0.8; 
-    z-index: 5;
-    pointer-events: none;
-}
-
-
-/* =========================================
-   INTERACTIVE PRELOADER STYLES
-   ========================================= */
-:root {
-  --bg-preloader: #f4f4f4;
-}
-
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--bg-preloader);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999999; /* Highest Z-index */
-  overflow: hidden;
-  will-change: transform;
-}
-
-.stickers-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; 
-}
-
-.sticker {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: clamp(80px, 12vw, 180px);
-  height: auto;
-  aspect-ratio: 4 / 5; 
-  object-fit: cover; 
-  border-radius: 12px; 
-  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.2));
-  will-change: transform, opacity;
-  opacity: 0; 
-  transform: scale(0);
-}
-
-.preloader-counter {
-  position: absolute;
-  bottom: 2rem;
-  right: 3rem;
-  overflow: hidden;
-  z-index: 999999;
-}
-
-.counter-text {
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 900;
-  color: #111;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  display: block;
-}
-
-.instruction {
-  position: absolute;
-  bottom: 3.5rem;
-  left: 3rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #111;
-  letter-spacing: -0.02em;
-  opacity: 0.5;
 }
 
 .portfolio__card[data-category="youtube-thumbnail"] {
@@ -3065,6 +2772,58 @@ ul {
     aspect-ratio: 1 / 1 !important; /* Square - For future use */
 }
 
+
+/* =========================================
+   AI MATRIX RAIN EFFECT
+   ========================================= */
+.ai-matrix-wrapper {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Aap isko apne hisaab se bada ya chota kar sakte ho */
+    background-color: #030303;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(230, 0, 0, 0.2);
+    box-shadow: 0 0 40px rgba(230, 0, 0, 0.1);
+    margin-top: 2rem;
+    z-index: 10;
+}
+
+#red-matrix-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ai-matrix-overlay-text {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+    background: rgba(3, 3, 3, 0.8);
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(230, 0, 0, 0.3);
+    pointer-events: none;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Mobile Screens ke liye thoda adjust */
+@media screen and (max-width: 767px) {
+    .ai-matrix-wrapper {
+        height: 250px;
+    }
+}
+
 /* Mobile Adjustments for Popup */
 @media screen and (max-width: 480px) {
     .welcome-popup-box {
@@ -3190,13 +2949,6 @@ ul {
     /* Agar logo margin le raha ho left/right toh usko fix karne ke liye */
     .header .logo {
         margin-left: 0;
-    }
-}
-
-/* Mobile par sirf 3 stickers load honge, baaki hide ho jayenge */
-@media (max-width: 768px) {
-    .sticker:nth-child(n+4) {
-        display: none !important;
     }
 }
 
@@ -3922,10 +3674,6 @@ ul {
     .ai-work__visual-overlay {
         background: linear-gradient(to top, var(--bg-color) 0%, transparent 40%);
     }
-
-    .ai-work__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -3941,21 +3689,7 @@ ul {
     .ai-work__visual {
         height: 300px;
     }
-    .ai-work__grid {
-        grid-template-columns: 1fr;
-    }
     
-    /* Card 1, Card 2 aur Card 3 ko specifically 4:5 kiya gaya hai */
-    .ai-work__grid .ai-card:nth-child(1),
-    .ai-work__grid .ai-card:nth-child(2),
-    .ai-work__grid .ai-card:nth-child(3) {
-        aspect-ratio: 4 / 5 !important;
-    }
-    
-    /* Card 4 (YouTube thumbnail) 16:9 hi rahega */
-    .ai-work__grid .ai-card:nth-child(4) {
-        aspect-ratio: 16 / 9 !important;
-    }
 }
 
 

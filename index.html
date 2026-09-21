@@ -6,34 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DRAKENS | Portfolio</title>
 
-	<!-- 🚀 SABSE BADA FIX: Yahan ye script daalein -->
-	<script>
-		// Check karega ki preloader pehle chal chuka hai ya nahi
-		if (sessionStorage.getItem('preloaderDone')) {
-			// AGAR CHAL CHUKA HAI TOH TURANT CSS SE HIDE KAR DO (Flash nahi aayega)
-			document.write('<style>.preloader { display: none !important; }</style>');
-
-			// Browser ko scroll yaad rakhne do
-			if (history.scrollRestoration) {
-				history.scrollRestoration = 'auto';
-			}
-		} else {
-			// PEHLI BAAR AAYA HAI (Top par bhejo aur manual set karo)
-			if (history.scrollRestoration) {
-				history.scrollRestoration = 'manual';
-			}
-			window.scrollTo(0, 0);
-		}
-	</script>
-
-	<script>
-		// Agar Google ka bot hai, toh Preloader ko CSS se turant gayab kar do
-		if (/bot|googlebot|crawler|spider|robot|crawling|lighthouse|chrome-lighthouse/i.test(navigator.userAgent)) {
-			document.write('<style>.preloader { display: none !important; }</style>');
-		}
-	</script>
-	<!-- 🚀 FIX END -->
-
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -665,100 +637,14 @@
 					</div>
 				</div>
 		
-				<!-- Bottom Grid (4 Cards) -->
-				<div class="ai-work__grid">
-		
-					<!-- Card 1 -->
-					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
-						<div class="ai-card__img-wrapper">
-							<div class="ai-card__overlay"></div>
-						
-							<!-- 1. Default Image (Base) -->
-							<img src="Ai Work Image/DOOM.webp" alt="AI Base" class="ai-card__img" loading="lazy">
-						
-							<!-- 2. Extra Images for Fast Hover Animation (Strobe Effect) -->
-							<!-- Inme apni alag-alag 3 images ka link daal dena -->
-							<img src="Ai Work Image/Toxic.webp" alt="AI Flash 1" class="ai-card__img strobe-img img-1" loading="lazy">
-							<img src="Ai Work Image/Resident evil.webp" alt="AI Flash 2" class="ai-card__img strobe-img img-3" loading="lazy">
-							<img src="Ai Work Image/HOF.webp" alt="AI Flash 3" class="ai-card__img strobe-img img-4" loading="lazy">
-							<img src="Ai Work Image/Devil.webp" alt="AI Flash 4" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/Ghost Rider.webp" alt="AI Flash 5" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/attack on titan.webp" alt="AI Flash 6" class="ai-card__img strobe-img img-5">
-							<img src="Ai Work Image/smile.webp" alt="AI Flash 7" class="ai-card__img strobe-img img-5">
-							<img src="Ai Work Image/Untitled-3.webp" alt="AI Flash 8" class="ai-card__img strobe-img img-5">
-							<img src="Ai Work Image/Mario.webp" alt="AI Flash 9" class="ai-card__img strobe-img img-5" loading="lazy" width="400"
-								height="500">
-							<img src="Ai Work Image/CAPTAIN copy.webp" alt="AI Flash 10" class="ai-card__img strobe-img img-5" loading="lazy"> 
-							<img src="Ai Work Image/Akuma copy.webp" alt="AI Flash 11" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/Robin copy.webp" alt="AI Flash 12" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/Iceman copy.webp" alt="AI Flash 13" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/Sang Chi copy.webp" alt="AI Flash 14" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/GAMBIT.webp" alt="AI Flash 15" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/Kraven copy.webp" alt="AI Flash 16" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/Naruto.webp" alt="AI Flash 17" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/Space.webp" alt="AI Flash 18" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="Ai Work Image/AQ Man.webp" alt="AI Flash 19" class="ai-card__img strobe-img img-5" loading="lazy">
-							
-						</div>
-						
-					</a>
-		
-					<!-- Card 2 -->
-					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
-						<div class="ai-card__img-wrapper">
-							<div class="ai-card__overlay"></div>
-					
-							<!-- 1. Default Image (Base) -->
-							<img src="https://images.unsplash.com/photo-1681404173264-7c603a110a11?q=80&w=600&auto=format&fit=crop"
-								alt="AI Product" class="ai-card__img">
-					
-							<!-- 2. Extra Images for Hover Animation (Card 2 की अपनी 3 इमेजेस यहाँ डालें) -->
-							<img src="extra-img-2a.jpg" alt="AI Flash 1" class="ai-card__img strobe-img img-1">
-							<img src="extra-img-2b.jpg" alt="AI Flash 2" class="ai-card__img strobe-img img-2">
-							<img src="extra-img-2c.jpg" alt="AI Flash 3" class="ai-card__img strobe-img img-3">
-						</div>
-					</a>
-					
-					<!-- Card 3 -->
-					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
-						<div class="ai-card__img-wrapper">
-							<div class="ai-card__overlay"></div>
-					
-							<!-- 1. Default Image (Base) -->
-							<img src="https://images.unsplash.com/photo-1662994977461-12f8fcbdcc84?q=80&w=600&auto=format&fit=crop"
-								alt="AI Environment" class="ai-card__img">
-					
-							<!-- 2. Extra Images for Hover Animation (Card 3 की अपनी 3 इमेजेस यहाँ डालें) -->
-							<img src="extra-img-3a.jpg" alt="AI Flash 1" class="ai-card__img strobe-img img-1">
-							<img src="extra-img-3b.jpg" alt="AI Flash 2" class="ai-card__img strobe-img img-2">
-							<img src="extra-img-3c.jpg" alt="AI Flash 3" class="ai-card__img strobe-img img-3">
-						</div>
-					</a>
-					
-					<!-- Card 4 -->
-					<a href="#" class="ai-card gs-reveal-aicard" data-hover>
-						<div class="ai-card__img-wrapper">
-							<div class="ai-card__overlay"></div>
-					
-							<!-- 1. Default Image (Base) -->
-							<img src="Recent work image/YOUTUBE THUMBNAIL image/GTA 6.webp"
-								alt="AI Concept" class="ai-card__img">
-					
-							<!-- 2. Extra Images for Hover Animation (Card 4 की अपनी 3 इमेजेस यहाँ डालें) -->
-							<img src="Recent work image/YOUTUBE THUMBNAIL image/10.webp" alt="AI Flash 1" class="ai-card__img strobe-img img-1"	 loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/11.webp" alt="AI Flash 2" class="ai-card__img strobe-img img-2" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/12.webp" alt="AI Flash 3" class="ai-card__img strobe-img img-3" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/13.webp" alt="AI Flash 4" class="ai-card__img strobe-img img-4" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/14.webp" alt="AI Flash 5" class="ai-card__img strobe-img img-5" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/15.webp" alt="AI Flash 6" class="ai-card__img strobe-img img-6" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/16.webp" alt="AI Flash 7" class="ai-card__img strobe-img img-7" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/17.webp" alt="AI Flash 8" class="ai-card__img strobe-img img-8" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/18.webp" alt="AI Flash 9" class="ai-card__img strobe-img img-9" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/8.webp" alt="AI Flash 10" class="ai-card__img strobe-img img-10" loading="lazy">
-							<img src="THUMNAIL/Thumbnail image/9.webp" alt="AI Flash 11" class="ai-card__img strobe-img img-11" loading="lazy">
-						</div>
-					</a>
-		
+				<!-- Bottom Matrix Effect (Replaced 4 Cards) -->
+				<div class="ai-matrix-wrapper gs-reveal-matrix">
+					<canvas id="red-matrix-canvas"></canvas>
+				
+					<!-- Optional: Matrix ke upar ek chota sa text/overlay dikhane ke liye -->
+					<div class="ai-matrix-overlay-text">
+						<span>NEURAL NETWORK ACTIVE</span>
+					</div>
 				</div>
 			</div>
 		</section>

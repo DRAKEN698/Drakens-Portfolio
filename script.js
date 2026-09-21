@@ -553,16 +553,14 @@ aiTl
     "-=0.6",
   ) // Start slightly before text finishes
 
-  // C. Cards Stagger Reveal
+  // C. Reveal Matrix Canvas
   .to(
-    ".gs-reveal-aicard",
+    ".gs-reveal-matrix",
     {
       y: 0,
       opacity: 1,
-      rotateX: 0,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "back.out(1.2)", // Slight pop effect
+      duration: 1,
+      ease: "power3.out",
     },
     "-=0.8",
   );
@@ -1229,47 +1227,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================================
-// 24. AI WORK UNLIMITED STROBE (NO BLANK & OPTIMIZED SPEED)
-// =========================================
-document.addEventListener("DOMContentLoaded", () => {
-  const aiCards = document.querySelectorAll(".ai-card");
-
-  aiCards.forEach((card, index) => {
-    const images = card.querySelectorAll(".ai-card__img");
-
-    if (images.length > 1) {
-      let currentIndex = 0;
-
-      // पहली इमेज को Active करो
-      images[currentIndex].classList.add("is-active");
-
-      setTimeout(() => {
-        // स्पीड को 500ms से बढ़ाकर 1200ms (1.2 सेकंड) कर दिया गया है
-        setInterval(() => {
-          const prevImage = images[currentIndex];
-
-          // नया इंडेक्स निकालो
-          currentIndex = (currentIndex + 1) % images.length;
-          const nextImage = images[currentIndex];
-
-          // पुरानी इमेज से is-prev हटाओ
-          images.forEach((img) => img.classList.remove("is-prev"));
-
-          // जो अभी चल रही थी उसे is-prev बना दो (ताकि वो ब्लैंक न हो)
-          prevImage.classList.remove("is-active");
-          prevImage.classList.add("is-prev");
-
-          // नई इमेज को Active बना दो
-          nextImage.classList.add("is-active");
-        }, 1200); // <-- यहाँ 1200ms (1.2s) स्पीड सेट है
-      }, index * 200);
-    } else if (images.length === 1) {
-      images[0].classList.add("is-active");
-    }
-  });
-});
-
-// =========================================
 // 25. FIX: BACK BUTTON SCROLL RESTORATION & BLACK SCREEN
 // =========================================
 
@@ -1314,4 +1271,77 @@ window.addEventListener("pageshow", (event) => {
             }
         }, 150);
     }
+});
+
+// =========================================
+// 26. RED MATRIX RAIN EFFECT
+// =========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById('red-matrix-canvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let width, height;
+
+    // Resize canvas to fit its wrapper
+    const resizeCanvas = () => {
+        width = canvas.parentElement.offsetWidth;
+        height = canvas.parentElement.offsetHeight;
+        canvas.width = width;
+        canvas.height = height;
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Characters for Matrix (Katakana + Latin + Numbers for authentic look)
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン';
+    const fontSize = 16;
+    let columns = Math.floor(width / fontSize);
+    let drops = [];
+
+    // Initialize drops
+    const initDrops = () => {
+        columns = Math.floor(width / fontSize);
+        drops = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = Math.random() * -100; // Random start position for natural look
+        }
+    };
+    initDrops();
+    window.addEventListener('resize', initDrops);
+
+    // Drawing function
+    const drawMatrix = () => {
+        // Black background with slight opacity to create fading tails
+        ctx.fillStyle = 'rgba(3, 3, 3, 0.1)'; 
+        ctx.fillRect(0, 0, width, height);
+
+        // Vibrant Red text
+        ctx.fillStyle = '#E60000'; // Var(--accent-color)
+        ctx.font = fontSize + 'px monospace';
+        ctx.textAlign = 'center';
+
+        for (let i = 0; i < drops.length; i++) {
+            // Pick a random character
+            const text = chars.charAt(Math.floor(Math.random() * chars.length));
+            
+            // X and Y coordinates
+            const x = i * fontSize + (fontSize / 2);
+            const y = drops[i] * fontSize;
+
+            // Draw text
+            ctx.fillText(text, x, y);
+
+            // Reset drop to top randomly when it hits bottom
+            if (y > height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+
+            // Move drop down
+            drops[i]++;
+        }
+    };
+
+    // Animate at ~30 FPS
+    setInterval(drawMatrix, 40);
 });
