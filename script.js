@@ -565,15 +565,6 @@ aiTl
     "-=0.8",
   );
 
-// Continuous subtle breathing animation for the glowing button
-gsap.to(".btn--glow", {
-  boxShadow: "0 0 15px 2px rgba(230, 0, 0, 0.3)",
-  duration: 1.5,
-  repeat: -1,
-  yoyo: true,
-  ease: "sine.inOut",
-});
-
 // =========================================
 // 10. SERVICES SECTION GSAP ANIMATIONS
 // =========================================
