@@ -978,20 +978,19 @@ ScrollTrigger.create({
 // 18. THUMBNAIL GALLERY SECTION GSAP ANIMATIONS
 // =========================================
 
-// A. Setup Initial Hidden States
+// A. Setup Initial Hidden States (Added force3D for GPU optimization)
 gsap.set(".gs-reveal-thumb", { y: 30, opacity: 0 });
-gsap.set(".gs-reveal-thumbcard", { y: 50, opacity: 0, scale: 0.95 });
+gsap.set(".gs-reveal-thumbcard", { y: 50, opacity: 0, scale: 0.95, force3D: true });
 gsap.set(".gs-reveal-thumbbtn", { y: 20, opacity: 0 });
 
 // B. Create ScrollTrigger Timeline for Thumbnail Section
 ScrollTrigger.create({
   trigger: ".thumbnail-gallery",
-  start: "top 75%", // Triggers when section is 75% in viewport
+  start: "top 75%", 
   once: true,
   onEnter: () => {
     const thTl = gsap.timeline();
 
-    // 1. Reveal Header Elements (Kicker, Title, Line, Desc)
     thTl
       .to(".gs-reveal-thumb", {
         y: 0,
@@ -1000,8 +999,7 @@ ScrollTrigger.create({
         stagger: 0.1,
         ease: "power3.out",
       })
-
-      // 2. Stagger 8 Thumbnail Cards
+      // Stagger 8 Thumbnail Cards (Optimized)
       .to(
         ".gs-reveal-thumbcard",
         {
@@ -1009,13 +1007,12 @@ ScrollTrigger.create({
           opacity: 1,
           scale: 1,
           duration: 0.8,
-          stagger: 0.08, // Very fast stagger since there are 8 items
+          stagger: 0.08, 
           ease: "expo.out",
+          force3D: true, // 🚀 YEH LINE LAG FIX KAREGI
         },
-        "-=0.4",
+        "-=0.4"
       )
-
-      // 3. Fade in bottom button
       .to(
         ".gs-reveal-thumbbtn",
         {
@@ -1024,7 +1021,7 @@ ScrollTrigger.create({
           duration: 0.6,
           ease: "power2.out",
         },
-        "-=0.2",
+        "-=0.2"
       );
   },
 });

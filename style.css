@@ -2057,14 +2057,15 @@ ul {
 /* Card Styling - 16:9 Ratio */
 .thumbnail__card {
     display: block;
-    border-radius: 12px; /* Smooth rounded corners */
+    border-radius: 12px; 
     overflow: hidden;
     position: relative;
-    aspect-ratio: 16 / 9; /* Perfect YouTube thumbnail ratio */
+    aspect-ratio: 16 / 9; 
     background-color: #EFEFEF; 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Soft drop shadow */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
     transform: translateZ(0); 
     cursor: none;
+    will-change: transform, opacity; /* 🚀 YEH LINE ADD KAREIN */
 }
 
 .thumbnail__img-wrapper {
