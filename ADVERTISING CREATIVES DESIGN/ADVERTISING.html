@@ -7,7 +7,7 @@
     <title>Advertising Gallery | Drakens</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -15,40 +15,173 @@
 
 <body>
 
+    <!-- Vertical Section Indicator -->
+    <nav class="section-indicator" id="section-indicator" aria-label="Section navigation">
+        <button class="indicator-dot active" data-index="0" aria-label="Section 1: Advertising">
+            <span class="indicator-tooltip">01 ADVERTISING</span>
+        </button>
+        <button class="indicator-dot" data-index="1" aria-label="Section 2: Promotional & Offer Ads">
+            <span class="indicator-tooltip">02 PROMO & OFFERS</span>
+        </button>
+        <button class="indicator-dot" data-index="2" aria-label="Section 3: Service & Business Ads">
+            <span class="indicator-tooltip">03 SERVICE & BUSINESS</span>
+        </button>
+        <button class="indicator-dot" data-index="3" aria-label="Section 4: Performance Marketing Creatives">
+            <span class="indicator-tooltip">04 PERFORMANCE MARKETING</span>
+        </button>
+        <button class="indicator-dot" data-index="4" aria-label="Section 5: Ad Formats & Campaigns">
+            <span class="indicator-tooltip">05 AD FORMATS & CAMPAIGNS</span>
+        </button>
+    </nav>
+
     <!-- Main Content Layout -->
     <main class="gallery-wrapper">
 
-        <!-- Horizontal Image Grid / Carousel -->
-        <div class="carousel-container" id="carousel-track">
-            <!-- Sections will be injected here via JavaScript -->
-        </div>
-
-        <!-- Arrow Controls -->
-        <div class="carousel-controls">
-            <button class="arrow-btn" id="prev-btn" aria-label="Previous">&larr;</button>
-            <button class="arrow-btn" id="next-btn" aria-label="Next">&rarr;</button>
-        </div>
-
-        <!-- Bottom Large Text Section -->
-        <div class="bottom-footer">
-            <div class="footer-line"></div>
-            <div class="footer-content">
-                <div class="big-number">01</div>
-                <div class="big-title">ADVERTISING</div>
+        <!-- SECTION 01: ADVERTISING -->
+        <section class="gallery-section is-visible" id="section-advertising" data-index="0">
+            <!-- Horizontal Image Grid / Carousel -->
+            <div class="carousel-container" id="carousel-track">
+                <!-- Sections will be injected here via JavaScript -->
             </div>
-        </div>
+
+            <!-- Arrow Controls -->
+            <div class="carousel-controls">
+                <button class="arrow-btn" id="prev-btn" aria-label="Previous">&larr;</button>
+                <button class="arrow-btn" id="next-btn" aria-label="Next">&rarr;</button>
+            </div>
+
+            <!-- Bottom Large Text Section -->
+            <div class="bottom-footer">
+                <div class="footer-line"></div>
+                <div class="footer-content">
+                    <div class="big-number">01</div>
+                    <div class="big-title">ADVERTISING</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 02: PROMOTIONAL & OFFER ADS -->
+        <section class="gallery-section" id="section-promotional" data-index="1">
+            <!-- Horizontal Image Grid / Carousel -->
+            <div class="carousel-container" id="carousel-track-2">
+                <!-- Sections will be injected here via JavaScript -->
+            </div>
+
+            <!-- Arrow Controls -->
+            <div class="carousel-controls">
+                <button class="arrow-btn" id="prev-btn-2" aria-label="Previous">&larr;</button>
+                <button class="arrow-btn" id="next-btn-2" aria-label="Next">&rarr;</button>
+            </div>
+
+            <!-- Bottom Large Text Section -->
+            <div class="bottom-footer">
+                <div class="footer-line"></div>
+                <div class="footer-content">
+                    <div class="big-number">02</div>
+                    <div class="big-title">PROMOTIONAL & OFFER ADS</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 03: SERVICE & BUSINESS ADS -->
+        <section class="gallery-section" id="section-services" data-index="2">
+            <!-- Horizontal Image Grid / Carousel -->
+            <div class="carousel-container" id="carousel-track-3">
+                <!-- Sections will be injected here via JavaScript -->
+            </div>
+
+            <!-- Arrow Controls -->
+            <div class="carousel-controls">
+                <button class="arrow-btn" id="prev-btn-3" aria-label="Previous">&larr;</button>
+                <button class="arrow-btn" id="next-btn-3" aria-label="Next">&rarr;</button>
+            </div>
+
+            <!-- Bottom Large Text Section -->
+            <div class="bottom-footer">
+                <div class="footer-line"></div>
+                <div class="footer-content">
+                    <div class="big-number">03</div>
+                    <div class="big-title">SERVICE & BUSINESS ADS</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 04: PERFORMANCE MARKETING CREATIVES -->
+        <section class="gallery-section" id="section-performance" data-index="3">
+            <!-- Horizontal Image Grid / Carousel -->
+            <div class="carousel-container" id="carousel-track-4">
+                <!-- Sections will be injected here via JavaScript -->
+            </div>
+
+            <!-- Arrow Controls -->
+            <div class="carousel-controls">
+                <button class="arrow-btn" id="prev-btn-4" aria-label="Previous">&larr;</button>
+                <button class="arrow-btn" id="next-btn-4" aria-label="Next">&rarr;</button>
+            </div>
+
+            <!-- Bottom Large Text Section -->
+            <div class="bottom-footer">
+                <div class="footer-line"></div>
+                <div class="footer-content">
+                    <div class="big-number">04</div>
+                    <div class="big-title">PERFORMANCE MARKETING CREATIVES</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 05: AD FORMATS & CAMPAIGNS -->
+        <section class="gallery-section" id="section-formats" data-index="4">
+            <!-- Horizontal Image Grid / Carousel -->
+            <div class="carousel-container" id="carousel-track-5">
+                <!-- Sections will be injected here via JavaScript -->
+            </div>
+
+            <!-- Arrow Controls -->
+            <div class="carousel-controls">
+                <button class="arrow-btn" id="prev-btn-5" aria-label="Previous">&larr;</button>
+                <button class="arrow-btn" id="next-btn-5" aria-label="Next">&rarr;</button>
+            </div>
+
+            <!-- Bottom Large Text Section -->
+            <div class="bottom-footer">
+                <div class="footer-line"></div>
+                <div class="footer-content">
+                    <div class="big-number">05</div>
+                    <div class="big-title">AD FORMATS & CAMPAIGNS</div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <!-- HIDDEN GRID MODAL (Pops up when a section is clicked) -->
+    <!-- HIDDEN GRID MODAL (Pops up when a section card is clicked) -->
     <div class="grid-modal" id="grid-modal">
         <div class="modal-header">
-            <div class="modal-title" id="modal-title">CATEGORY NAME</div>
-            <button class="close-btn" id="close-modal-btn">&times;</button>
+            <div class="modal-header-left">
+                <div class="modal-title" id="modal-title">CATEGORY NAME</div>
+                <div class="modal-subtitle" id="modal-subtitle">SUBTITLE</div>
+            </div>
+            <button class="close-btn" id="close-modal-btn" aria-label="Close modal">&times;</button>
         </div>
-        <!-- Inner images will be loaded here in a CSS Grid -->
+        <!-- Inner cards with swipeable multiple images will be loaded here -->
         <div class="modal-grid-content" id="modal-grid-content">
-            <!-- Images generated by JS -->
+            <!-- Sub-cards generated by JS -->
+        </div>
+    </div>
+
+    <!-- FULLSCREEN LIGHTBOX (For full-size swipeable image preview) -->
+    <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true">
+        <div class="lightbox-header">
+            <div class="lightbox-info" id="lightbox-info">CREATIVE DETAIL</div>
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+        </div>
+        <div class="lightbox-slider" id="lightbox-slider">
+            <div class="lightbox-track" id="lightbox-track">
+                <!-- Slides loaded dynamically -->
+            </div>
+            <button class="lightbox-arrow prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+            <button class="lightbox-arrow next" id="lightbox-next" aria-label="Next image">&#10095;</button>
+            <div class="lightbox-counter" id="lightbox-counter">1 / 1</div>
         </div>
     </div>
 
