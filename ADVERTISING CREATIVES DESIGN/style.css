@@ -182,6 +182,7 @@ body {
     overflow: hidden;
     background-color: #1a1a1a;
     position: relative;
+    border-radius: 6px;
 }
 
 .grid-image-wrap img {
@@ -393,21 +394,23 @@ body {
 }
 
 /* ==========================================================================
-   SUB-CARDS WITH MULTI-IMAGE SWIPE SLIDER
+   SUB-CARDS WITH MULTI-IMAGE SWIPE SLIDER (TEXT REMOVED - IMAGES ONLY)
    ========================================================================== */
 .sub-card {
     background-color: #121212;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .sub-card:hover {
-    border-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6);
+    transform: translateY(-4px);
 }
 
 .sub-card-slider {
@@ -417,7 +420,6 @@ body {
     overflow: hidden;
     background-color: #181818;
     touch-action: pan-y;
-    cursor: grab;
     user-select: none;
 }
 
@@ -446,6 +448,11 @@ body {
     object-fit: cover;
     display: block;
     pointer-events: none;
+    transition: transform 0.4s ease;
+}
+
+.sub-card:hover .sub-card-slide img {
+    transform: scale(1.03);
 }
 
 /* Slider Controls (Arrow Buttons on Hover/Tap) */
@@ -453,14 +460,14 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background-color: rgba(15, 15, 15, 0.65);
+    background-color: rgba(15, 15, 15, 0.7);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
-    font-size: 13px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -489,119 +496,41 @@ body {
     right: 12px;
 }
 
-/* Badge for counter / hint */
-.sub-card-badge {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    background: rgba(11, 11, 11, 0.75);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 4px 9px;
-    border-radius: 20px;
-    z-index: 5;
-    pointer-events: none;
-}
-
-/* Swipe Indicator Prompt Badge */
-.sub-card-swipe-hint {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    background: rgba(11, 11, 11, 0.75);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #aaaaaa;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 4px 8px;
-    border-radius: 20px;
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    pointer-events: none;
-    text-transform: uppercase;
-}
-
 /* Dots at bottom of card */
 .sub-card-dots {
     position: absolute;
-    bottom: 12px;
+    bottom: 14px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 6px;
     z-index: 5;
-    padding: 4px 8px;
-    background: rgba(11, 11, 11, 0.5);
-    backdrop-filter: blur(6px);
-    border-radius: 12px;
+    padding: 5px 10px;
+    background: rgba(11, 11, 11, 0.55);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
 }
 
 .sub-card-dot {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .sub-card-dot.active {
     background-color: #ffffff;
-    width: 14px;
-    border-radius: 7px;
+    width: 16px;
+    border-radius: 8px;
 }
 
-/* Sub-card Information Details */
-.sub-card-info {
-    padding: 16px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    background: #121212;
-}
-
-.sub-card-title {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-
-.sub-card-desc {
-    font-size: 10px;
-    color: #888888;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.sub-card-zoom-btn {
-    background: transparent;
-    border: none;
-    color: #aaa;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    transition: color 0.2s ease;
-}
-
-.sub-card-zoom-btn:hover {
-    color: #ffffff;
+/* HIDE ALL TEXT FROM SUB-CARDS (Title, Subtitle, Zoom Button, Badge, Swipe Hint) */
+.sub-card-info,
+.sub-card-badge,
+.sub-card-swipe-hint {
+    display: none !important;
 }
 
 /* ==========================================================================
@@ -866,46 +795,5 @@ body {
 
     .modal-grid-content {
         grid-template-columns: 1fr;
-    }
-}
-
-/* Short Landscape Mode (e.g. mobile rotated landscape) */
-@media (max-height: 520px) and (orientation: landscape) {
-    .gallery-section {
-        height: auto;
-        min-height: 100vh;
-        scroll-snap-align: none;
-    }
-
-    .site-header {
-        padding: 10px 20px;
-    }
-
-    .carousel-container {
-        padding: 4px 20px;
-    }
-
-    .grid-item {
-        flex: 0 0 200px;
-    }
-
-    .grid-image-wrap {
-        aspect-ratio: 16 / 10;
-    }
-
-    .carousel-controls {
-        margin-bottom: 12px;
-    }
-
-    .bottom-footer {
-        padding-bottom: 12px;
-    }
-
-    .big-number {
-        font-size: 32px;
-    }
-
-    .big-title {
-        font-size: 24px;
     }
 }

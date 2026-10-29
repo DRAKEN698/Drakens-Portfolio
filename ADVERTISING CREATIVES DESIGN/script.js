@@ -557,7 +557,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let lightboxImages = [];
 
   // ==========================================================================
-  // SWIPE ENGINE FACTORY FOR SUB-CARDS
+  // SWIPE ENGINE FACTORY FOR SUB-CARDS (IMAGES ONLY - TEXT REMOVED)
   // ==========================================================================
   function createSwipeCard(cardData, categoryTitle) {
     const images =
@@ -584,7 +584,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slide.className = "sub-card-slide";
       const img = document.createElement("img");
       img.src = imgSrc;
-      img.alt = `${cardData.title} - Image ${idx + 1}`;
+      img.alt = `${cardData.title || "Creative"} - Image ${idx + 1}`;
       img.loading = "lazy";
       img.draggable = false;
       slide.appendChild(img);
@@ -592,18 +592,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     slider.appendChild(track);
-
-    // Counter Badge
-    const badge = document.createElement("div");
-    badge.className = "sub-card-badge";
-    badge.textContent = `1 / ${images.length}`;
-    slider.appendChild(badge);
-
-    // Swipe Hint
-    const swipeHint = document.createElement("div");
-    swipeHint.className = "sub-card-swipe-hint";
-    swipeHint.innerHTML = `<span>&larr; Swipe &rarr;</span>`;
-    slider.appendChild(swipeHint);
 
     // Navigation Arrows
     const prevBtn = document.createElement("button");
@@ -638,22 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     slider.appendChild(dotsContainer);
-
-    // Card Info Footer
-    const info = document.createElement("div");
-    info.className = "sub-card-info";
-    info.innerHTML = `
-      <h4 class="sub-card-title">${cardData.title}</h4>
-      <div class="sub-card-desc">
-        <span>${cardData.subtitle || `${images.length} CREATIVES`}</span>
-        <button class="sub-card-zoom-btn" type="button">
-          Zoom &#10530;
-        </button>
-      </div>
-    `;
-
     card.appendChild(slider);
-    card.appendChild(info);
 
     // ========================================================================
     // SLIDER STATE & TRANSITION LOGIC
@@ -673,9 +646,6 @@ document.addEventListener("DOMContentLoaded", () => {
       dots.forEach((dot, idx) => {
         dot.classList.toggle("active", idx === currentSlide);
       });
-
-      // Update Badge
-      badge.textContent = `${currentSlide + 1} / ${totalSlides}`;
     }
 
     prevBtn.addEventListener("click", (e) => {
@@ -718,7 +688,6 @@ document.addEventListener("DOMContentLoaded", () => {
         touchDeltaX = currentX - touchStartX;
         const deltaY = currentY - touchStartY;
 
-        // Determine if horizontal swipe or vertical page scroll
         if (isHorizontalGesture === null) {
           if (Math.abs(touchDeltaX) > 8 || Math.abs(deltaY) > 8) {
             isHorizontalGesture = Math.abs(touchDeltaX) > Math.abs(deltaY);
@@ -726,7 +695,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (isHorizontalGesture) {
-          // Prevent page scroll during horizontal swipe
           if (e.cancelable) e.preventDefault();
           const baseOffset = -currentSlide * 100;
           const pxOffset = (touchDeltaX / slider.offsetWidth) * 100;
@@ -739,14 +707,11 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.addEventListener("touchend", () => {
       if (isHorizontalGesture && Math.abs(touchDeltaX) > 35) {
         if (touchDeltaX < 0) {
-          // Swiped Left -> Next
           goToSlide(currentSlide + 1);
         } else {
-          // Swiped Right -> Prev
           goToSlide(currentSlide - 1);
         }
       } else {
-        // Return to current slide
         goToSlide(currentSlide);
       }
       isHorizontalGesture = null;
@@ -762,7 +727,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let dragDistance = 0;
 
     slider.addEventListener("mousedown", (e) => {
-      // Don't drag if clicking buttons or dots
       if (
         e.target.closest(".sub-card-arrow") ||
         e.target.closest(".sub-card-dots")
@@ -806,20 +770,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ========================================================================
     // CLICK TO EXPAND IN LIGHTBOX
     // ========================================================================
-    const zoomBtn = info.querySelector(".sub-card-zoom-btn");
-    if (zoomBtn) {
-      zoomBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        openLightbox(
-          images,
-          currentSlide,
-          `${categoryTitle} • ${cardData.title}`,
-        );
-      });
-    }
-
     slider.addEventListener("click", (e) => {
-      // Don't open if clicked arrows/dots or if user dragged
       if (
         e.target.closest(".sub-card-arrow") ||
         e.target.closest(".sub-card-dots") ||
@@ -830,7 +781,7 @@ document.addEventListener("DOMContentLoaded", () => {
       openLightbox(
         images,
         currentSlide,
-        `${categoryTitle} • ${cardData.title}`,
+        `${categoryTitle}${cardData.title ? ` • ${cardData.title}` : ""}`,
       );
     });
 
@@ -945,7 +896,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (item.cards && item.cards.length > 0) {
       subCards = item.cards;
     } else if (item.innerImages && item.innerImages.length > 0) {
-      // Split into sub-cards with multiple images
       subCards = [
         {
           title: `${item.title} - SET 01`,
@@ -963,7 +913,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ];
     }
 
-    // Render each sub-card with multi-image swipe capability
+    // Render each sub-card (pure image cards)
     subCards.forEach((cardData) => {
       const cardEl = createSwipeCard(cardData, item.title);
       modalGridContent.appendChild(cardEl);
@@ -1139,7 +1089,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener(
     "wheel",
     (e) => {
-      // Don't intercept if modal or lightbox is open
       if (
         (gridModal && gridModal.classList.contains("active")) ||
         (lightboxModal && lightboxModal.classList.contains("active"))
@@ -1147,10 +1096,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Ignore predominantly horizontal scrolls (touchpad / horizontal track scroll)
       if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-
-      // Require meaningful delta to avoid accidental hair-trigger ticks
       if (Math.abs(e.deltaY) < 20) return;
 
       e.preventDefault();
@@ -1158,12 +1104,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isScrollLocked) return;
 
       if (e.deltaY > 0) {
-        // Scroll down to next section
         if (currentSectionIndex < sections.length - 1) {
           scrollToSection(currentSectionIndex + 1);
         }
       } else if (e.deltaY < 0) {
-        // Scroll up to previous section
         if (currentSectionIndex > 0) {
           scrollToSection(currentSectionIndex - 1);
         }
@@ -1172,7 +1116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: false },
   );
 
-  // Keyboard navigation for sections (ArrowDown / ArrowUp / PageDown / PageUp)
+  // Keyboard navigation for sections
   window.addEventListener("keydown", (e) => {
     if (
       (gridModal && gridModal.classList.contains("active")) ||
