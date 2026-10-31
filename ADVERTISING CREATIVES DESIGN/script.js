@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 10_56PM.jpg",
+                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 11_11PM (1).jpg",
                 },
               ],
             },
@@ -61,10 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 11_19PM.jpg",
+                },
               ],
             },
             {
@@ -72,10 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 11_45PM.jpg",
+                },
               ],
             },
             {
@@ -83,10 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 12_04AM.jpg",
+                },
               ],
             },
             {
@@ -94,10 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 12_20AM.jpg",
+                },
               ],
             },
             {
@@ -105,14 +101,40 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 1_21PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 8_18PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Skincare_product_visual_reverse_…_64b99883_2K.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Vitamin C Glow in Teal Paradise.png",
+                },
               ],
             },
           ],
         },
+
+                                                                      // END OF BEAUTY AND SKIN CARE
+
         {
           id: "food-sweets-snacks",
           badge: "CATEGORY 02",
