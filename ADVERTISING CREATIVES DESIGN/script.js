@@ -41,10 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 10_56PM.jpg",
+                },
               ],
             },
             {
@@ -52,10 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 10_56PM.jpg",
+                },
               ],
             },
             {
@@ -466,8 +464,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "FLASH WEEKEND SALE",
           subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
@@ -477,8 +475,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "SEASONAL DISCOUNTS",
           subtitle: "03 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
@@ -487,8 +485,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "BUNDLED VALUE PACKS",
           subtitle: "03 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1507764983913-ae817c385072?q=80&w=800&auto=format&fit=crop",
@@ -504,8 +502,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "CREATIVE STRATEGY LAB",
           subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
@@ -515,8 +513,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "ENTERPRISE WORKSPACE",
           subtitle: "03 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
@@ -525,8 +523,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "BUSINESS CONSULTING & TECH",
           subtitle: "03 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
@@ -542,8 +540,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "DATA & ANALYTICS DASHBOARDS",
           subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop",
@@ -553,8 +551,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "GROWTH ACQUISITION ADS",
           subtitle: "03 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
@@ -570,8 +568,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "GLOBAL URBAN LAUNCH",
           subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800&auto=format&fit=crop",
@@ -581,8 +579,8 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           title: "DIGITAL IDENTITY ROLLOUT",
           subtitle: "03 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
+          src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          images: [
             "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
@@ -1037,9 +1035,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const card = document.createElement("div");
     card.className = "sub-card";
 
-    // Build Card HTML
+    // CHECK IF SINGLE IMAGE OR MULTIPLE IMAGES
+    const hasMultipleImages = images.length > 1;
+    if (hasMultipleImages) {
+      card.classList.add("has-multiple-images");
+    } else {
+      card.classList.add("is-single-image");
+    }
+
     const slider = document.createElement("div");
     slider.className = "sub-card-slider";
+    if (hasMultipleImages) {
+      slider.classList.add("has-multiple-images");
+    } else {
+      slider.classList.add("is-single-image");
+    }
 
     // Track for sliding
     const track = document.createElement("div");
@@ -1059,183 +1069,181 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slider.appendChild(track);
 
-    // Navigation Arrows
-    const prevBtn = document.createElement("button");
-    prevBtn.className = "sub-card-arrow prev";
-    prevBtn.innerHTML = "&#10094;";
-    prevBtn.setAttribute("aria-label", "Previous image");
-
-    const nextBtn = document.createElement("button");
-    nextBtn.className = "sub-card-arrow next";
-    nextBtn.innerHTML = "&#10095;";
-    nextBtn.setAttribute("aria-label", "Next image");
-
-    slider.appendChild(prevBtn);
-    slider.appendChild(nextBtn);
-
-    // Dots Container
-    const dotsContainer = document.createElement("div");
-    dotsContainer.className = "sub-card-dots";
-    const dots = [];
-
-    images.forEach((_, i) => {
-      const dot = document.createElement("div");
-      dot.className = `sub-card-dot ${i === 0 ? "active" : ""}`;
-      dot.setAttribute("data-slide", i);
-      dotsContainer.appendChild(dot);
-      dots.push(dot);
-
-      dot.addEventListener("click", (e) => {
-        e.stopPropagation();
-        goToSlide(i);
-      });
-    });
-
-    slider.appendChild(dotsContainer);
-    card.appendChild(slider);
-
-    // ========================================================================
-    // SLIDER STATE & TRANSITION LOGIC
-    // ========================================================================
     let currentSlide = 0;
     const totalSlides = images.length;
+    let dragDistance = 0;
 
-    function goToSlide(index) {
-      if (index < 0) index = 0;
-      if (index >= totalSlides) index = totalSlides - 1;
-      currentSlide = index;
+    // ------------------------------------------------------------------------
+    // CAROUSEL NAVIGATION ARROWS & DOTS:
+    // ONLY CREATED IF THERE ARE MULTIPLE IMAGES!
+    // IF SINGLE IMAGE -> NO ARROWS, NO DOTS, NO SLIDER GESTURES!
+    // ------------------------------------------------------------------------
+    if (hasMultipleImages) {
+      // Navigation Arrows
+      const prevBtn = document.createElement("button");
+      prevBtn.className = "sub-card-arrow prev";
+      prevBtn.innerHTML = "&#10094;";
+      prevBtn.setAttribute("aria-label", "Previous image");
 
-      track.style.transition = "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)";
-      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      const nextBtn = document.createElement("button");
+      nextBtn.className = "sub-card-arrow next";
+      nextBtn.innerHTML = "&#10095;";
+      nextBtn.setAttribute("aria-label", "Next image");
 
-      // Update Dots
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle("active", idx === currentSlide);
+      slider.appendChild(prevBtn);
+      slider.appendChild(nextBtn);
+
+      // Dots Container
+      const dotsContainer = document.createElement("div");
+      dotsContainer.className = "sub-card-dots";
+      const dots = [];
+
+      images.forEach((_, i) => {
+        const dot = document.createElement("div");
+        dot.className = `sub-card-dot ${i === 0 ? "active" : ""}`;
+        dot.setAttribute("data-slide", i);
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+
+        dot.addEventListener("click", (e) => {
+          e.stopPropagation();
+          goToSlide(i);
+        });
+      });
+
+      slider.appendChild(dotsContainer);
+
+      function goToSlide(index) {
+        if (index < 0) index = 0;
+        if (index >= totalSlides) index = totalSlides - 1;
+        currentSlide = index;
+
+        track.style.transition = "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)";
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("active", idx === currentSlide);
+        });
+      }
+
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        goToSlide(currentSlide > 0 ? currentSlide - 1 : totalSlides - 1);
+      });
+
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        goToSlide(currentSlide < totalSlides - 1 ? currentSlide + 1 : 0);
+      });
+
+      // Touch Swipe Gestures
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchDeltaX = 0;
+      let isHorizontalGesture = null;
+
+      slider.addEventListener(
+        "touchstart",
+        (e) => {
+          if (e.touches.length !== 1) return;
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          touchDeltaX = 0;
+          isHorizontalGesture = null;
+          track.style.transition = "none";
+        },
+        { passive: true },
+      );
+
+      slider.addEventListener(
+        "touchmove",
+        (e) => {
+          if (e.touches.length !== 1) return;
+          const currentX = e.touches[0].clientX;
+          const currentY = e.touches[0].clientY;
+          touchDeltaX = currentX - touchStartX;
+          const deltaY = currentY - touchStartY;
+
+          if (isHorizontalGesture === null) {
+            if (Math.abs(touchDeltaX) > 8 || Math.abs(deltaY) > 8) {
+              isHorizontalGesture = Math.abs(touchDeltaX) > Math.abs(deltaY);
+            }
+          }
+
+          if (isHorizontalGesture) {
+            if (e.cancelable) e.preventDefault();
+            const baseOffset = -currentSlide * 100;
+            const pxOffset = (touchDeltaX / slider.offsetWidth) * 100;
+            track.style.transform = `translateX(${baseOffset + pxOffset}%)`;
+          }
+        },
+        { passive: false },
+      );
+
+      slider.addEventListener("touchend", () => {
+        if (isHorizontalGesture && Math.abs(touchDeltaX) > 35) {
+          if (touchDeltaX < 0) {
+            goToSlide(currentSlide + 1);
+          } else {
+            goToSlide(currentSlide - 1);
+          }
+        } else {
+          goToSlide(currentSlide);
+        }
+        isHorizontalGesture = null;
+        touchDeltaX = 0;
+      });
+
+      // Mouse Drag Gestures
+      let isMouseDown = false;
+      let mouseStartX = 0;
+      let mouseDeltaX = 0;
+
+      slider.addEventListener("mousedown", (e) => {
+        if (
+          e.target.closest(".sub-card-arrow") ||
+          e.target.closest(".sub-card-dots")
+        )
+          return;
+        isMouseDown = true;
+        mouseStartX = e.clientX;
+        mouseDeltaX = 0;
+        dragDistance = 0;
+        slider.classList.add("is-dragging");
+        track.style.transition = "none";
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (!isMouseDown) return;
+        mouseDeltaX = e.clientX - mouseStartX;
+        dragDistance = Math.abs(mouseDeltaX);
+        const baseOffset = -currentSlide * 100;
+        const pxOffset = (mouseDeltaX / slider.offsetWidth) * 100;
+        track.style.transform = `translateX(${baseOffset + pxOffset}%)`;
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (!isMouseDown) return;
+        isMouseDown = false;
+        slider.classList.remove("is-dragging");
+
+        if (dragDistance > 40) {
+          if (mouseDeltaX < 0) {
+            goToSlide(currentSlide + 1);
+          } else {
+            goToSlide(currentSlide - 1);
+          }
+        } else {
+          goToSlide(currentSlide);
+        }
+        dragDistance = 0;
+        mouseDeltaX = 0;
       });
     }
 
-    prevBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      goToSlide(currentSlide > 0 ? currentSlide - 1 : totalSlides - 1);
-    });
+    card.appendChild(slider);
 
-    nextBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      goToSlide(currentSlide < totalSlides - 1 ? currentSlide + 1 : 0);
-    });
-
-    // ========================================================================
-    // TOUCH SWIPE GESTURES (Mobile & Tablet)
-    // ========================================================================
-    let touchStartX = 0;
-    let touchStartY = 0;
-    let touchDeltaX = 0;
-    let isHorizontalGesture = null;
-
-    slider.addEventListener(
-      "touchstart",
-      (e) => {
-        if (e.touches.length !== 1) return;
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-        touchDeltaX = 0;
-        isHorizontalGesture = null;
-        track.style.transition = "none";
-      },
-      { passive: true },
-    );
-
-    slider.addEventListener(
-      "touchmove",
-      (e) => {
-        if (e.touches.length !== 1) return;
-        const currentX = e.touches[0].clientX;
-        const currentY = e.touches[0].clientY;
-        touchDeltaX = currentX - touchStartX;
-        const deltaY = currentY - touchStartY;
-
-        if (isHorizontalGesture === null) {
-          if (Math.abs(touchDeltaX) > 8 || Math.abs(deltaY) > 8) {
-            isHorizontalGesture = Math.abs(touchDeltaX) > Math.abs(deltaY);
-          }
-        }
-
-        if (isHorizontalGesture) {
-          if (e.cancelable) e.preventDefault();
-          const baseOffset = -currentSlide * 100;
-          const pxOffset = (touchDeltaX / slider.offsetWidth) * 100;
-          track.style.transform = `translateX(${baseOffset + pxOffset}%)`;
-        }
-      },
-      { passive: false },
-    );
-
-    slider.addEventListener("touchend", () => {
-      if (isHorizontalGesture && Math.abs(touchDeltaX) > 35) {
-        if (touchDeltaX < 0) {
-          goToSlide(currentSlide + 1);
-        } else {
-          goToSlide(currentSlide - 1);
-        }
-      } else {
-        goToSlide(currentSlide);
-      }
-      isHorizontalGesture = null;
-      touchDeltaX = 0;
-    });
-
-    // ========================================================================
-    // MOUSE DRAG SWIPE GESTURES (Desktop)
-    // ========================================================================
-    let isMouseDown = false;
-    let mouseStartX = 0;
-    let mouseDeltaX = 0;
-    let dragDistance = 0;
-
-    slider.addEventListener("mousedown", (e) => {
-      if (
-        e.target.closest(".sub-card-arrow") ||
-        e.target.closest(".sub-card-dots")
-      )
-        return;
-      isMouseDown = true;
-      mouseStartX = e.clientX;
-      mouseDeltaX = 0;
-      dragDistance = 0;
-      slider.classList.add("is-dragging");
-      track.style.transition = "none";
-    });
-
-    window.addEventListener("mousemove", (e) => {
-      if (!isMouseDown) return;
-      mouseDeltaX = e.clientX - mouseStartX;
-      dragDistance = Math.abs(mouseDeltaX);
-      const baseOffset = -currentSlide * 100;
-      const pxOffset = (mouseDeltaX / slider.offsetWidth) * 100;
-      track.style.transform = `translateX(${baseOffset + pxOffset}%)`;
-    });
-
-    window.addEventListener("mouseup", () => {
-      if (!isMouseDown) return;
-      isMouseDown = false;
-      slider.classList.remove("is-dragging");
-
-      if (dragDistance > 40) {
-        if (mouseDeltaX < 0) {
-          goToSlide(currentSlide + 1);
-        } else {
-          goToSlide(currentSlide - 1);
-        }
-      } else {
-        goToSlide(currentSlide);
-      }
-      dragDistance = 0;
-      mouseDeltaX = 0;
-    });
-
-    // ========================================================================
     // CLICK TO EXPAND IN LIGHTBOX
-    // ========================================================================
     slider.addEventListener("click", (e) => {
       if (
         e.target.closest(".sub-card-arrow") ||
@@ -1261,6 +1269,15 @@ document.addEventListener("DOMContentLoaded", () => {
     lightboxImages = images;
     lightboxCurrentIndex = startIndex || 0;
     lightboxInfo.textContent = titleText || "CREATIVE PREVIEW";
+
+    const hasMultiple = images.length > 1;
+    if (lightboxPrev && lightboxNext) {
+      lightboxPrev.style.display = hasMultiple ? "flex" : "none";
+      lightboxNext.style.display = hasMultiple ? "flex" : "none";
+    }
+    if (lightboxCounter) {
+      lightboxCounter.style.display = hasMultiple ? "block" : "none";
+    }
 
     lightboxTrack.innerHTML = "";
     images.forEach((src, idx) => {
@@ -1459,10 +1476,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <h2 class="category-title">${cat.title}</h2>
             ${cat.subtitle ? `<p class="category-subtitle">${cat.subtitle}</p>` : ""}
           </div>
-          <div class="category-carousel-controls">
+          ${(cat.cards && cat.cards.length > 1) ? `<div class="category-carousel-controls">
             <button class="category-arrow-btn prev" id="cat-prev-${idx}" aria-label="Previous cards">&#10094;</button>
             <button class="category-arrow-btn next" id="cat-next-${idx}" aria-label="Next cards">&#10095;</button>
-          </div>
+          </div>` : ''}
         `;
         sectionEl.appendChild(headerEl);
 

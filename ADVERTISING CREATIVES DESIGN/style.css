@@ -1032,3 +1032,13 @@ body {
         gap: 28px;
     }
 }
+
+/* Single Image State: Hide all arrows, dots and hints */
+.sub-card.is-single-image .sub-card-arrow,
+.sub-card.is-single-image .sub-card-dots,
+.sub-card-slider.is-single-image .sub-card-arrow,
+.sub-card-slider.is-single-image .sub-card-dots {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
