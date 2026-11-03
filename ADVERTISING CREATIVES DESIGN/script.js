@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
           id: "beauty-skincare",
           badge: "CATEGORY 01",
           title: "Beauty and Skin Care Poster",
-          subtitle: "LUXURY COSMETICS, SERUMS & AESTHETIC DERMA",
           cards: [
             {
               title: "LUXURY GLOW SERUM & ELIXIR",
@@ -176,10 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // END OF BEAUTY AND SKIN CARE
 
         {
-          id: "food-sweets-snacks",
+          id: "ice-cream-advertising",
           badge: "CATEGORY 02",
-          title: "Food, Sweets and Snacks Poster",
-          subtitle: "ARTISANAL DELICACIES, GOURMET TREATS & CONFECTIONERY",
+          title: "Ice Cream Advertising Poster",
           cards: [
             {
               images: [
@@ -224,9 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
               ],
             },
             {
-              title: "ARTISAN PASTRY & FRESH BAKERY",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
                   src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_41AM.jpg",
@@ -287,7 +282,6 @@ document.addEventListener("DOMContentLoaded", () => {
           id: "food-sweets-snacks-part2",
           badge: "CATEGORY 03",
           title: "Food, Sweets & Snacks Poster",
-          subtitle: "GOURMET DELICACIES, CONFECTIONERY & CRISPY TREATS",
           cards: [
             {
               title: "ARTISANAL CAKES & PASTRIES",
@@ -405,7 +399,6 @@ document.addEventListener("DOMContentLoaded", () => {
           id: "tech-gadgets",
           badge: "CATEGORY 04",
           title: "Tech, Gadgets & Audio Electronics Poster",
-          subtitle: "WIRELESS ACOUSTICS, NEXT-GEN DEVICES & SMART HARDWARE",
           cards: [
             {
               title: "AUDIO & SOUND EXPERIENCE",
@@ -490,8 +483,6 @@ document.addEventListener("DOMContentLoaded", () => {
           id: "luxury-watches",
           badge: "CATEGORY 05",
           title: "Luxury Watches & Premium Accessories Poster",
-          subtitle:
-            "MINIMALIST CHRONOGRAPHS, TIMEPIECES & MASTER CRAFTSMANSHIP",
           cards: [
             {
               title: "MINIMALIST WATCH SERIES",
