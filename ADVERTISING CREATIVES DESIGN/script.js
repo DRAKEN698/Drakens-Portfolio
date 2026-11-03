@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ],
         },
 
-                                                                      // END OF BEAUTY AND SKIN CARE
+        // END OF BEAUTY AND SKIN CARE
 
         {
           id: "food-sweets-snacks",
@@ -142,69 +142,45 @@ document.addEventListener("DOMContentLoaded", () => {
           subtitle: "ARTISANAL DELICACIES, GOURMET TREATS & CONFECTIONERY",
           cards: [
             {
-              title: "GOURMET ARTISAN BURGERS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Cornetto Chocolate Swirl Bouquet.png",
+                },
               ],
             },
             {
-              title: "LUXURY DESSERTS & CONFECTIONS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 11_47PM.jpg",
+                },
               ],
             },
             {
-              title: "CRUNCHY SNACKS & APPETIZERS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1509722747041-616f39b57569?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 11_55PM.jpg",
+                },
               ],
             },
             {
-              title: "WOOD-FIRED ARTISAN PIZZA",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 7_53PM.jpg",
+                },
               ],
             },
             {
-              title: "DOUBLE SMASH BACON BURGER",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 8_35PM.jpg",
+                },
               ],
             },
             {
-              title: "CRISPY GOLDEN FRENCH FRIES",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_01AM.jpg",
+                },
               ],
             },
             {
@@ -212,10 +188,44 @@ document.addEventListener("DOMContentLoaded", () => {
               subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-                "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_41AM.jpg",
+                },
+              ], 
+            },
+            {
+              images: [
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_52AM.jpg",
+                },
+              ],
+            },
+            {
+              images: [
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Cornetto Mermaid_ Experience the Magic.png",
+                },
+              ],
+            },
+            {
+              images: [
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 8_49AM.jpg",
+                },
+              ],
+            },
+            {
+              images: [
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Premium Chocolate Orange Almond Ice Cream.png",
+                },
+              ],
+            },
+            {
+              images: [
+                {
+                  src: "ICE CREAM ADVERTISING POSTER/Rio Grande Raspberry Sorbet Splash.png",
+                },
               ],
             },
           ],
