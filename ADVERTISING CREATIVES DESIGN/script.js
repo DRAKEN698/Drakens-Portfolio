@@ -130,6 +130,46 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
               ],
             },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Blueberry Nights_ Gentle Gel Face Wash.png",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Golden Beach Glow Sunscreen Ad.png",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Mint Hydration Beauty Ad.png",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Vitamin C Glow Wash Citrus Splash.png",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+              images: [
+                {
+                  src: "Beauty and Skin Care Poster/Dewy Neem Face Wash Ad.png",
+                },
+              ],
+            },
           ],
         },
 
@@ -191,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                   src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_41AM.jpg",
                 },
-              ], 
+              ],
             },
             {
               images: [
