@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 1. Data for Section 01: ADVERTISING
   const advertisingData = [
     {
-      title: "PRODUCT ADS",
+      title: " SWEETS & SNACKS ADVERTISING ",
       subtitle: "5 CATEGORIES • 35 COLLECTIONS",
       src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
       categories: [
@@ -151,89 +151,75 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           id: "ice-cream-advertising",
           badge: "CATEGORY 02",
-          title: "Ice Cream Advertising Poster",
+          title: "Ice Cream Cones Advertising Poster",
           cards: [
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Cornetto Chocolate Swirl Bouquet.png",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Cornetto Chocolate Swirl Bouquet.png",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 11_47PM.jpg",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Cornetto Mermaid_ Experience the Magic.png",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 11_55PM.jpg",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Gemini_Generated_Image_9e2se19e2se19e2s.png",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 7_53PM.jpg",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Generated Image November 01, 2026 - 7_53PM.jpg",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 01, 2026 - 8_35PM.jpg",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Generated Image November 01, 2026 - 8_35PM.jpg",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_01AM.jpg",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Generated Image November 02, 2026 - 12_01AM.jpg",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_41AM.jpg",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Generated Image November 05, 2026 - 1_23PM.jpg",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 12_52AM.jpg",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Generated Image November 05, 2026 - 1_30PM.jpg",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Cornetto Mermaid_ Experience the Magic.png",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Generated Image November 05, 2026 - 1_43PM.jpg",
                 },
               ],
             },
             {
               images: [
                 {
-                  src: "ICE CREAM ADVERTISING POSTER/Generated Image November 02, 2026 - 8_49AM.jpg",
-                },
-              ],
-            },
-            {
-              images: [
-                {
-                  src: "ICE CREAM ADVERTISING POSTER/Premium Chocolate Orange Almond Ice Cream.png",
-                },
-              ],
-            },
-            {
-              images: [
-                {
-                  src: "ICE CREAM ADVERTISING POSTER/Rio Grande Raspberry Sorbet Splash.png",
+                  src: "ICE CREAM Cons ADVERTISING POSTER/Generated Image November 05, 2026 - 1_57PM.jpg",
                 },
               ],
             },
