@@ -31,17 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
       src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
       categories: [
         {
-          id: "beauty-skincare",
+          id: "ice-cream-advertising",
           badge: "CATEGORY 01",
-          title: "Beauty and Skin Care Poster",
+          title: "Ice Cream Cups Advertising Poster",
           cards: [
             {
-              title: "LUXURY GLOW SERUM & ELIXIR",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 10_56PM.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 10_48AM.jpg",
                 },
               ],
             },
@@ -51,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 11_11PM (1).jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 10_51AM.jpg",
                 },
               ],
             },
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 11_19PM.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 10_57AM.jpg",
                 },
               ],
             },
@@ -71,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 30, 2026 - 11_45PM.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 11_02AM.jpg",
                 },
               ],
             },
@@ -81,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 12_04AM.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 11_12AM.jpg",
                 },
               ],
             },
@@ -91,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 12_20AM.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 11_18AM.jpg",
                 },
               ],
             },
@@ -101,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 1_21PM.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 11_21AM.jpg",
                 },
               ],
             },
@@ -109,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Generated Image October 31, 2026 - 8_18PM.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 12_01PM.jpg",
                 },
               ],
             },
@@ -117,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Skincare_product_visual_reverse_…_64b99883_2K.jpg",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 12_09PM.jpg",
                 },
               ],
             },
@@ -125,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Vitamin C Glow in Teal Paradise.png",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 12_13PM.jpg",
                 },
               ],
             },
@@ -133,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Blueberry Nights_ Gentle Gel Face Wash.png",
+                  src: "Premium & Gourmet Ice Cream/Generated Image November 05, 2026 - 12_15PM.jpg",
                 },
               ],
             },
@@ -141,31 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "Beauty and Skin Care Poster/Golden Beach Glow Sunscreen Ad.png",
-                },
-              ],
-            },
-            {
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
-                {
-                  src: "Beauty and Skin Care Poster/Mint Hydration Beauty Ad.png",
-                },
-              ],
-            },
-            {
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
-                {
-                  src: "Beauty and Skin Care Poster/Vitamin C Glow Wash Citrus Splash.png",
-                },
-              ],
-            },
-            {
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
-              images: [
-                {
-                  src: "Beauty and Skin Care Poster/Dewy Neem Face Wash Ad.png",
+                  src: "Premium & Gourmet Ice Cream/Rio Grande Raspberry Sorbet Splash.png",
                 },
               ],
             },
