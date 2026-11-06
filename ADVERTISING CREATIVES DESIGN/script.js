@@ -526,7 +526,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     {
-      title: "PROMO & OFFERS",
+      title: "BEVERAGES Advertising",
       subtitle: "09 CREATIVES",
       src: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=800&auto=format&fit=crop",
       cards: [
@@ -663,97 +663,387 @@ document.addEventListener("DOMContentLoaded", () => {
   const promotionalOffersData = [
     {
       title: "FLASH SALE ADS",
-      subtitle: "14 CREATIVES",
+      subtitle: "2 CATEGORIES • 07 CREATIVES",
       src: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "24-HOUR COUNTDOWN DROP",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "flash-sale-countdown",
+          badge: "CATEGORY 01",
+          title: "24-Hour Countdown Drop",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
           ],
         },
         {
-          title: "STOREWIDE CLEARANCE",
-          subtitle: "03 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
+          id: "flash-sale-clearance",
+          badge: "CATEGORY 02",
+          title: "Storewide Clearance",
+          cards: [
+            {
+              src: "images/product-ad-1.jpg",
               images: [
-            "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "DISCOUNT & DEALS",
-      subtitle: "18 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "VIP MEMBER REWARDS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "vip-member-rewards",
+          badge: "CATEGORY 01",
+          title: "VIP Member Rewards",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "SEASONAL OFFERS",
-      subtitle: "10 CREATIVES",
+      subtitle: "03 CREATIVES",
       src: "https://images.unsplash.com/photo-1486401899868-0e435ed85128?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "HOLIDAY COLLECTION SPECIALS",
-          subtitle: "03 SHOTS • SWIPE TO VIEW",
+          id: "holiday-collection",
+          badge: "CATEGORY 01",
+          title: "Holiday Collection Specials",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "BUNDLE CAMPAIGNS",
-      subtitle: "16 CREATIVES",
+      subtitle: "03 CREATIVES",
       src: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "MULTI-PRODUCT COMBO",
-          subtitle: "03 SHOTS • SWIPE TO VIEW",
+          id: "multi-product-combo",
+          badge: "CATEGORY 01",
+          title: "Multi-Product Combo",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1507764983913-ae817c385072?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1507764983913-ae817c385072?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1507764983913-ae817c385072?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "SPECIAL PROMOTIONS",
-      subtitle: "12 CREATIVES",
+      subtitle: "03 CREATIVES",
       src: "https://images.unsplash.com/photo-1572584642822-6f8de0243c93?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "LIMITED EDITION LAUNCH",
-          subtitle: "03 SHOTS • SWIPE TO VIEW",
+          id: "limited-edition",
+          badge: "CATEGORY 01",
+          title: "Limited Edition Launch",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
@@ -764,90 +1054,380 @@ document.addEventListener("DOMContentLoaded", () => {
   const serviceBusinessData = [
     {
       title: "CORPORATE BRANDING",
-      subtitle: "16 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "IDENTITY DESIGN SYSTEMS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "identity-design-systems",
+          badge: "CATEGORY 01",
+          title: "Identity Design Systems",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "AGENCY & CONSULTING",
-      subtitle: "22 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "GLOBAL TALENT & STRATEGY",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "global-talent-strategy",
+          badge: "CATEGORY 01",
+          title: "Global Talent & Strategy",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "TECH & SAAS SOLUTIONS",
-      subtitle: "18 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "CLOUD PLATFORM SUITE",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "cloud-platform-suite",
+          badge: "CATEGORY 01",
+          title: "Cloud Platform Suite",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "FINANCE & GROWTH",
-      subtitle: "14 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "CAPITAL & INVESTMENT SOLUTIONS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "capital-investment-solutions",
+          badge: "CATEGORY 01",
+          title: "Capital & Investment Solutions",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "B2B MARKETING",
-      subtitle: "20 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "LEAD GENERATION SYSTEM",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "lead-generation-system",
+          badge: "CATEGORY 01",
+          title: "Lead Generation System",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
@@ -858,90 +1438,380 @@ document.addEventListener("DOMContentLoaded", () => {
   const performanceMarketingData = [
     {
       title: "CONVERSION ADS",
-      subtitle: "24 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "HIGH-CONVERTING FUNNELS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "high-converting-funnels",
+          badge: "CATEGORY 01",
+          title: "High-Converting Funnels",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "META & INSTAGRAM ADS",
-      subtitle: "30 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "INSTAGRAM REELS & FEED ADS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "instagram-reels-feed-ads",
+          badge: "CATEGORY 01",
+          title: "Instagram Reels & Feed Ads",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "RETARGETING CAMPAIGNS",
-      subtitle: "18 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "ABANDONED CART RECOVERY",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "abandoned-cart-recovery",
+          badge: "CATEGORY 01",
+          title: "Abandoned Cart Recovery",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "UGC & TIKTOK ADS",
-      subtitle: "25 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "VIRAL UGC HOOKS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "viral-ugc-hooks",
+          badge: "CATEGORY 01",
+          title: "Viral UGC Hooks",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "GROWTH FUNNELS",
-      subtitle: "15 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "SCALING ARCHITECTURE",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "scaling-architecture",
+          badge: "CATEGORY 01",
+          title: "Scaling Architecture",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
@@ -952,90 +1822,380 @@ document.addEventListener("DOMContentLoaded", () => {
   const adFormatsCampaignsData = [
     {
       title: "CAROUSEL ADS",
-      subtitle: "18 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "MULTI-CARD NARRATIVE",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "multi-card-narrative",
+          badge: "CATEGORY 01",
+          title: "Multi-Card Narrative",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "VIDEO & REELS ADS",
-      subtitle: "22 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "CINEMATIC VERTICAL ADS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "cinematic-vertical-ads",
+          badge: "CATEGORY 01",
+          title: "Cinematic Vertical Ads",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "BANNER & DISPLAY",
-      subtitle: "14 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "HIGH-IMPACT BILLBOARDS",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "high-impact-billboards",
+          badge: "CATEGORY 01",
+          title: "High-Impact Billboards",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "STORY FORMATS",
-      subtitle: "20 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "IMMERSIVE MOBILE STORIES",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "immersive-mobile-stories",
+          badge: "CATEGORY 01",
+          title: "Immersive Mobile Stories",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1555529771-835f59bfc50c?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1555529771-835f59bfc50c?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1555529771-835f59bfc50c?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
     },
     {
       title: "OMNICHANNEL CAMPAIGNS",
-      subtitle: "16 CREATIVES",
+      subtitle: "04 CREATIVES",
       src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
-      cards: [
+      categories: [
         {
-          title: "INTEGRATED 360 LAUNCH",
-          subtitle: "04 SHOTS • SWIPE TO VIEW",
+          id: "integrated-360-launch",
+          badge: "CATEGORY 01",
+          title: "Integrated 360 Launch",
+          cards: [
+            {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
-            "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      cards: [
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+            },
           ],
         },
       ],
@@ -1459,76 +2619,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (modalCategoryNav) {
         modalCategoryNav.innerHTML = "";
-        modalCategoryNav.style.display = "flex";
+        if (item.categories.length > 1) {
+          modalCategoryNav.style.display = "flex";
 
-        // ALL POSTERS pill
-        const allPill = document.createElement("button");
-        allPill.className = "category-nav-pill active";
-        allPill.textContent = "ALL POSTERS";
-        allPill.addEventListener("click", () => {
-          modalCategoryNav
-            .querySelectorAll(".category-nav-pill")
-            .forEach((p) => p.classList.remove("active"));
-          allPill.classList.add("active");
-          gridModal.scrollTo({ top: 0, behavior: "smooth" });
-        });
-        modalCategoryNav.appendChild(allPill);
-
-        // Individual category pills
-        item.categories.forEach((cat, idx) => {
-          const pill = document.createElement("button");
-          pill.className = "category-nav-pill";
-          pill.setAttribute("data-target", `cat-section-${idx}`);
-          pill.textContent = cat.title;
-          pill.addEventListener("click", () => {
+          // ALL POSTERS pill
+          const allPill = document.createElement("button");
+          allPill.className = "category-nav-pill active";
+          allPill.textContent = "ALL POSTERS";
+          allPill.addEventListener("click", () => {
             modalCategoryNav
               .querySelectorAll(".category-nav-pill")
               .forEach((p) => p.classList.remove("active"));
-            pill.classList.add("active");
-            const targetSec = document.getElementById(`cat-section-${idx}`);
-            if (targetSec) {
-              targetSec.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
+            allPill.classList.add("active");
+            gridModal.scrollTo({ top: 0, behavior: "smooth" });
           });
-          modalCategoryNav.appendChild(pill);
-        });
+          modalCategoryNav.appendChild(allPill);
 
-        // Scroll spy to highlight active category pill
-        modalScrollHandler = () => {
-          const scrollPos = gridModal.scrollTop;
-          const sections = modalGridContent.querySelectorAll(
-            ".modal-category-section",
-          );
-          let currentActiveId = null;
-
-          if (scrollPos < 120) {
-            currentActiveId = "ALL";
-          } else {
-            sections.forEach((sec) => {
-              const top = sec.offsetTop - 200;
-              if (scrollPos >= top) {
-                currentActiveId = sec.id;
+          // Individual category pills
+          item.categories.forEach((cat, idx) => {
+            const pill = document.createElement("button");
+            pill.className = "category-nav-pill";
+            pill.setAttribute("data-target", `cat-section-${idx}`);
+            pill.textContent = cat.title;
+            pill.addEventListener("click", () => {
+              modalCategoryNav
+                .querySelectorAll(".category-nav-pill")
+                .forEach((p) => p.classList.remove("active"));
+              pill.classList.add("active");
+              const targetSec = document.getElementById(`cat-section-${idx}`);
+              if (targetSec) {
+                targetSec.scrollIntoView({ behavior: "smooth", block: "start" });
               }
             });
-          }
+            modalCategoryNav.appendChild(pill);
+          });
 
-          modalCategoryNav
-            .querySelectorAll(".category-nav-pill")
-            .forEach((pill) => {
-              if (currentActiveId === "ALL") {
-                pill.classList.toggle("active", pill === allPill);
-              } else {
-                pill.classList.toggle(
-                  "active",
-                  pill.getAttribute("data-target") === currentActiveId,
-                );
-              }
-            });
-        };
+          // Scroll spy to highlight active category pill
+          modalScrollHandler = () => {
+            const scrollPos = gridModal.scrollTop;
+            const sections = modalGridContent.querySelectorAll(
+              ".modal-category-section",
+            );
+            let currentActiveId = null;
 
-        gridModal.addEventListener("scroll", modalScrollHandler, {
-          passive: true,
-        });
+            if (scrollPos < 120) {
+              currentActiveId = "ALL";
+            } else {
+              sections.forEach((sec) => {
+                const top = sec.offsetTop - 200;
+                if (scrollPos >= top) {
+                  currentActiveId = sec.id;
+                }
+              });
+            }
+
+            modalCategoryNav
+              .querySelectorAll(".category-nav-pill")
+              .forEach((pill) => {
+                if (currentActiveId === "ALL") {
+                  pill.classList.toggle("active", pill === allPill);
+                } else {
+                  pill.classList.toggle(
+                    "active",
+                    pill.getAttribute("data-target") === currentActiveId,
+                  );
+                }
+              });
+          };
+
+          gridModal.addEventListener("scroll", modalScrollHandler, {
+            passive: true,
+          });
+        } else {
+          modalCategoryNav.style.display = "none";
+        }
       }
 
       // Render each category section with Carousel Navigation Arrows!
