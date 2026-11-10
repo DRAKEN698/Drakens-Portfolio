@@ -527,19 +527,19 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "BEVERAGES Advertising",
-      subtitle: "3 CATEGORIES • 10 CREATIVES",
+      subtitle: "3 CATEGORIES • 14 CREATIVES",
       src: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=800&auto=format&fit=crop",
       categories: [
         {
           id: "beverage-flash-weekend-sale",
           badge: "CATEGORY 01",
-          title: "Flash Weekend Sale",
+          title: "Sports Drinks Advertising",
           cards: [
             {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?q=80&w=800&auto=format&fit=crop",
+                  src: "Sports Drinks/Generated Image November 08, 2026 - 2_41PM.jpg",
                 },
               ],
             },
@@ -547,7 +547,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800&auto=format&fit=crop",
+                  src: "Sports Drinks/Generated Image November 08, 2026 - 8_58PM.jpg",
                 },
               ],
             },
@@ -555,7 +555,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
+                  src: "Sports Drinks/Generated Image November 08, 2026 - 9_02PM.jpg",
                 },
               ],
             },
@@ -563,7 +563,39 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=800&auto=format&fit=crop",
+                  src: "Sports Drinks/Generated Image November 08, 2026 - 9_10PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Sports Drinks/Generated Image November 08, 2026 - 9_32PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Sports Drinks/Generated Image November 08, 2026 - 9_49PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Sports Drinks/Generated Image November 09, 2026 - 6_23PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Sports Drinks/Generated Image November 09, 2026 - 9_52AM.jpg",
                 },
               ],
             },
@@ -572,13 +604,13 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           id: "beverage-seasonal-discounts",
           badge: "CATEGORY 02",
-          title: "Seasonal Discounts",
+          title: "Energy Drink Advertising",
           cards: [
             {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop",
+                  src: "Energy Drink/Generated Image November 06, 2026 - 7_54PM.jpg",
                 },
               ],
             },
@@ -586,7 +618,7 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop",
+                  src: "Energy Drink/Generated Image November 07, 2026 - 10_29PM.jpg",
                 },
               ],
             },
@@ -594,7 +626,71 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=800&auto=format&fit=crop",
+                  src: "Energy Drink/Generated Image November 07, 2026 - 10_44PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 07, 2026 - 1_38PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 07, 2026 - 1_44PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 07, 2026 - 2_51PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 07, 2026 - 3_13PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 07, 2026 - 8_41PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 07, 2026 - 9_33PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 07, 2026 - 9_58PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Energy Drink/Generated Image November 10, 2026 - 6_49AM.jpg",
                 },
               ],
             },
@@ -603,7 +699,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           id: "beverage-bundled-value-packs",
           badge: "CATEGORY 03",
-          title: "Bundled Value Packs",
+          title: "Soft Drink Advertising",
           cards: [
             {
               src: "images/product-ad-1.jpg",
@@ -3225,24 +3321,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (prevBtn && nextBtn) {
           const getScrollDistance = () => {
-            const card = carouselTrack.querySelector(".sub-card");
-            const cardWidth = card ? card.offsetWidth + 24 : 350;
-            return Math.max(cardWidth * 2, carouselTrack.clientWidth * 0.7);
+            return carouselTrack.clientWidth;
           };
 
           nextBtn.addEventListener("click", () => {
-            carouselTrack.scrollBy({
-              left: getScrollDistance(),
-              behavior: "smooth",
-            });
+            const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+            if (carouselTrack.scrollLeft >= maxScroll - 10) {
+              carouselTrack.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+              carouselTrack.scrollBy({
+                left: getScrollDistance(),
+                behavior: "smooth",
+              });
+            }
           });
 
           prevBtn.addEventListener("click", () => {
-            carouselTrack.scrollBy({
-              left: -getScrollDistance(),
-              behavior: "smooth",
-            });
+            if (carouselTrack.scrollLeft <= 10) {
+              const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+              carouselTrack.scrollTo({ left: maxScroll, behavior: "smooth" });
+            } else {
+              carouselTrack.scrollBy({
+                left: -getScrollDistance(),
+                behavior: "smooth",
+              });
+            }
           });
+
+          // Hide arrows if all cards fit in one frame without scrolling
+          const updateArrowVisibility = () => {
+            const canScroll = carouselTrack.scrollWidth > carouselTrack.clientWidth + 5;
+            const controlsWrapper = headerEl.querySelector(".category-carousel-controls");
+            if (controlsWrapper) {
+              controlsWrapper.style.display = canScroll ? "flex" : "none";
+            }
+          };
+          requestAnimationFrame(updateArrowVisibility);
+          window.addEventListener("resize", updateArrowVisibility);
         }
 
         modalGridContent.appendChild(sectionEl);
@@ -3371,15 +3486,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!prevBtn || !nextBtn || !track) return;
 
-    const scrollAmount = 300;
-
     nextBtn.addEventListener("click", () => {
-      track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScroll - 10) {
+        track.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: track.clientWidth, behavior: "smooth" });
+      }
     });
 
     prevBtn.addEventListener("click", () => {
-      track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      if (track.scrollLeft <= 10) {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        track.scrollTo({ left: maxScroll, behavior: "smooth" });
+      } else {
+        track.scrollBy({ left: -track.clientWidth, behavior: "smooth" });
+      }
     });
+
+    // Auto hide arrows if all cards fit in one frame
+    const updateArrows = () => {
+      const canScroll = track.scrollWidth > track.clientWidth + 5;
+      prevBtn.style.display = canScroll ? "flex" : "none";
+      nextBtn.style.display = canScroll ? "flex" : "none";
+    };
+    requestAnimationFrame(updateArrows);
+    window.addEventListener("resize", updateArrows);
   }
 
   setupArrowControls("prev-btn", "next-btn", "carousel-track");
