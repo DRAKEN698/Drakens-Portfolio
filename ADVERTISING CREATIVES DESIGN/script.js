@@ -241,116 +241,94 @@ document.addEventListener("DOMContentLoaded", () => {
           // ==========================================================================
           id: "food-sweets-snacks-part2",
           badge: "CATEGORY 03",
-          title: "Food, Sweets & Snacks Poster",
+          title: "Ice Cream Bars & Sticks Advertising",
           cards: [
             {
-              title: "ARTISANAL CAKES & PASTRIES",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1535141192574-5d4897c13136?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 01, 2026 - 11_47PM.jpg",
+                },
               ],
             },
             {
-              title: "TRADITIONAL & LUXURY SWEETS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 01, 2026 - 11_55PM.jpg",
+                },
               ],
             },
             {
-              title: "CRUNCHY SAVORY SNACKS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1566478989037-eec170784d0b?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1621996346565-e3d5d628169b?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1585238342024-78d387f4a707?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 02, 2026 - 12_41AM.jpg",
+                },
               ],
             },
             {
-              title: "GOURMET STREET FOOD & TACOS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 02, 2026 - 12_52AM.jpg",
+                },
               ],
             },
             {
-              title: "HANDCRAFTED ICE CREAM & GELATO",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 02, 2026 - 8_49AM.jpg",
+                },
               ],
             },
             {
-              title: "CHOCOLATE & TRUFFLE DELIGHTS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1582293041079-7814c2f12063?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 05, 2026 - 5_15PM.jpg",
+                },
               ],
             },
             {
-              title: "FRESH JUICES & BEVERAGE COMPANIONS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1546173159-315724a31696?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 05, 2026 - 5_17PM.jpg",
+                },
               ],
             },
             {
-              title: "SWEET BAKERY & COOKIES",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 05, 2026 - 5_34PM.jpg",
+                },
               ],
             },
             {
-              title: "DELUXE WAFFLES & PANCAKES",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1562376552-0d160a2f238d?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1528198691077-709f609e6a70?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 05, 2026 - 6_14PM.jpg",
+                },
               ],
             },
             {
-              title: "PREMIUM SNACK PLATTERS",
-              subtitle: "04 SHOTS • SWIPE TO VIEW",
-              src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "Food, Sweets & Snacks Poster/my-image.jpg" ya URL)
+              src: "images/product-ad-1.jpg",
               images: [
-                "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1509722747041-616f39b57569?q=80&w=800&auto=format&fit=crop",
+                {
+                  src: "Ice Cream Bars & Sticks/Generated Image November 05, 2026 - 6_21PM.jpg",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Ice Cream Bars & Sticks/Premium Chocolate Orange Almond Ice Cream.png",
+                },
               ],
             },
           ],
