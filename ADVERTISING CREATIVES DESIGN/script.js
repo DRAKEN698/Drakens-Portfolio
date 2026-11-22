@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: " SWEETS & SNACKS ADVERTISING ",
       subtitle: "5 CATEGORIES • 35 COLLECTIONS",
-      src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
+      src: "Covers/SWEETS & SNACKS ADVERTISING Cover.jpg",
       categories: [
         {
           id: "ice-cream-advertising",
@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "BEVERAGES Advertising",
       subtitle: "3 CATEGORIES • 14 CREATIVES",
-      src: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=800&auto=format&fit=crop",
+      src: "Covers/BEVERAGES Advertising Cover.jpg",
       categories: [
         {
           id: "beverage-flash-weekend-sale",
@@ -782,12 +782,12 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "SERVICE ADS",
       subtitle: "3 CATEGORIES • 10 CREATIVES",
-      src: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop",
+      src: "Covers/Service & Business Ads Cover.jpg",
       categories: [
         {
           id: "service-creative-strategy",
           badge: "CATEGORY 01",
-          title: "Creative Strategy Lab",
+          title: "Digital Marketing Services ads",
           cards: [
             {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
@@ -1613,7 +1613,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "CORPORATE BRANDING",
       subtitle: "04 CREATIVES",
-      src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+      src: "",
       categories: [
         {
           id: "identity-design-systems",
