@@ -781,7 +781,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "SERVICE ADS",
-      subtitle: "3 CATEGORIES • 10 CREATIVES",
+      subtitle: "3 CATEGORIES • 14 CREATIVES",
       src: "Covers/Service & Business Ads Cover.jpg",
       categories: [
         {
@@ -793,7 +793,31 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg", // <-- [SRC TAG]: Apni image ka path yahan dalein (e.g. "images/my-image.jpg" ya URL)
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_28 PM-1.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_29 PM-2.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_30 PM-3.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_31 PM-4.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_32 PM-5.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_34 PM-6.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_35 PM-7.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_35 PM-8.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 1/ChatGPT Image Nov 20, 2026, 05_44_36 PM-9.png",
                 },
               ],
             },
@@ -801,7 +825,31 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_15 PM-1.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_16 PM-2.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_17 PM-3.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_18 PM-4.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_19 PM-5.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_20 PM-6.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_21 PM-7.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_22 PM-8.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 2/ChatGPT Image Nov 20, 2026, 06_08_23 PM-9.png",
                 },
               ],
             },
@@ -809,7 +857,31 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=800&auto=format&fit=crop",
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_44 PM-1.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_46 PM-2.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_47 PM-3.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_48 PM-4.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_49 PM-5.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_50 PM-6.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_51 PM-7.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_52 PM-8.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 3/ChatGPT Image Nov 20, 2026, 06_19_53 PM-9.png",
                 },
               ],
             },
@@ -817,7 +889,127 @@ document.addEventListener("DOMContentLoaded", () => {
               src: "images/product-ad-1.jpg",
               images: [
                 {
-                  src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_46 PM-1.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_37 PM-2.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_38 PM-3.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_40 PM-4.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_41 PM-5.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_42 PM-6.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_43 PM-7.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_44 PM-8.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 4/ChatGPT Image Nov 22, 2026, 02_15_45 PM-9.png",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_50 PM-1.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_51 PM-2.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_52 PM-3.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_54 PM-4.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_55 PM-5.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_56 PM-6.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_58 PM-7.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_48_59 PM-8.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 5/ChatGPT Image Nov 20, 2026, 10_49_00 PM-9.png",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_03 PM-1.jpg",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_05 PM-2.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_06 PM-3.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_07 PM-4.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_08 PM-5.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_09 PM-6.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_10 PM-7.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_12 PM-8.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 6/ChatGPT Image Nov 20, 2026, 11_16_13 PM-9.png",
+                },
+              ],
+            },
+            {
+              src: "images/product-ad-1.jpg",
+              images: [
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_44 PM-1.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_45 PM-2.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_46 PM-3.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_48 PM-4.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_49 PM-5.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_50 PM-6.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_51 PM-7.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_52 PM-8.png",
+                },
+                {
+                  src: "Service & Business Ads/Service & Business Ads 7/ChatGPT Image Nov 20, 2026, 11_24_54 PM-9.png",
                 },
               ],
             },
@@ -3304,6 +3496,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
           nextBtn.addEventListener("click", () => {
             const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+            if (maxScroll <= 5) {
+              carouselTrack.scrollBy({ left: 40, behavior: "smooth" });
+              setTimeout(() => carouselTrack.scrollBy({ left: -40, behavior: "smooth" }), 250);
+              return;
+            }
             if (carouselTrack.scrollLeft >= maxScroll - 10) {
               carouselTrack.scrollTo({ left: 0, behavior: "smooth" });
             } else {
@@ -3315,8 +3512,13 @@ document.addEventListener("DOMContentLoaded", () => {
           });
 
           prevBtn.addEventListener("click", () => {
+            const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
+            if (maxScroll <= 5) {
+              carouselTrack.scrollBy({ left: -40, behavior: "smooth" });
+              setTimeout(() => carouselTrack.scrollBy({ left: 40, behavior: "smooth" }), 250);
+              return;
+            }
             if (carouselTrack.scrollLeft <= 10) {
-              const maxScroll = carouselTrack.scrollWidth - carouselTrack.clientWidth;
               carouselTrack.scrollTo({ left: maxScroll, behavior: "smooth" });
             } else {
               carouselTrack.scrollBy({
@@ -3325,17 +3527,6 @@ document.addEventListener("DOMContentLoaded", () => {
               });
             }
           });
-
-          // Hide arrows if all cards fit in one frame without scrolling
-          const updateArrowVisibility = () => {
-            const canScroll = carouselTrack.scrollWidth > carouselTrack.clientWidth + 5;
-            const controlsWrapper = headerEl.querySelector(".category-carousel-controls");
-            if (controlsWrapper) {
-              controlsWrapper.style.display = canScroll ? "flex" : "none";
-            }
-          };
-          requestAnimationFrame(updateArrowVisibility);
-          window.addEventListener("resize", updateArrowVisibility);
         }
 
         modalGridContent.appendChild(sectionEl);
