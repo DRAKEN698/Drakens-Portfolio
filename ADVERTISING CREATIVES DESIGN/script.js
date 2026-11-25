@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: " SWEETS & SNACKS ADVERTISING ",
       subtitle: "5 CATEGORIES • 35 COLLECTIONS",
-      src: "Covers/SWEETS & SNACKS ADVERTISING Cover.jpg",
+      src: "Covers/SWEETS & SNACKS ADVERTISING Cover.png",
       categories: [
         {
           id: "ice-cream-advertising",
@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "BEVERAGES Advertising",
       subtitle: "3 CATEGORIES • 14 CREATIVES",
-      src: "Covers/BEVERAGES Advertising Cover.jpg",
+      src: "Covers/BEVERAGES Advertising Cover.jpg.png",
       categories: [
         {
           id: "beverage-flash-weekend-sale",
